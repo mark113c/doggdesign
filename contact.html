@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>CONTACT</h1>
+    <section id="contact">
+
+    </section>
+
+    <script>
+        let contactData;
+        const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/74";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            console.log(response);
+            contactData = await response.json();
+            visContactSide();
+
+
+        }
+
+        function visContactSide() {
+            console.log(contactData);
+            document.querySelector("#contact").innerHTML = contactData.content.rendered;
+        }
+    </script>
+</body></html>

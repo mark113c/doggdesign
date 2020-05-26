@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forside</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <h1>Dögg Design</h1>
+    <section id="forside">
+
+    </section>
+
+    <script>
+        let forsideData;
+        const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/13";
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            console.log(response);
+            forsideData = await response.json();
+            visForside();
+
+
+        }
+
+        function visForside() {
+            console.log(forsideData);
+            document.querySelector("#forside").innerHTML = forsideData.content.rendered;
+        }
+    </script>
+</body></html>

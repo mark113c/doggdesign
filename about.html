@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    main {
+        50vw;
+    }
+
+    .carousel {
+        width: 80%;
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    .caro_imgs {
+        width: 25%;
+        padding: 3px;
+    }
+
+    .container {
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+
+    }
+
+    .container section {
+        scroll-snap-align: start;
+        min-width: 100%;
+    }
+
+    .carousel_inner {
+        display: flex;
+
+
+    }
+
+    .bwd,
+    .fwd {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+
+    }
+
+    .bwd img,
+    .fwd img {
+        position: absolute;
+        z-index: 10;
+
+    }
+
+    .fwd img {
+        margin-left: 4px;
+        width: 1.2%;
+    }
+
+    .bwd img {
+        margin-left: -22px;
+        width: 1.2%;
+    }
+
+</style>
+
+<body>
+    <h1>About</h1>
+    <section id="about_intro">
+
+    </section>
+    <h2>Story</h2>
+    <section id="about_story">
+    </section>
+
+
+    <h2>Sustainability</h2>
+    <section id="about_sustainability">
+    </section>
+
+    <h2>Press</h2>
+    <section id="about_press">
+        <template id="press_template">
+
+            <img class="caro_imgs" src="" alt="">
+
+        </template>
+
+    </section>
+    <main id="press_carousel">
+
+        <div class="carousel">
+            <div class="carousel_inner">
+
+                <div class="bwd">
+                    <img src="img/tilbagepil.svg" alt="tilbagepil">
+                </div>
+                <div class="container">
+
+                </div>
+                <div class="fwd">
+                    <img src="img/forwardpil.svg" alt="forwardpil">
+                </div>
+            </div>
+            <div class="legend-container"></div>
+        </div>
+
+    </main>
+
+
+    <h2>Exhibitions</h2>
+    <section id="about_exhibitions">
+        <template id="exhibitions_template">
+            <article>
+                <h3></h3>
+                <p></p>
+            </article>
+        </template>
+    </section>
+
+
+    <h2>Curriculum Vitae</h2>
+    <section id="about_CV"></section>
+
+    <script>
+        //ABOUT INTRO (sektion 1)
+        let aboutIntroData;
+        const aboutIntroEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/59";
+
+        //ABOUT - STORY (sektion 2)
+        let aboutStoryData;
+        const aboutStoryEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/61";
+
+        //ABOUT - SUSTAINABIKITY (sektion 3)
+        let aboutSustainabilityData;
+        const aboutSustainabilityEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/64";
+
+        //ABOUT - PRESS (sektion 4)
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+        const aboutPressEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press/125";
+
+
+        //ABOUT - EXHIBITIONS (sektion 5)
+        let aboutExhibitionsData = [];
+        const aboutExhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
+        let exhibitionsTemplate = document.querySelector("#exhibitions_template");
+        const listeElm = document.querySelector("#about_exhibitions");
+
+
+        //ABOUT - CV (sektion 6)
+        let aboutCVData;
+        const aboutCVEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/87";
+
+
+
+        //Loader DOM'en
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
+        }
+
+        async function hentData() {
+            //Henter data ind for ABOUT - INTRO sektion 1
+            const aboutIntroResponse = await fetch(aboutIntroEndpoint);
+            console.log(aboutIntroResponse);
+            aboutIntroData = await aboutIntroResponse.json();
+            visAboutIntro();
+
+            //Henter data ind for ABOUT - STORY sektion 2
+            const aboutStoryResponse = await fetch(aboutStoryEndpoint);
+            console.log(aboutStoryResponse);
+            aboutStoryData = await aboutStoryResponse.json();
+            visAboutStory();
+
+            //Henter data ind for ABOUT - SUSTAINABILITY sektion 3
+            const aboutSustainabilityResponse = await fetch(aboutSustainabilityEndpoint);
+            console.log(aboutSustainabilityResponse);
+            aboutSustainabilityData = await aboutSustainabilityResponse.json();
+            visAboutSustainability();
+
+            //Henter data ind for ABOUT - PRESS sektion 4
+            const aboutPressResponse = await fetch(aboutPressEndpoint);
+            console.log(aboutPressResponse);
+            karrusel = await aboutPressResponse.json();
+            visAboutPress();
+
+
+
+            //Henter data ind for ABOUT - EXHIBITIONS sektion 5
+            const aboutExhibitionsResponse = await fetch(aboutExhibitionsEndpoint);
+            console.log(aboutExhibitionsResponse);
+            aboutExhibitionsData = await aboutExhibitionsResponse.json();
+            visAboutExhibitions();
+
+
+            //Henter data ind for ABOUT - CV sektion 6
+            const aboutCVResponse = await fetch(aboutCVEndpoint);
+            console.log(aboutCVResponse);
+            aboutCVData = await aboutCVResponse.json();
+            visAboutCV();
+
+
+
+        }
+
+        //FUNKTIONER TIL SEKTIONER
+
+        function visAboutIntro() {
+            console.log(aboutIntroData);
+            document.querySelector("#about_intro").innerHTML = aboutIntroData.content.rendered;
+        }
+
+        function visAboutStory() {
+            console.log(aboutStoryData);
+            document.querySelector("#about_story").innerHTML = aboutStoryData.content.rendered;
+        }
+
+        function visAboutSustainability() {
+            console.log(aboutSustainabilityData);
+            document.querySelector("#about_sustainability").innerHTML = aboutSustainabilityData.content.rendered;
+        }
+
+        //Mangler function til Press
+        function visAboutPress() {
+            numberOfPicsInCaro = karrusel.image.length;
+            console.log("image", karrusel.image);
+            karrusel.image.forEach((image, index) => {
+                const theClone =
+                    document.querySelector("#press_template").cloneNode(true).content;
+                const secondClone = document.querySelector("#press_template").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = image.guid;
+                secondClone.querySelector(".caro_imgs").src = image.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+
+
+        function visAboutExhibitions() {
+            console.log(aboutExhibitionsData);
+            aboutExhibitionsData.forEach(elm => {
+                const klon = exhibitionsTemplate.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = elm.year;
+                klon.querySelector("p").innerHTML = elm.exhibitions;
+
+                listeElm.appendChild(klon);
+            });
+        }
+
+        function visAboutCV() {
+            console.log(aboutCVData);
+            document.querySelector("#about_CV").innerHTML = aboutCVData.content.rendered;
+
+        }
+
+    </script>
+</body>
+
+</html>
