@@ -13,11 +13,10 @@
     <section id="webshop">
         <template id="webshop_template">
             <article>
-                <h2></h2>
                 <img src="">
-                <p class="short_description"></p>
+                <h2></h2>
                 <p class="price"></p>
-                <p class="measurements"></p>
+
             </article>
         </template>
     </section>
@@ -48,9 +47,9 @@
                 const klon = webshopTemplate.cloneNode(true).content;
                 klon.querySelector("h2").innerHTML = elm.product_name;
                 klon.querySelector("img").src = elm.product_image.guid;
-                klon.querySelector(".short_description").innerHTML = elm.short_description;
+
                 klon.querySelector(".price").innerHTML = elm.price;
-                klon.querySelector(".measurements").innerHTML = elm.height + " x " + elm.width + " x " + elm.length;
+
 
                 listeElm.appendChild(klon);
             });
