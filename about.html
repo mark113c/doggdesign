@@ -126,47 +126,6 @@
     <section id="about_sustainability">
     </section>
 
-    <h2>Press</h2>
-    <div class="underline"></div>
-    <section id="about_press">
-        <template id="press_template">
-
-            <img class="caro_imgs" src="" alt="">
-
-        </template>
-
-    </section>
-    <main id="press_carousel">
-
-        <div class="carousel">
-            <div class="carousel_inner">
-
-                <div class="bwd">
-                    <img src="img/tilbagepil.svg" alt="tilbagepil">
-                </div>
-                <div class="container">
-
-                </div>
-                <div class="fwd">
-                    <img src="img/forwardpil.svg" alt="forwardpil">
-                </div>
-            </div>
-            <div class="legend-container"></div>
-        </div>
-
-    </main>
-
-
-    <h2>Exhibitions</h2>
-    <div class="underline"></div>
-    <section id="about_exhibitions">
-        <template id="exhibitions_template">
-            <article>
-                <h3></h3>
-                <p></p>
-            </article>
-        </template>
-    </section>
 
 
     <h2>Curriculum Vitae</h2>
@@ -182,25 +141,12 @@
         let aboutStoryData;
         const aboutStoryEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/61";
 
-        //ABOUT - SUSTAINABIKITY (sektion 3)
+        //ABOUT - SUSTAINABILITY (sektion 3)
         let aboutSustainabilityData;
         const aboutSustainabilityEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/64";
 
-        //ABOUT - PRESS (sektion 4)
-        let karrusel;
-        let numberOfPicsInCaro;
-        let caroCurrentNum = 0;
-        const aboutPressEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press/125";
 
-
-        //ABOUT - EXHIBITIONS (sektion 5)
-        let aboutExhibitionsData = [];
-        const aboutExhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
-        let exhibitionsTemplate = document.querySelector("#exhibitions_template");
-        const listeElm = document.querySelector("#about_exhibitions");
-
-
-        //ABOUT - CV (sektion 6)
+        //ABOUT - CV (sektion 4)
         let aboutCVData;
         const aboutCVEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/87";
 
@@ -211,8 +157,7 @@
 
         function start() {
             hentData();
-            document.querySelector(".fwd").addEventListener("click", fwd);
-            document.querySelector(".bwd").addEventListener("click", bwd);
+
         }
 
         async function hentData() {
@@ -234,22 +179,8 @@
             aboutSustainabilityData = await aboutSustainabilityResponse.json();
             visAboutSustainability();
 
-            //Henter data ind for ABOUT - PRESS sektion 4
-            const aboutPressResponse = await fetch(aboutPressEndpoint);
-            console.log(aboutPressResponse);
-            karrusel = await aboutPressResponse.json();
-            visAboutPress();
 
-
-
-            //Henter data ind for ABOUT - EXHIBITIONS sektion 5
-            const aboutExhibitionsResponse = await fetch(aboutExhibitionsEndpoint);
-            console.log(aboutExhibitionsResponse);
-            aboutExhibitionsData = await aboutExhibitionsResponse.json();
-            visAboutExhibitions();
-
-
-            //Henter data ind for ABOUT - CV sektion 6
+            //Henter data ind for ABOUT - CV sektion 4
             const aboutCVResponse = await fetch(aboutCVEndpoint);
             console.log(aboutCVResponse);
             aboutCVData = await aboutCVResponse.json();
@@ -276,80 +207,6 @@
             document.querySelector("#about_sustainability").innerHTML = aboutSustainabilityData.content.rendered;
         }
 
-        //Mangler function til Press
-        function visAboutPress() {
-            numberOfPicsInCaro = karrusel.image.length;
-            console.log("image", karrusel.image);
-            karrusel.image.forEach((image, index) => {
-                const theClone =
-                    document.querySelector("#press_template").cloneNode(true).content;
-                const secondClone = document.querySelector("#press_template").cloneNode(true).content;
-                theClone.querySelector(".caro_imgs").src = image.guid;
-                secondClone.querySelector(".caro_imgs").src = image.guid;
-                document.querySelector(".container").appendChild(theClone);
-                document.querySelector(".legend-container").appendChild(theClone);
-            })
-            document.querySelector(".container").addEventListener("scroll", scrollFunction);
-        }
-
-        function fwd() {
-            if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                caroCurrentNum++;
-                navigate();
-            }
-        }
-
-        function bwd() {
-            if (caroCurrentNum > 0)
-                caroCurrentNum--;
-            navigate();
-        }
-
-        function navigate() {
-            document.querySelector(".container").scrollTo({
-                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
-                behavior: "smooth"
-            })
-            setBtns();
-        }
-
-        function scrollFunction() {
-            //  console.log("scrollFunction");
-
-            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
-            console.log(caroCurrentNum);
-            setBtns();
-
-        }
-
-        function setBtns() {
-            if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                document.querySelector(".fwd").style.opacity = 1;
-                document.querySelector(".fwd").style.cursor = "pointer";
-            } else {
-                document.querySelector(".fwd").style.opacity = 0.2;
-                document.querySelector(".fwd").style.cursor = "default";
-            }
-            if (caroCurrentNum > 0) {
-                document.querySelector(".bwd").style.opacity = 1;
-                document.querySelector(".bwd").style.cursor = "pointer";
-            } else {
-                document.querySelector(".bwd").style.opacity = 0.2;
-                document.querySelector(".bwd").style.cursor = "default";
-            }
-        }
-
-
-        function visAboutExhibitions() {
-            console.log(aboutExhibitionsData);
-            aboutExhibitionsData.forEach(elm => {
-                const klon = exhibitionsTemplate.cloneNode(true).content;
-                klon.querySelector("h3").innerHTML = elm.year;
-                klon.querySelector("p").innerHTML = elm.exhibitions;
-
-                listeElm.appendChild(klon);
-            });
-        }
 
         function visAboutCV() {
             console.log(aboutCVData);

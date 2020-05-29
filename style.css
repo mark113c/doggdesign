@@ -10,6 +10,10 @@ body {
     background-color: #F2F2EF;
 }
 
+img {
+    width: 100%;
+}
+
 /*HEADER*/
 /*HEADER-SLUT*/
 
@@ -52,9 +56,102 @@ button {
     flex-direction: column;
 }
 
+/*FONT STYLING START*/
+h1 {
+    font-size: 1.5rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-family: manropelight;
+    font-size: 1rem;
+}
+
+/*FONT STYLING SLUT*/
+
+/*BILLEDEKARRUSELLER START*/
+main {
+    50vw;
+}
+
+.carousel {
+    width: 90%;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.caro_imgs {
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+
+}
+
+.container section {
+    scroll-snap-align: start;
+
+}
+
+.carousel_inner {
+    display: flex;
+
+
+}
+
+.bwd,
+.fwd {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.bwd img,
+.fwd img {
+    position: absolute;
+    z-index: 10;
+
+}
+
+.fwd img {
+
+    width: 2%;
+    margin-left: 10px;
+}
+
+.bwd img {
+
+    width: 2%;
+    margin-left: -22px;
+}
+
+/*BILLEDEKARRUSELLER SLUT*/
+
+
 /*----------------------------------------GENERELT-SLUT----------------------------------------*/
 
-/*----------------------------------------FORSIDE----------------------------------------*/
+/*----------------------------------------FORSIDE-START---------------------------------------*/
 
 /*SPLASH-SECTION-FORSIDE*/
 
@@ -87,8 +184,8 @@ button {
 /*SPLASH-SECTION-FORSIDE-SLUT*/
 
 #forside h2 {
-    font-size: 1.5rem;
-    font-family: manropeextralight;
+
+    font-family: manropebold;
     margin-bottom: 2vw;
     margin-left: 4vw;
     letter-spacing: 5px;
@@ -102,3 +199,77 @@ button {
 
 
 /*----------------------------------------FORSIDE-SLUT----------------------------------------*/
+
+
+/*----------------------------------------WEBSHOP-START----------------------------------------*/
+/*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
+
+/*----------------------------------------DETALJEVIEW-START----------------------------------------*/
+
+/*Overskrift og underline start*/
+
+#detaljeview_article .h1_container {
+    position: relative;
+    width: 50vw;
+    top: 2.8vw;
+    left: 39.8vw;
+    text-align: start;
+    line-height: .9;
+}
+
+#detaljeview_article .underline {
+    width: 60vw;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 15vw;
+    right: 0vw;
+    float: right;
+}
+
+/*Overskrift og underline slut*/
+
+.detaljeview_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: 0;
+}
+
+.detaljeview_col {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 4vw;
+}
+
+
+
+/*----------------------------------------DETALJEVIEW-SLUT----------------------------------------*/
+
+
+/*----------------------------------------ABOUT-START----------------------------------------*/
+/*----------------------------------------ABOUT-SLUT----------------------------------------*/
+
+
+/*----------------------------------------EXHIBITIONS-START----------------------------------------*/
+/*----------------------------------------EXHIBITIONS-SLUT----------------------------------------*/
+
+
+/*----------------------------------------PRESS-START----------------------------------------*/
+/*----------------------------------------PRESS-SLUT----------------------------------------*/
+
+/*----------------------------------------FOOTERPAGES-START----------------------------------------*/
+/*TERMS AND CONDITIONS START*/
+/*TERMS AND CONDITIONS SLUT*/
+
+/*REFUND POLICY START*/
+/*REFUND POLICY SLUT*/
+
+/*RETAILERS START*/
+/*RETAILERS SLUT*/
+
+/*SHIPPING INFO START*/
+/*SHIPPING INFO SLUT*/
+
+
+/*----------------------------------------FOOTERPAGES-SLUT----------------------------------------*/

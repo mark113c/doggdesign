@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhibitions</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Exhibitions</h1>
+    <div class="underline"></div>
+    <section id="about_exhibitions">
+        <template id="exhibitions_template">
+            <article>
+                <h3></h3>
+                <p></p>
+            </article>
+        </template>
+    </section>
+
+    <script>
+        let aboutExhibitionsData = [];
+        const aboutExhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
+        let exhibitionsTemplate = document.querySelector("#exhibitions_template");
+        const listeElm = document.querySelector("#about_exhibitions");
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+        }
+
+        async function hentData() {
+            const aboutExhibitionsResponse = await fetch(aboutExhibitionsEndpoint);
+            console.log(aboutExhibitionsResponse);
+            aboutExhibitionsData = await aboutExhibitionsResponse.json();
+            visAboutExhibitions();
+
+        }
+
+        function visAboutExhibitions() {
+            console.log(aboutExhibitionsData);
+            aboutExhibitionsData.forEach(elm => {
+                const klon = exhibitionsTemplate.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = elm.year;
+                klon.querySelector("p").innerHTML = elm.exhibitions;
+
+                listeElm.appendChild(klon);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
