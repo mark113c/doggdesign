@@ -49,6 +49,10 @@
                 klon.querySelector("img").src = elm.product_image.guid;
 
                 klon.querySelector(".price").innerHTML = elm.price;
+                klon.querySelector("article").addEventListener("click", () => {
+
+                    location.href = "detaljeview.html?id=" + elm.id;
+                });
 
 
                 listeElm.appendChild(klon);

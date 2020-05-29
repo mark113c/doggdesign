@@ -5,37 +5,267 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="fonts.css">
 </head>
+<style>
+    body {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    main {
+        50vw;
+    }
+
+    .carousel {
+        width: 90%;
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    .caro_imgs {
+        width: 100%;
+
+    }
+
+    .container {
+        display: flex;
+        overflow: scroll;
+        scroll-snap-type: x mandatory;
+
+    }
+
+    .container section {
+        scroll-snap-align: start;
+
+    }
+
+    .carousel_inner {
+        display: flex;
+
+
+    }
+
+    .bwd,
+    .fwd {
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+
+    }
+
+    .bwd img,
+    .fwd img {
+        position: absolute;
+        z-index: 10;
+
+    }
+
+    .fwd img {
+
+        width: 2%;
+        margin-left: 10px;
+    }
+
+    .bwd img {
+
+        width: 2%;
+        margin-left: -22px;
+    }
+
+    .webshop_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+
+    .webshop_col {
+        flex-basis: 300px;
+        flex-grow: 1;
+        padding: 4vw;
+    }
+
+    #detaljeview_article h1 {
+        margin: 10vw 0 0 33vw;
+        text-align: start;
+        line-height: .9;
+        text-transform: uppercase;
+        font-family: manropebold;
+    }
+
+    .underline {
+        width: 55vw;
+        height: 1px;
+        background-color: black;
+        float: right;
+    }
+</style>
 
 <body>
-    <section id="detaljeview">
+    <section id="webshop_detaljeview">
         <article id="detaljeview_article">
-            <h1></h1>
-            <img src="">
-            <p class="long_description"></p>
-            <p class="price"></p>
-            <p class="measurements"></p>
-            <p class="materials"></p>
+            <div class="webshop_wrapper">
+                <h1></h1>
+                <div class="underline"></div>
+                <div class="webshop_col">
+
+                    <!--            <img src="">-->
+                    <p class="long_description"></p>
+                    <p class="price"></p>
+                    <p class="measurements">Measurements <br></p>
+                    <p class="materials">Materials <br></p>
+                </div>
+                <div class="webshop_col">
+                    <template>
+
+                        <img class="caro_imgs" src="" alt="">
+
+                    </template>
+                    <main id="webshop_carousel">
+
+                        <div class="carousel">
+                            <div class="carousel_inner">
+
+                                <div class="bwd">
+                                    <img src="img/tilbagepil.svg" alt="tilbagepil">
+                                </div>
+                                <div class="container">
+
+                                </div>
+                                <div class="fwd">
+                                    <img src="img/forwardpil.svg" alt="forwardpil">
+                                </div>
+                            </div>
+                            <div class="legend-container"></div>
+                        </div>
+
+                    </main>
+
+                </div>
+            </div>
         </article>
+
     </section>
+
     <script>
+        //Detaljeview tekst indhold
         const urlParams = new URLSearchParams(window.location.search)
         const id = urlParams.get("id");
-        const detaljeviewEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop" + id;
-        let detaljeview;
+        const detaljeviewEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop";
+        let detaljeviewData = [];
+        const detaljeview = document.querySelector("#webshop_detaljeview");
+
+
+        //Detaljeview karussel
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+        const detaljeKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop/" + id;
+
+        document.addEventListener("DOMContentLoaded", start);
+
 
         function start() {
             hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
         }
 
         async function hentData() {
+            //Henter data ind for tekst indhold
             const detaljeviewResponse = await fetch(detaljeviewEndpoint);
-            detaljeview
+            //console.log(detaljeviewResponse);
+            detaljeviewData = await detaljeviewResponse.json();
+            visDetaljeview();
+
+            //Billedkarrusel
+            const karruselResponse = await fetch(detaljeKarruselEndpoint);
+            console.log("BABAGANUSH" + karruselResponse);
+            karrusel = await karruselResponse.json();
+            visBilledkarrusel();
 
         }
 
-    </script>
-</body>
+        function visDetaljeview() {
+            //console.log("visDetaljeview");
+            detaljeviewData.forEach(elm => {
+                console.log(detaljeviewData);
+                if (elm.id == id) {
+                    detaljeview.querySelector("h1").innerHTML = elm.product_name;
+                    detaljeview.querySelector(".long_description").innerHTML = elm.long_description;
+                    detaljeview.querySelector(".price").innerHTML = elm.price;
+                    detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
+                    detaljeview.querySelector(".materials").innerHTML += elm.material;
 
-</html>
+
+                }
+            });
+        }
+
+        function visBilledkarrusel() {
+            numberOfPicsInCaro = karrusel.product_gallery.length;
+            //            console.log("product_gallery", karrusel.product_gallery);
+            karrusel.product_gallery.forEach((product_gallery, index) => {
+                const theClone =
+                    document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = product_gallery.guid;
+                secondClone.querySelector(".caro_imgs").src = product_gallery.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+    </script>
+</body></html>

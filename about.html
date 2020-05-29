@@ -4,10 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>ABOUT</title>
     <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="fonts.css">
 </head>
 <style>
+    body {
+        margin: 0;
+    }
+
+    h1,
+    p,
+    a,
+    h2 {
+        font-family: manropebold;
+    }
+
+    .quote p {
+        font-family: manropelight;
+        max-width: 350px;
+        font-size: 1.4rem;
+        display: block;
+        margin: 0 auto;
+    }
+
+
+
     main {
         50vw;
     }
@@ -66,23 +88,46 @@
         width: 1.2%;
     }
 
+    h1 {
+        margin: 10vw 0 0 19vw;
+        text-align: center;
+        line-height: .9;
+    }
+
+    .underline {
+        width: 55vw;
+        height: 1px;
+        background-color: black;
+        float: right;
+    }
+
+    h2 {
+        margin: 10vw 0 0 10.4vw;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: .9;
+    }
 </style>
 
 <body>
-    <h1>About</h1>
+    <h1>ABOUT</h1>
+    <div class="underline"></div>
     <section id="about_intro">
 
     </section>
     <h2>Story</h2>
+    <div class="underline"></div>
     <section id="about_story">
     </section>
 
 
     <h2>Sustainability</h2>
+    <div class="underline"></div>
     <section id="about_sustainability">
     </section>
 
     <h2>Press</h2>
+    <div class="underline"></div>
     <section id="about_press">
         <template id="press_template">
 
@@ -113,6 +158,7 @@
 
 
     <h2>Exhibitions</h2>
+    <div class="underline"></div>
     <section id="about_exhibitions">
         <template id="exhibitions_template">
             <article>
@@ -124,6 +170,7 @@
 
 
     <h2>Curriculum Vitae</h2>
+    <div class="underline"></div>
     <section id="about_CV"></section>
 
     <script>
@@ -309,8 +356,5 @@
             document.querySelector("#about_CV").innerHTML = aboutCVData.content.rendered;
 
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
