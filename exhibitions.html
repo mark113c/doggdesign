@@ -7,10 +7,28 @@
     <title>Exhibitions</title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .h1_container {
+            top: 6vw;
+            left: 40vw;
+            position: relative;
+            width: 50vw;
+        }
+
+        .underline {
+            width: 60vw;
+            height: 1px;
+            background-color: black;
+            float: right;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Exhibitions</h1>
+    <div class="h1_container">
+        <h1>Exhibitions</h1>
+    </div>
     <div class="underline"></div>
     <section id="about_exhibitions">
         <template id="exhibitions_template">
@@ -51,8 +69,5 @@
                 listeElm.appendChild(klon);
             });
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
