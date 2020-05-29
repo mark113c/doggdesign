@@ -1,0 +1,104 @@
+/*----------------------------------------GENERELT----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2EF;
+}
+
+/*HEADER*/
+/*HEADER-SLUT*/
+
+/*FOOTER*/
+/*FOOTER-SLUT*/
+
+/*CALL-TO-ACTION-BUTTONS*/
+.cta {
+    border: 1px solid #000000;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-family: manropebold;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0 20px 0 20px;
+}
+
+button {
+    margin: auto;
+    display: block;
+    margin-bottom: 15vw;
+}
+
+/*CALL-TO-ACTION-BUTTONS-SLUT*/
+
+/*QUOTES*/
+.quote {
+    font-size: 1.4rem;
+    font-family: manropelight;
+    margin: 0 auto;
+    display: block;
+    max-width: 350px;
+}
+
+/*QUOTES-SLUT*/
+
+.sectionwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------------------------------GENERELT-SLUT----------------------------------------*/
+
+/*----------------------------------------FORSIDE----------------------------------------*/
+
+/*SPLASH-SECTION-FORSIDE*/
+
+#forside img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15vw;
+}
+
+#splash_forside img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15vw;
+}
+
+#splashimage_text {
+    font-size: 1rem;
+    font-family: manropelight;
+    text-align: center;
+}
+
+#splash_quote {
+    font-size: 1.4rem;
+    font-family: manropelight;
+    margin: 0 auto;
+    display: block;
+    max-width: 350px;
+}
+
+/*SPLASH-SECTION-FORSIDE-SLUT*/
+
+#forside h2 {
+    font-size: 1.5rem;
+    font-family: manropeextralight;
+    margin-bottom: 2vw;
+    margin-left: 4vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+#forside .sectionwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----------------------------------------FORSIDE-SLUT----------------------------------------*/
