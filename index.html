@@ -6,158 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forside</title>
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #F2F2EF;
-    }
-
-    .header {
-
-        justify-content: space-around;
-        font-family: manropebold;
-        display: flex;
-        text-transform: uppercase;
-        margin-bottom: 10vw;
-
-    }
 
 
-
-    img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 15vw;
-
-    }
-
-    .splash_image {
-
-        width: 90%;
-        float: right;
-    }
-
-    /*
-    .splash {
-        margin: 0;
-        text-align: right;
-    }
-
-    .splash h1 {
-
-        font-size: 3rem;
-        font-family: manropebold;
-        margin: 0;
-        line-height: 50px;
-    }
-*/
-
-    #undertekst {
-        font-size: 0.7rem;
-        text-align: end;
-        margin-top: 0;
-    }
-
-    .cta {
-        border: 0px solid #ffffff;
-
-
-        background-color: #EAEAE8;
-        box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.15);
-        font-size: 1rem;
-        font-family: manropebold;
-        /*        margin: 0 0 25vw 0;*/
-        letter-spacing: 1.5px;
-        line-height: 50px;
-        text-transform: uppercase;
-        padding: 0 20vw 0 20vw;
-    }
-
-    button {
-        margin: auto;
-        display: block;
-        margin-bottom: 15vw;
-    }
-
-    h2 {
-        font-size: 2rem;
-        font-family: manropeextralight;
-
-
-
-
-        margin-bottom: 2vw;
-        letter-spacing: 5px;
-        line-height: 30px;
-
-    }
-
-
-
-    .splash p {
-        /*        text-align: left;*/
-        font-size: 1.4rem;
-        font-family: manropelight;
-        margin: 0 auto;
-        display: block;
-        max-width: 350px;
-
-    }
-
-
-
-    p {}
-
-    .quote {
-        /*        text-align: left;*/
-        font-size: 1.4rem;
-        font-family: manropelight;
-        margin: 0 auto;
-        display: block;
-        max-width: 350px;
-
-    }
-
-
-
-
-
-
-
-    .sectionwrapper {
-        display: flex;
-        flex-direction: column;
-
-    }
 </style>
 
 <body>
 
-    <section class="header">
 
-        <div>Menu</div>
-        <div>Menu</div>
-        <div>Menu</div>
+    <section id="splash_forside">
 
-    </section>
+        <img id="splash_mobil" src="img/splash_mobil.svg" alt="dogg design">
+        <p id="splashimage_text">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>
 
-    <section class="splash">
-        <div class="splash_image">
-            <img src="img/Splash.svg" alt="dogg design">
-        </div>
+        <img src="img/hiti2%20(1).png" alt="dogg design hiti lamp">
         <!--
         <h1>DÖGG DESIGN</h1>
         <p id="undertekst">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>
 -->
-        <p>Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak.</p>
+        <p id="splash_quote">Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak. </p>
         <div class="button">
-            <button class="cta">SHOWROOM
+            <button class="cta" id="splash_cta">SHOWROOM
             </button>
         </div>
 
@@ -189,5 +60,8 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
