@@ -27,6 +27,13 @@
         text-align: end;
         font-size: 3rem;
         font-family: manropebold;
+        margin: 0;
+    }
+
+    #undertekst {
+        font-size: 0.7rem;
+        text-align: end;
+        margin-top: 0;
     }
 
     .cta {
@@ -46,15 +53,17 @@
         font-family: manroperegular;
         margin: 0 0 15vw;
         margin-left: 5vw;
-
-
     }
+
+
 
     .splash p {
         text-align: left;
         font-size: 1.4rem;
         font-family: manropelight;
     }
+
+
 
     p {}
 
@@ -108,17 +117,18 @@
     .sectionwrapper:nth-child(11) {
         justify-content: flex-end;
     }
-
 </style>
 
 <body>
 
     <section class="splash">
         <h1>DÖGG DESIGN</h1>
+        <p id="undertekst">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>
         <p>Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak.</p>
         <button class="cta">SHOWROOM
 
         </button>
+
     </section>
 
     <section id="forside">
@@ -147,8 +157,5 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
