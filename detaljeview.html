@@ -5,22 +5,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="fonts.css">
 </head>
 <style>
+    body {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
     main {
         50vw;
     }
 
     .carousel {
-        width: 80%;
+        width: 90%;
         padding: 0;
         margin-left: 20px;
     }
 
     .caro_imgs {
-        width: 25%;
-        padding: 3px;
+        width: 100%;
+
     }
 
     .container {
@@ -32,7 +40,7 @@
 
     .container section {
         scroll-snap-align: start;
-        min-width: 100%;
+
     }
 
     .carousel_inner {
@@ -57,53 +65,90 @@
     }
 
     .fwd img {
-        margin-left: 4px;
-        width: 1.2%;
+
+        width: 2%;
+        margin-left: 10px;
     }
 
     .bwd img {
+
+        width: 2%;
         margin-left: -22px;
-        width: 1.2%;
     }
 
+    .webshop_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+    }
+
+    .webshop_col {
+        flex-basis: 300px;
+        flex-grow: 1;
+        padding: 4vw;
+    }
+
+    #detaljeview_article h1 {
+        margin: 10vw 0 0 33vw;
+        text-align: start;
+        line-height: .9;
+        text-transform: uppercase;
+        font-family: manropebold;
+    }
+
+    .underline {
+        width: 55vw;
+        height: 1px;
+        background-color: black;
+        float: right;
+    }
 </style>
 
 <body>
     <section id="webshop_detaljeview">
         <article id="detaljeview_article">
-            <h1></h1>
-            <!--            <img src="">-->
-            <p class="long_description"></p>
-            <p class="price"></p>
-            <p class="measurements">Measurements <br></p>
-            <p class="materials">Materials <br></p>
-            <template>
+            <div class="webshop_wrapper">
+                <h1></h1>
+                <div class="underline"></div>
+                <div class="webshop_col">
 
-                <img class="caro_imgs" src="" alt="">
+                    <!--            <img src="">-->
+                    <p class="long_description"></p>
+                    <p class="price"></p>
+                    <p class="measurements">Measurements <br></p>
+                    <p class="materials">Materials <br></p>
+                </div>
+                <div class="webshop_col">
+                    <template>
 
-            </template>
+                        <img class="caro_imgs" src="" alt="">
+
+                    </template>
+                    <main id="webshop_carousel">
+
+                        <div class="carousel">
+                            <div class="carousel_inner">
+
+                                <div class="bwd">
+                                    <img src="img/tilbagepil.svg" alt="tilbagepil">
+                                </div>
+                                <div class="container">
+
+                                </div>
+                                <div class="fwd">
+                                    <img src="img/forwardpil.svg" alt="forwardpil">
+                                </div>
+                            </div>
+                            <div class="legend-container"></div>
+                        </div>
+
+                    </main>
+
+                </div>
+            </div>
         </article>
 
     </section>
-    <main id="webshop_carousel">
-
-        <div class="carousel">
-            <div class="carousel_inner">
-
-                <div class="bwd">
-                    <img src="img/tilbagepil.svg" alt="tilbagepil">
-                </div>
-                <div class="container">
-
-                </div>
-                <div class="fwd">
-                    <img src="img/forwardpil.svg" alt="forwardpil">
-                </div>
-            </div>
-            <div class="legend-container"></div>
-        </div>
-
-    </main>
 
     <script>
         //Detaljeview tekst indhold
@@ -118,7 +163,7 @@
         let karrusel;
         let numberOfPicsInCaro;
         let caroCurrentNum = 0;
-        const detaljeKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop" + id;
+        const detaljeKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop/" + id;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -138,6 +183,7 @@
 
             //Billedkarrusel
             const karruselResponse = await fetch(detaljeKarruselEndpoint);
+            console.log("BABAGANUSH" + karruselResponse);
             karrusel = await karruselResponse.json();
             visBilledkarrusel();
 
@@ -161,7 +207,7 @@
 
         function visBilledkarrusel() {
             numberOfPicsInCaro = karrusel.product_gallery.length;
-            console.log("product_gallery", karrusel.product_gallery);
+            //            console.log("product_gallery", karrusel.product_gallery);
             karrusel.product_gallery.forEach((product_gallery, index) => {
                 const theClone =
                     document.querySelector("template").cloneNode(true).content;
@@ -221,8 +267,5 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
