@@ -50,6 +50,29 @@
             text-align: center;
         }
 
+        .underline {
+            width: 60vw;
+            height: 1px;
+            background-color: black;
+            float: right;
+        }
+
+        h1 {
+            text-align: left;
+            line-height: .9;
+        }
+
+        .h1_container {
+            top: 6vw;
+            left: 40vw;
+            position: relative;
+            width: 50vw;
+        }
+
+        button {
+            text-decoration: underline;
+        }
+
 
 
         /*
@@ -64,8 +87,19 @@
 </head>
 
 <body>
-    <h1>Webshop</h1>
-    <div class="underline"></div>
+    <div class="h1_container">
+        <h1>WEBSHOP</h1>
+    </div>
+    <div class="underline">
+    </div>
+
+    <div class="filter-menu">
+        <button id="all" class="filter valgt" data-kategori="all">ALL</button>
+        <button class="filter " data-kategori="tables">TABLES</button>
+        <button class="filter " data-kategori="chairs">CHAIRS</button>
+        <button class="filter " data-kategori="lamps">LAMPS</button>
+        <button class="filter " data-kategori="home_decor">HOME DECOR</button>
+    </div>
     <section id="webshop">
         <template id="webshop_template">
             <article>
