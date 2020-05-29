@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="fonts.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #F2F2EF;
+        }
+
+        #webshop {
+            background-color: #F2F2EF;
+            padding: 15vw;
+        }
+
+        h2,
+        p,
+        h1 {
+            font-family: manropebold;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #webshop h2,
+        p {
+            margin-top: 1vw;
+            margin-bottom: 2vw;
+        }
+
+
+        #webshop img {
+            width: 100%;
+        }
+
+        #webshop article {
+            margin: 12vw 3vw 0 2vw;
+        }
+
+        #webshop article .price {
+            text-align: center;
+        }
+
+        #webshop article h2 {
+            text-align: center;
+        }
+
+        .underline {
+            width: 60vw;
+            height: 1px;
+            background-color: black;
+            float: right;
+        }
+
+        h1 {
+            text-align: left;
+            line-height: .9;
+        }
+
+        .h1_container {
+            top: 6vw;
+            left: 40vw;
+            position: relative;
+            width: 50vw;
+        }
+
+        button {
+            background: none;
+            border: none;
+            transition: 1s ease;
+        }
+
+        .filter-menu {
+            display: flex;
+            margin-top: 10vw;
+            overflow: scroll;
+        }
+
+        .valgt {
+            animation-name: line_kf;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+
+        @keyframes line_kf {
+            0% {
+                transform: scaleX(0);
+            }
+
+            100% {
+                transform: scaleX(1);
+            }
+
+        }
+
+        .line {
+            border-style: solid;
+            transform: scalex(0)
+        }
+
+
+
+        /*
+        #webshop article .col {
+            display: grid;
+            grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+*/
+    </style>
+</head>
+
+<body>
+    <div class="h1_container">
+        <h1>SHOWROOM</h1>
+    </div>
+    <div class="underline">
+    </div>
+
+    <div class="filter-menu">
+        <button id="all" class="filter valgt" data-kategori="all">HITI
+            <hr class="line">
+        </button>
+
+        <a href="" <button>VAGN
+            <hr class="line"></button>
+            <button>FIFTY
+                <hr class="line">
+            </button>
+
+            <button>ENERGIA
+                <hr class="line">
+            </button>
+            <button>RE-SIT
+                <hr class="line">
+            </button>
+            <button>WING
+                <hr class="line">
+            </button>
+            <button>ROCKY TRÉ
+                <hr class="line">
+            </button>
+            <button>DIAMOND LAMP
+                <hr class="line">
+            </button>
+            <button>ROCKY TRÉ
+                <hr class="line">
+            </button>
+
+    </div>
+
+    <script>
+        let webshopData = [];
+        const webshopEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop?per_page=100";
+        let webshopTemplate = document.querySelector("#webshop_template");
+        const listeElm = document.querySelector("#webshop");
+        let filter = "alle";
+        const container = document.querySelector("#webshop");
+
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            hentData();
+            addEvenlistenersToAllButtons();
+
+        }
+
+        async function hentData() {
+            const webshopResponse = await fetch(webshopEndpoint);
+            console.log(webshopResponse);
+            webshopData = await webshopResponse.json();
+            visWebshop();
+
+        }
+
+        function visWebshop() {
+            console.log(webshopData);
+            container.innerHTML = "";
+            webshopData.forEach(elm => {
+                if (filter == "alle" || filter == elm.wf_webshop_folders) {
+                    const klon = webshopTemplate.cloneNode(true).content;
+                    klon.querySelector("h2").innerHTML = elm.product_name;
+                    klon.querySelector("img").src = elm.product_image.guid;
+
+                    klon.querySelector(".price").innerHTML = elm.price;
+                    klon.querySelector("article").addEventListener("click", () => {
+
+                        location.href = "detaljeview.html?id=" + elm.id;
+                    });
+
+
+                    listeElm.appendChild(klon);
+                }
+            });
+
+        }
+
+        function addEvenlistenersToAllButtons() {
+
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+
+            //    this.classList.add("valgt");
+            document.querySelector(".line").classList.add("valgt");
+            visWebshop();
+        }
+    </script>
+</body></html>

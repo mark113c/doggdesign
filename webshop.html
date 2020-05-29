@@ -79,6 +79,7 @@
             margin-top: 10vw;
         }
 
+        /*
         .valgt {
             animation-name: line_kf;
             animation-duration: 0.5s;
@@ -96,11 +97,19 @@
             }
 
         }
+*/
 
+        .valgt {
+            text-decoration: underline;
+            border: none;
+        }
+
+        /*
         .line {
             border-style: solid;
             transform: scalex(0)
         }
+*/
 
 
 
@@ -123,20 +132,20 @@
 
     <div class="filter-menu">
         <button id="all" class="filter valgt" data-kategori="all">ALL
-            <hr class="line">
+
         </button>
 
         <button class="filter" data-kategori="13">TABLES
-            <hr class="line"></button>
+        </button>
         <button class="filter" data-kategori="14">CHAIRS
-            <hr class="line">
+
         </button>
 
         <button class="filter" data-kategori="15">LAMPS
-            <hr class="line">
+
         </button>
         <button class="filter" data-kategori="16">HOME DECOR
-            <hr class="line">
+
         </button>
 
     </div>
@@ -211,8 +220,8 @@
                 elm.classList.remove("valgt");
             })
 
-            //    this.classList.add("valgt");
-            document.querySelector(".line").classList.add("valgt");
+            this.classList.add("valgt");
+
             visWebshop();
         }
     </script>

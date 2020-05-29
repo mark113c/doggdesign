@@ -9,8 +9,92 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    footer {
+        text-align: center;
+    }
+
+    .footer_top,
+    .footer_mid,
+    .footer_bot {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .footer_top {
+        margin-top: 25px;
+    }
+
+    .footer_top a:nth-child(1) {
+        margin-right: 12.5px;
+    }
+
+    .footer_top a:nth-child(2) {
+        margin-left: 12.5px;
+    }
+
+    footer {
+        text-decoration: none;
+        color: black;
+        font-family: manroperegular;
+
+    }
+
+    footer a {
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 25px;
+    }
+
+    .footer {
+        /*        border-top: 1px solid black;*/
+
+    }
+
+    .icons div {
+        margin: 0 10px 0 10px;
+    }
+
+    .face {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+    }
+
+    .insta {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+    }
+
+    .li {
+        width: 30px;
+        height: 30px;
+        background-color: black;
+    }
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        margin-top: 20px;
 
 
+    }
+
+    .text p:nth-child(1) {
+        text-align: left;
+    }
+
+    .text p:nth-child(2) {
+        text-align: right;
+    }
 </style>
 
 <body>
@@ -38,6 +122,42 @@
 
     </section>
 
+    <footer>
+        <div class="footer_top">
+            <a href="">SHIPPING</a>
+
+            <a href="">RETAILERS</a>
+        </div>
+        <div class="footer_mid">
+            <a href="">RETURN POLICY</a>
+        </div>
+        <div class="footer_bot">
+            <a href="">TERMS AND CONDITIONS</a></div>
+
+        <div class="footer">
+            <div class="icons">
+                <div class="face"></div>
+                <div class="insta"></div>
+                <div class="li"></div>
+            </div>
+
+            <div class="text">
+                <p>Dögg Design <br>
+                    Margretheholmsvej 12, 5. th <br>
+                    1432 Copenhagen K</p>
+                <p>
+                    Dögg Gudmundsdóttir <br>
+                    (+45) 26 17 09 05 <br>
+                    dogg@doggdesign.com
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
     <script>
         let forsideData;
         const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/13";
@@ -60,8 +180,5 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
