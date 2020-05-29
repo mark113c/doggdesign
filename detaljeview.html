@@ -80,6 +80,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row-reverse;
+        margin-right: 0;
     }
 
     .webshop_col {
@@ -89,7 +90,7 @@
     }
 
     #detaljeview_article h1 {
-        margin: 10vw 0 0 33vw;
+
         text-align: start;
         line-height: .9;
         text-transform: uppercase;
@@ -97,19 +98,34 @@
     }
 
     .underline {
-        width: 55vw;
+        width: 60vw;
         height: 1px;
         background-color: black;
+        position: absolute;
+        top: 15vw;
+        right: 0vw;
         float: right;
     }
+
+    .h1_container {
+        position: relative;
+        width: 50vw;
+        top: 6vw;
+        left: 40vw;
+    }
+
 </style>
 
 <body>
     <section id="webshop_detaljeview">
+
         <article id="detaljeview_article">
-            <div class="webshop_wrapper">
+            <div class="h1_container">
                 <h1></h1>
-                <div class="underline"></div>
+            </div>
+            <div class="underline"></div>
+            <div class="webshop_wrapper">
+
                 <div class="webshop_col">
 
                     <!--            <img src="">-->
@@ -267,5 +283,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
