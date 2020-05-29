@@ -70,7 +70,36 @@
         }
 
         button {
-            text-decoration: underline;
+            background: none;
+            border: none;
+            transition: 1s ease;
+        }
+
+        .filter-menu {
+            margin-top: 10vw;
+        }
+
+        .valgt {
+            animation-name: line_kf;
+            animation-duration: 0.5s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+
+        @keyframes line_kf {
+            0% {
+                transform: scaleX(0);
+            }
+
+            100% {
+                transform: scaleX(1);
+            }
+
+        }
+
+        .line {
+            border-style: solid;
+            transform: scalex(0)
         }
 
 
@@ -82,7 +111,6 @@
             grid-gap: 20px;
         }
 */
-
     </style>
 </head>
 
@@ -94,11 +122,23 @@
     </div>
 
     <div class="filter-menu">
-        <button id="all" class="filter valgt" data-kategori="all">ALL</button>
-        <button class="filter " data-kategori="tables">TABLES</button>
-        <button class="filter " data-kategori="chairs">CHAIRS</button>
-        <button class="filter " data-kategori="lamps">LAMPS</button>
-        <button class="filter " data-kategori="home_decor">HOME DECOR</button>
+        <button id="all" class="filter valgt" data-kategori="all">ALL
+            <hr class="line">
+        </button>
+
+        <button class="filter" data-kategori="13">TABLES
+            <hr class="line"></button>
+        <button class="filter" data-kategori="14">CHAIRS
+            <hr class="line">
+        </button>
+
+        <button class="filter" data-kategori="15">LAMPS
+            <hr class="line">
+        </button>
+        <button class="filter" data-kategori="16">HOME DECOR
+            <hr class="line">
+        </button>
+
     </div>
     <section id="webshop">
         <template id="webshop_template">
@@ -113,14 +153,17 @@
     </section>
     <script>
         let webshopData = [];
-        const webshopEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop";
+        const webshopEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop?per_page=100";
         let webshopTemplate = document.querySelector("#webshop_template");
         const listeElm = document.querySelector("#webshop");
+        let filter = "alle";
+        const container = document.querySelector("#webshop");
 
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentData();
+            addEvenlistenersToAllButtons();
 
         }
 
@@ -134,23 +177,43 @@
 
         function visWebshop() {
             console.log(webshopData);
+            container.innerHTML = "";
             webshopData.forEach(elm => {
-                const klon = webshopTemplate.cloneNode(true).content;
-                klon.querySelector("h2").innerHTML = elm.product_name;
-                klon.querySelector("img").src = elm.product_image.guid;
+                if (filter == "alle" || filter == elm.wf_webshop_folders) {
+                    const klon = webshopTemplate.cloneNode(true).content;
+                    klon.querySelector("h2").innerHTML = elm.product_name;
+                    klon.querySelector("img").src = elm.product_image.guid;
 
-                klon.querySelector(".price").innerHTML = elm.price;
-                klon.querySelector("article").addEventListener("click", () => {
+                    klon.querySelector(".price").innerHTML = elm.price;
+                    klon.querySelector("article").addEventListener("click", () => {
 
-                    location.href = "detaljeview.html?id=" + elm.id;
-                });
+                        location.href = "detaljeview.html?id=" + elm.id;
+                    });
 
 
-                listeElm.appendChild(klon);
+                    listeElm.appendChild(klon);
+                }
             });
+
         }
 
-    </script>
-</body>
+        function addEvenlistenersToAllButtons() {
 
-</html>
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+
+            })
+        }
+
+        function filtrering() {
+            filter = this.dataset.kategori;
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.classList.remove("valgt");
+            })
+
+            //    this.classList.add("valgt");
+            document.querySelector(".line").classList.add("valgt");
+            visWebshop();
+        }
+    </script>
+</body></html>
