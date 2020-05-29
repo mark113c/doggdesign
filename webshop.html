@@ -72,18 +72,19 @@
         button {
             background: none;
             border: none;
-            transition: 1s ease;
+
         }
 
         .filter-menu {
             margin-top: 10vw;
         }
 
-        .valgt {
+        .line1 {
             animation-name: line_kf;
             animation-duration: 0.5s;
             animation-iteration-count: 1;
             animation-timing-function: linear;
+
         }
 
         @keyframes line_kf {
@@ -97,11 +98,15 @@
 
         }
 
+
         .line {
             border-style: solid;
-            transform: scalex(0)
+
         }
 
+        .hide {
+            display: none;
+        }
 
 
         /*
@@ -122,21 +127,21 @@
     </div>
 
     <div class="filter-menu">
-        <button id="all" class="filter valgt" data-kategori="all">ALL
+        <button id="all" class="filter valgt" data-kategori="alle">ALL
             <hr class="line">
         </button>
 
         <button class="filter" data-kategori="13">TABLES
-            <hr class="line"></button>
-        <button class="filter" data-kategori="14">CHAIRS
-            <hr class="line">
+            <hr id="line" class="hide"></button>
+        <button class="filter hide" data-kategori="14">CHAIRS
+            <hr class="line ">
         </button>
 
         <button class="filter" data-kategori="15">LAMPS
-            <hr class="line">
+            <hr class="line hide">
         </button>
         <button class="filter" data-kategori="16">HOME DECOR
-            <hr class="line">
+            <hr class="line hide">
         </button>
 
     </div>
@@ -211,8 +216,8 @@
                 elm.classList.remove("valgt");
             })
 
-            //    this.classList.add("valgt");
-            document.querySelector(".line").classList.add("valgt");
+            document.querySelector("#line").classList.toggle("hide");
+
             visWebshop();
         }
     </script>
