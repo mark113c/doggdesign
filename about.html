@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
 </head>
 <style>
@@ -13,12 +13,6 @@
         margin: 0;
     }
 
-    h1,
-    p,
-    a,
-    h2 {
-        font-family: manropebold;
-    }
 
     .quote p {
         font-family: manropelight;
@@ -110,27 +104,62 @@
 </style>
 
 <body>
-    <h1>ABOUT</h1>
-    <div class="underline"></div>
-    <section id="about_intro">
 
-    </section>
-    <h2>Story</h2>
-    <div class="underline"></div>
-    <section id="about_story">
-    </section>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="img/dogg_logo.png" alt="Dogg logo">
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
 
 
-    <h2>Sustainability</h2>
-    <div class="underline"></div>
-    <section id="about_sustainability">
-    </section>
+            <ul class="nav" id="nav">
+                <li><a href="">WEBSHOP</a></li>
+                <li><a href="">SHOWROOM</a></li>
+                <li><a href="">EXHIBTIONS</a></li>
+                <li><a href="">PRESS</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
+
+    <div class="content_wrapper">
+        <h1>ABOUT</h1>
+        <div class="underline"></div>
+        <section id="about_intro">
+
+        </section>
+        <h2>Story</h2>
+        <div class="underline"></div>
+        <section id="about_story">
+        </section>
+
+
+        <h2>Sustainability</h2>
+        <div class="underline"></div>
+        <section id="about_sustainability">
+        </section>
 
 
 
-    <h2>Curriculum Vitae</h2>
-    <div class="underline"></div>
-    <section id="about_CV"></section>
+        <h2>Curriculum Vitae</h2>
+        <div class="underline"></div>
+        <section id="about_CV"></section>
+    </div>
+
+    <script src="script.js"></script>
 
     <script>
         //ABOUT INTRO (sektion 1)

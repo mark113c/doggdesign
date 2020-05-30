@@ -36,17 +36,51 @@
 </head>
 
 <body>
-    <div class="h1_container">
-        <h1>CONTACT</h1>
+
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="img/dogg_logo.png" alt="Dogg logo">
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="">WEBSHOP</a></li>
+                <li><a href="">SHOWROOM</a></li>
+                <li><a href="">EXHIBTIONS</a></li>
+                <li><a href="">PRESS</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU START    -->
+
+    <div class="content_wrapper">
+        <div class="h1_container">
+            <h1>CONTACT</h1>
+        </div>
+
+        <div class="underline">
+        </div>
+        <div class="underline"></div>
+        <section id="contact">
+
+        </section>
     </div>
 
-    <div class="underline">
-    </div>
-    <div class="underline"></div>
-    <section id="contact">
-
-    </section>
-
+    <script src="script.js"></script>
     <script>
         let contactData;
         const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/74";
@@ -70,4 +104,6 @@
             document.querySelector("#contact").innerHTML = contactData.content.rendered;
         }
     </script>
+
+
 </body></html>
