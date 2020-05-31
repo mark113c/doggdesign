@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
     <style>
         body {
@@ -13,22 +14,19 @@
         }
 
         #webshop {
-            background-color: #F2F2EF;
+
             padding: 15vw;
         }
 
-        h2,
-        p,
-        h1 {
-            font-family: manropebold;
-        }
 
-        h1 {
+        #webshop h1,
+        #webshop h2,
+        #webshop price {
             text-align: center;
         }
 
         #webshop h2,
-        p {
+        #webshop p {
             margin-top: 1vw;
             margin-bottom: 2vw;
         }
@@ -42,13 +40,6 @@
             margin: 12vw 3vw 0 2vw;
         }
 
-        #webshop article .price {
-            text-align: center;
-        }
-
-        #webshop article h2 {
-            text-align: center;
-        }
 
         .underline {
             width: 60vw;
@@ -69,53 +60,30 @@
             width: 50vw;
         }
 
-        button {
+        .filter-menu button {
             background: none;
-            border: none;
 
+
+            /*            transition: 1s ease;*/
+        }
+
+        .valgt {
+
+            text-decoration: underline;
         }
 
         .filter-menu {
             margin-top: 10vw;
-        }
+            display: flex;
 
-        .line1 {
-            animation-name: line_kf;
-            animation-duration: 0.5s;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
 
         }
 
-        @keyframes line_kf {
-            0% {
-                transform: scaleX(0);
-            }
-
-            100% {
-                transform: scaleX(1);
-            }
-
+        .filter-menu p {
+            margin-left: 1.7vw;
+            margin-right: 1.7vw;
         }
 
-
-        .line {
-            border-style: solid;
-
-        }
-
-        .hide {
-            display: none;
-        }
-
-
-        /*
-        #webshop article .col {
-            display: grid;
-            grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-*/
     </style>
 </head>
 
@@ -127,22 +95,28 @@
     </div>
 
     <div class="filter-menu">
-        <button id="all" class="filter valgt" data-kategori="alle">ALL
-            <hr class="line">
-        </button>
+        <div id="all" class="filter valgt" data-kategori="alle">
+            <p>ALL</p>
 
-        <button class="filter" data-kategori="13">TABLES
-            <hr id="line" class="hide"></button>
-        <button class="filter hide" data-kategori="14">CHAIRS
-            <hr class="line ">
-        </button>
+        </div>
+        <div class="line"></div>
 
-        <button class="filter" data-kategori="15">LAMPS
-            <hr class="line hide">
-        </button>
-        <button class="filter" data-kategori="16">HOME DECOR
-            <hr class="line hide">
-        </button>
+        <div class="filter" data-kategori="13">
+            <p>TABLES</p>
+        </div>
+        <div class="filter" data-kategori="14">
+            <p>CHAIRS</p>
+
+        </div>
+
+        <div class="filter" data-kategori="15">
+            <p>LAMPS</p>
+
+        </div>
+        <div class="filter" data-kategori="16">
+            <p>HOME DECOR</p>
+
+        </div>
 
     </div>
     <section id="webshop">
@@ -216,9 +190,12 @@
                 elm.classList.remove("valgt");
             })
 
-            document.querySelector("#line").classList.toggle("hide");
+            this.classList.add("valgt");
 
             visWebshop();
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
