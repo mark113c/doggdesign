@@ -21,7 +21,7 @@
 
         #webshop h1,
         #webshop h2,
-        #webshop price {
+        #webshop .price {
             text-align: center;
         }
 
@@ -83,11 +83,39 @@
             margin-left: 1.7vw;
             margin-right: 1.7vw;
         }
-
     </style>
 </head>
 
 <body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
     <div class="h1_container">
         <h1>WEBSHOP</h1>
     </div>
@@ -130,6 +158,7 @@
             </article>
         </template>
     </section>
+    <script src="script.js"></script>
     <script>
         let webshopData = [];
         const webshopEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop?per_page=100";
@@ -194,8 +223,5 @@
 
             visWebshop();
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

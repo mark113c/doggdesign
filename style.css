@@ -290,6 +290,7 @@ main {
     font-size: 1rem;
     font-family: manropelight;
     text-align: center;
+
 }
 
 #splash_quote {
@@ -298,6 +299,10 @@ main {
     margin: 0 auto;
     display: block;
     max-width: 350px;
+}
+
+#splash_mobil {
+    margin-top: 40vw;
 }
 
 /*SPLASH-SECTION-FORSIDE-SLUT*/
