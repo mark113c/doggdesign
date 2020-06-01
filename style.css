@@ -14,12 +14,40 @@ img {
     width: 100%;
 }
 
-#about {
-    padding-top: 19vw;
+#about p:nth-child(1) {
+    padding-top: 30vw;
 }
 
 
+/* STYLING AF HEADERE START  */
 
+.h1_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 200px;
+}
+
+.underline {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+.h2_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 50px;
+}
+
+.underline2 {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+/* STYLING AF HEADERE SLUT  */
 /*
 section {
     margin-top: 10vw;
@@ -171,10 +199,6 @@ button {
 
 /*QUOTES-SLUT*/
 
-.sectionwrapper {
-    display: flex;
-    flex-direction: column;
-}
 
 /*FONT STYLING START*/
 h1 {
@@ -182,6 +206,7 @@ h1 {
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
+    margin: 0;
 }
 
 h2 {
@@ -189,6 +214,7 @@ h2 {
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
+    margin: 0;
 }
 
 h3 {
@@ -218,31 +244,38 @@ a {
     height: 1px;
     background-color: black;
     float: right;
+    position: relative;
+    top: 24vw;
+    right: 0vw;
 }
 
 .underline2 {
-    width: 50vw;
+    width: 55vw;
     height: 1px;
     background-color: black;
+    position: relative;
+    top: 6vw;
+    right: 0vw;
     float: right;
+
 }
 
 /*UNDERLINE TIL OVERSKRIFTER SLUT*/
 
 .h1_container {
-    top: 6vw;
-    left: 40vw;
+    top: 23.8vw;
+    left: 39.5vw;
     position: relative;
     width: 50vw;
-    line-height: 1.4;
+    line-height: .8;
 }
 
 .h2_container {
-    top: 6vw;
-    left: 40vw;
+    top: 5.5vw;
+    left: 45vw;
     position: relative;
     width: 50vw;
-    line-height: 1.4;
+    line-height: .68;
 }
 
 /*BILLEDEKARRUSELLER START*/
@@ -317,7 +350,7 @@ main {
 #forside img {
     width: 100%;
     height: 100%;
-    margin-bottom: 15vw;
+
 }
 
 #splash_forside img {
@@ -358,10 +391,7 @@ main {
     line-height: 30px;
 }
 
-#forside .sectionwrapper {
-    display: flex;
-    flex-direction: column;
-}
+
 
 
 /*----------------------------------------FORSIDE-SLUT----------------------------------------*/
@@ -375,24 +405,9 @@ main {
 
 /*Overskrift og underline start*/
 
-#detaljeview_article .h1_container {
-    position: relative;
-    width: 50vw;
-    top: 2.8vw;
-    left: 39.8vw;
-    text-align: start;
-    line-height: .9;
-}
 
-#detaljeview_article .underline {
-    width: 60vw;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    top: 15vw;
-    right: 0vw;
-    float: right;
-}
+
+
 
 /*Overskrift og underline slut*/
 
@@ -400,7 +415,7 @@ main {
     display: flex;
     flex-wrap: wrap;
 
-    margin-right: 0;
+    margin-top: 30vw;
 }
 
 .detaljeview_col {
@@ -416,13 +431,13 @@ main {
 /*----------------------------------------SHOWROOM-START----------------------------------------*/
 
 
-#showroom .showroom_h1 {
-    padding-top: 15vw;
-}
+
 
 #showroom .h2_container {
     margin-top: 20vw;
-    left: 50vw;
+    left: 44.7vw;
+
+
 }
 
 #showroom p {
@@ -431,7 +446,7 @@ main {
 
 #showroom .filter-menu {
 
-    margin-top: 10vw;
+    margin-top: 30vw;
     display: flex;
     justify-content: center;
 
@@ -450,9 +465,7 @@ main {
 
 
 
-#about .h2_container {
-    left: 40vw;
-}
+
 
 #about_sustainability .underline {
     width: 65%;
@@ -478,12 +491,10 @@ main {
 
 #exhibitions h3 {
     padding-left: 4vw;
-    padding-top: 10vw;
+    padding-top: 30vw;
 }
 
-.content_wrapper {
-    margin-top: 20vw;
-}
+
 
 /*----------------------------------------EXHIBITIONS-SLUT----------------------------------------*/
 
@@ -511,11 +522,25 @@ main {
 }
 
 #press {
-    padding: 10vw 10vw 3vw 10vw;
+    padding: 30vw 10vw 3vw 10vw;
 }
 
 
 /*----------------------------------------PRESS-SLUT----------------------------------------*/
+
+/*----------------------------------------CONTACT-START----------------------------------------*/
+#contact p:nth-child(1) {
+    padding-top: 30vw;
+
+}
+
+#contact p {
+    padding-left: 4vw;
+}
+
+
+
+/*----------------------------------------CONTACT-SLUT----------------------------------------*/
 
 /*----------------------------------------FOOTERPAGES-START----------------------------------------*/
 /*TERMS AND CONDITIONS START*/
@@ -654,33 +679,68 @@ ul {
 
     /*----------------------------------------IPAD GENERALT-SLUT----------------------------------------*/
 
+    /*----------------------------------------IPAD FORSIDE-START----------------------------------------*/
+    .quote p {
+        font-size: 2rem;
+
+    }
+
+    .cta {
+        border: 1px solid #000000;
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-family: manropebold;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding: 15px 20px 15px 20px;
+
+
+    }
+
+    #forside {
+
+
+        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+
+
+    }
+
+
+    /*----------------------------------------IPAD FORSIDE-SLUT----------------------------------------*/
+
     /*----------------------------------------IPAD WEBSHOP-START----------------------------------------*/
 
 
     /*----------------------------------------IPAD WEBSHOP-SLUT----------------------------------------*/
     /*----------------------------------------SHOWROOM-START----------------------------------------*/
 
-    #showroom .h2_container {
-        top: 5vw;
-        margin-top: 10vw;
-    }
+
 
 
     /*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD ABOUT-START----------------------------------------*/
 
-    #about .h1_container {
-        top: 5vw;
+    #about_intro .quote {
+        padding-top: 30vw;
     }
 
-    .contact .h1_container {
-        top: 5vw;
+    #about p:nth-child(1) {
+        padding-top: 0vw;
     }
+
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
+
+    #contact p:nth-child(1) {
+        padding-top: 20vw;
+
+    }
+
+
 
     /*----------------------------------------IPAD CONTACT-SLUT----------------------------------------*/
 
@@ -718,26 +778,7 @@ ul {
 
 
     /*----------------------------------------IPAD FOOTERPAGES-SLUT----------------------------------------*/
-    /*----------------------------------------IPAD FORSIDE START----------------------------------------*/
-    .quote p {
-        font-size: 2rem;
 
-    }
-
-    .cta {
-        border: 1px solid #000000;
-        background-color: transparent;
-        font-size: 1.5rem;
-        font-family: manropebold;
-        letter-spacing: 1.5px;
-        line-height: 50px;
-        text-transform: uppercase;
-        padding: 15px 20px 15px 20px;
-
-
-    }
-
-    /*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD-SLUT----------------------------------------*/
 
