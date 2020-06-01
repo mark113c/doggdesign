@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-custom_1">
+      <rect width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="custom_1" data-name="custom – 1" clip-path="url(#clip-custom_1)">
+    <image id="icons8-shopping-bag-96" width="39" height="39" transform="translate(3 4)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAADj0lEQVR4nO2dQU8TQRTHf9QGYkGIHIwnDRcDH4IYTupZwydQ9JuYcCPoB9BPoMaoR4PEeCNBE69GRILBgxijolYPbaNC33Z3ZnbfbOf9krm0nfdm5r/z3sxOtwXDMAzDMIwUGdFuQAFmgAvAPDAHnAEmu+/tA2+B18Az4AnwpvomDh8NYJHOoLaB3zlLG1gDrnRtGA4sAK/IP+hSeQmcr7jttWYMWKXYFZ9nRqwAoxX2o5ZMA88JN/CHyzpwsrLe1IxpYJPyBr9XNru+jH8YI9+VvwXcAi4Cs8B4t8wCl7rvbeWws46Fo/9YJXvAtoFrwLEctprAEvB+gM2VoD2oMQtkJ9wHwAkHu5PAwwy7bWx1RIPspeYqfuv4BnA7w/6mp/3as4g8OI/JF3IG0aAziyQ/lwP4qC1ryDHfJexITCHnhKcB/dSKGeTYf7UEf9cFX23gbAn+oucG8lIzROg5TBN4J/hcKsFfLjQT0Lzw+j3gVwn+fgL3C7aldDQFmBNef1SiT8m21JahZo/+4eBciT5nBZ8fSvQZLd/pPxgTJfqcEHx+K9FnqYwCy8AOxW+K1b3sdPuuek9pGf2B0C7LPgPoeya8C5zytFF3doHTrpV9BGgBXzzqDxMt4KtLRZ9l6OTgjySD81iYAGGISoANOqFtUJHIU9en+PjdEOpOZdjNxEcAyeknD5uxsy+8HtUMkBo5DJgAypgAykQlgJQDUhRAJQlLR4afPWzGjtQ35+NTC0HFkFZ4UeWAFJehUe0DhnkGRJWEUwxBJoAywQVoulbMcJpXAK3n03z8RjUDLAf8xTkJ+3BA/yO64xqNqYgW/ft8kGxDFAh64bmGoBQTcI+geSC0AMO8CesRtQApzwCnROwqQIoroB42A5QxAZQxAZSJQgDLAUepNAlLJ0ApC+B0KmYhqDhRhCAT4Ci2D6gImwHKmADKmADKRCFAyjlAuuNb6amYdCjRqrIRSoyjfBglnYb9qKoByozQ6WuQUzGXEJRy/IfOQEvfES2cB0wAN4IlYhPAjWC7YRcBUl4B9bAZoIwJoIwJoEywBzVC5oAUvhPUQzUJp/hs2GGCPStmIcgNywHK2D5AGZsBypgAygRbhro8IyY5eeFga9hQ3QcYFSXhMn9Yte5Usg/46FAnFfaKVnAR4I5DnVS4W4WTUeAmnX+50P7V2ljKdndM7K+xDMMwDMMwDMMwDMMwDJE/4kZbLiqd818AAAAASUVORK5CYII="/>
+  </g>
+</svg>
