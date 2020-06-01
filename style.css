@@ -160,11 +160,12 @@ button {
 
 /*QUOTES*/
 .quote {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-family: manropelight;
-    margin: 0 auto;
-    display: block;
-    max-width: 350px;
+    margin: 0;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    max-width: 1200px;
 }
 
 /*QUOTES-SLUT*/
@@ -445,14 +446,6 @@ main {
 
 
 
-#about .quote p {
-    font-family: manropelight;
-    max-width: 350px;
-    font-size: 1.4rem;
-    display: block;
-    margin: 0 auto;
-    padding-top: 10vw;
-}
 
 #about .h2_container {
     left: 40vw;
@@ -725,5 +718,13 @@ ul {
 
 
 }
+
+/*----------------------------------------IPAD FORSIDE START----------------------------------------*/
+.quote {
+    font-size: 2rem;
+
+}
+
+/*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
 
 /*----------------------------------------IPAD-SLUT----------------------------------------*/
