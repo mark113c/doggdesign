@@ -8,22 +8,7 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        .h1_container {
-            top: 6vw;
-            left: 40vw;
-            position: relative;
-            width: 50vw;
-            z-index: -1;
-        }
 
-        .underline {
-            width: 60vw;
-            height: 1px;
-            background-color: black;
-            float: right;
-        }
-    </style>
 </head>
 
 <body>
@@ -32,7 +17,7 @@
         <nav>
             <div class="header-wrapper">
                 <div class="logo">
-                    <img src="img/dogg_logo.png" alt="Dogg logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
                 </div>
 
                 <div id="burger" onclick="onClickMenu()">
@@ -44,12 +29,12 @@
 
 
             <ul class="nav" id="nav">
-                <li><a href="">WEBSHOP</a></li>
-                <li><a href="">SHOWROOM</a></li>
-                <li><a href="">EXHIBTIONS</a></li>
-                <li><a href="">PRESS</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBTIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
 
         </nav>
@@ -61,7 +46,7 @@
             <h1>Exhibitions</h1>
         </div>
         <div class="underline"></div>
-        <section id="about_exhibitions">
+        <section id="exhibitions">
             <template id="exhibitions_template">
                 <article>
                     <h3></h3>
@@ -74,10 +59,10 @@
     <script src="script.js"></script>
 
     <script>
-        let aboutExhibitionsData = [];
-        const aboutExhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
+        let exhibitionsData = [];
+        const exhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
         let exhibitionsTemplate = document.querySelector("#exhibitions_template");
-        const listeElm = document.querySelector("#about_exhibitions");
+        const listeElm = document.querySelector("#exhibitions");
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -86,16 +71,16 @@
         }
 
         async function hentData() {
-            const aboutExhibitionsResponse = await fetch(aboutExhibitionsEndpoint);
-            console.log(aboutExhibitionsResponse);
-            aboutExhibitionsData = await aboutExhibitionsResponse.json();
-            visAboutExhibitions();
+            const exhibitionsResponse = await fetch(exhibitionsEndpoint);
+            console.log(exhibitionsResponse);
+            exhibitionsData = await exhibitionsResponse.json();
+            visExhibitions();
 
         }
 
-        function visAboutExhibitions() {
-            console.log(aboutExhibitionsData);
-            aboutExhibitionsData.forEach(elm => {
+        function visExhibitions() {
+            console.log(exhibitionsData);
+            exhibitionsData.forEach(elm => {
                 const klon = exhibitionsTemplate.cloneNode(true).content;
                 klon.querySelector("h3").innerHTML = elm.year;
                 klon.querySelector("p").innerHTML = elm.exhibitions;
@@ -103,5 +88,8 @@
                 listeElm.appendChild(klon);
             });
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

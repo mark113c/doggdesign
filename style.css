@@ -14,9 +14,11 @@ img {
     width: 100%;
 }
 
-.content_wrapper {
-    padding-top: 19vw
+#about {
+    padding-top: 19vw;
 }
+
+
 
 /*
 section {
@@ -38,6 +40,10 @@ h1 {
 header {
     position: fixed;
     width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
 }
 
 .header-wrapper {
@@ -46,6 +52,9 @@ header {
     justify-content: space-between;
     background-color: #F2F2EF;
     width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
 
 }
 
@@ -121,10 +130,7 @@ header {
 }
 
 
-.h1_container {
 
-    z-index: -1;
-}
 
 /*BURGERMENU*/
 
@@ -177,7 +183,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -199,14 +205,47 @@ a {
     font-size: 1.2rem;
     font-family: manropebold;
     text-transform: uppercase;
+    color: black;
 
 }
 
 /*FONT STYLING SLUT*/
+/*UNDERLINE TIL OVERSKRIFTER START*/
+.underline {
+    width: 60vw;
+    height: 1px;
+    background-color: black;
+    float: right;
+}
+
+.underline2 {
+    width: 50vw;
+    height: 1px;
+    background-color: black;
+    float: right;
+}
+
+/*UNDERLINE TIL OVERSKRIFTER SLUT*/
+
+.h1_container {
+    top: 6vw;
+    left: 40vw;
+    position: relative;
+    width: 50vw;
+    line-height: 1.4;
+}
+
+.h2_container {
+    top: 6vw;
+    left: 40vw;
+    position: relative;
+    width: 50vw;
+    line-height: 1.4;
+}
 
 /*BILLEDEKARRUSELLER START*/
 main {
-    50vw;
+    width: 100%;
 }
 
 .carousel {
@@ -234,7 +273,6 @@ main {
 
 .carousel_inner {
     display: flex;
-
 
 }
 
@@ -326,6 +364,7 @@ main {
 
 
 /*----------------------------------------WEBSHOP-START----------------------------------------*/
+
 /*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
 
 /*----------------------------------------DETALJEVIEW-START----------------------------------------*/
@@ -370,20 +409,113 @@ main {
 
 /*----------------------------------------DETALJEVIEW-SLUT----------------------------------------*/
 
+/*----------------------------------------SHOWROOM-START----------------------------------------*/
+
+
+#showroom .showroom_h1 {
+    padding-top: 15vw;
+}
+
+#showroom .h2_container {
+    margin-top: 20vw;
+    left: 50vw;
+}
+
+#showroom p {
+    margin: 15vw 4vw 10vw 4vw;
+}
+
+#showroom .filter-menu {
+
+    margin-top: 10vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+#showroom .filter-menu p {
+    margin: 0 1.7vw 0 1.7vw;
+}
+
+/*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
+
 
 /*----------------------------------------ABOUT-START----------------------------------------*/
+
+
+
+
+#about .quote p {
+    font-family: manropelight;
+    max-width: 350px;
+    font-size: 1.4rem;
+    display: block;
+    margin: 0 auto;
+    padding-top: 10vw;
+}
+
+#about .h2_container {
+    left: 40vw;
+}
+
+#about_sustainability .underline {
+    width: 65%;
+}
+
+#about p {
+    margin: 10vw 4vw 10vw 4vw;
+}
+
+
+
 /*----------------------------------------ABOUT-SLUT----------------------------------------*/
 
 
 /*----------------------------------------EXHIBITIONS-START----------------------------------------*/
+#exhibitions p {
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+}
+
+
+
+#exhibitions h3 {
+    padding-left: 4vw;
+    padding-top: 10vw;
+}
+
+.content_wrapper {
+    margin-top: 20vw;
+}
+
 /*----------------------------------------EXHIBITIONS-SLUT----------------------------------------*/
 
 
 /*----------------------------------------PRESS-START----------------------------------------*/
+#press {
+    padding-top: 19vw;
+}
+
+
 /*----------------------------------------PRESS-SLUT----------------------------------------*/
 
 /*----------------------------------------FOOTERPAGES-START----------------------------------------*/
 /*TERMS AND CONDITIONS START*/
+#termsandconditions {
+    padding-top: 19vw;
+}
+
+#termsandconditions p {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+#termsandconditions a {
+    text-decoration: none;
+}
+
 /*TERMS AND CONDITIONS SLUT*/
 
 /*REFUND POLICY START*/
@@ -397,3 +529,68 @@ main {
 
 
 /*----------------------------------------FOOTERPAGES-SLUT----------------------------------------*/
+
+/*----------------------------------------IPAD START----------------------------------------*/
+
+@media only screen and (min-width : 768px) {
+
+    /*----------------------------------------IPAD GENERELT-START----------------------------------------*/
+    h1 {
+        font-size: 2.5rem;
+
+
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+
+
+    .h2_container {
+        top: 5vw;
+        margin-top: 10vw;
+    }
+
+
+    /*----------------------------------------IPAD GENERALT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD WEBSHOP-START----------------------------------------*/
+
+
+    /*----------------------------------------IPAD WEBSHOP-SLUT----------------------------------------*/
+    /*----------------------------------------SHOWROOM-START----------------------------------------*/
+
+    #showroom .h2_container {
+        top: 5vw;
+        margin-top: 10vw;
+    }
+
+
+    /*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD ABOUT-START----------------------------------------*/
+
+    #about .h1_container {
+        top: 5vw;
+    }
+
+    .contact .h1_container {
+        top: 5vw;
+    }
+
+    /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
+
+    /*----------------------------------------IPAD CONTACT-SLUT----------------------------------------*/
+
+
+
+}
+
+/*----------------------------------------IPAD-SLUT----------------------------------------*/

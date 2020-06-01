@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showroom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+</head>
+
+<body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!--    BURGER MENU SLUT    -->
+    <section id="showroom">
+        <div class="h1_container">
+            <h1 class="showroom_h1">SHOWROOM</h1>
+        </div>
+        <div class="underline"></div>
+        <div class="filter-menu">
+            <div id="all" class="filter valgt" data-kategori="alle">
+                <p>ALL</p>
+
+            </div>
+            <div class="line"></div>
+
+            <div class="filter" data-kategori="13">
+                <p>TABLES</p>
+            </div>
+            <div class="filter" data-kategori="14">
+                <p>CHAIRS</p>
+
+            </div>
+
+            <div class="filter" data-kategori="15">
+                <p>LAMPS</p>
+
+            </div>
+            <div class="filter" data-kategori="16">
+                <p>HOME DECOR</p>
+
+            </div>
+
+        </div>
+
+        <div class="h2_container">
+            <h2>RE-SIT</h2>
+        </div>
+        <div class="underline2"></div>
+        <p>We know how difficult it can be to choose the right furniture without seeing it in your home. Scroll further down to the virtual showroom.</p>
+        <img src="img/placeholder_showroom.png" alt="placeholder1">
+        <p>Follow the simple instructions and try your favorite furniture from Dögg Design in your virtual home.</p>
+        <img src="img/placeholder_showroom2.png" alt="placeholder2">
+        <img src="img/placeholder_showroom3.png" alt="placeholder3">
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

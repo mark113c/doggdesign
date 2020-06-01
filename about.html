@@ -8,100 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
 </head>
-<style>
-    body {
-        margin: 0;
-    }
 
-
-    .quote p {
-        font-family: manropelight;
-        max-width: 350px;
-        font-size: 1.4rem;
-        display: block;
-        margin: 0 auto;
-    }
-
-
-
-    main {
-        50vw;
-    }
-
-    .carousel {
-        width: 80%;
-        padding: 0;
-        margin-left: 20px;
-    }
-
-    .caro_imgs {
-        width: 25%;
-        padding: 3px;
-    }
-
-    .container {
-        display: flex;
-        overflow: scroll;
-        scroll-snap-type: x mandatory;
-
-    }
-
-    .container section {
-        scroll-snap-align: start;
-        min-width: 100%;
-    }
-
-    .carousel_inner {
-        display: flex;
-
-
-    }
-
-    .bwd,
-    .fwd {
-        display: flex;
-        cursor: pointer;
-        align-items: center;
-
-    }
-
-    .bwd img,
-    .fwd img {
-        position: absolute;
-        z-index: 10;
-
-    }
-
-    .fwd img {
-        margin-left: 4px;
-        width: 1.2%;
-    }
-
-    .bwd img {
-        margin-left: -22px;
-        width: 1.2%;
-    }
-
-    h1 {
-        margin: 10vw 0 0 19vw;
-        text-align: center;
-        line-height: .9;
-    }
-
-    .underline {
-        width: 55vw;
-        height: 1px;
-        background-color: black;
-        float: right;
-    }
-
-    h2 {
-        margin: 10vw 0 0 10.4vw;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: .9;
-    }
-</style>
 
 <body>
 
@@ -135,26 +42,32 @@
 
     <!--    BURGER MENU SLUT    -->
 
-    <div class="content_wrapper">
-        <h1>ABOUT</h1>
+    <div id="about">
+        <div class="h1_container">
+            <h1>ABOUT</h1>
+        </div>
         <div class="underline"></div>
         <section id="about_intro">
 
         </section>
-        <h2>Story</h2>
+        <div class="h2_container">
+            <h2>Story</h2>
+        </div>
         <div class="underline"></div>
         <section id="about_story">
         </section>
 
-
-        <h2>Sustainability</h2>
+        <div class="h2_container">
+            <h2>Sustainability</h2>
+        </div>
         <div class="underline"></div>
         <section id="about_sustainability">
         </section>
 
 
-
-        <h2>Curriculum Vitae</h2>
+        <div class="h2_container">
+            <h2>Curriculum Vitae</h2>
+        </div>
         <div class="underline"></div>
         <section id="about_CV"></section>
     </div>
@@ -242,5 +155,8 @@
             document.querySelector("#about_CV").innerHTML = aboutCVData.content.rendered;
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
