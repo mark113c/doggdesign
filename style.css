@@ -500,16 +500,16 @@ main {
 }
 
 #press article {
-    margin: 12vw 3vw 0 2vw;
+    margin: 10vw 3vw 0 2vw;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
-#press img {
+#press {
     padding: 10vw 10vw 3vw 10vw;
 }
 
