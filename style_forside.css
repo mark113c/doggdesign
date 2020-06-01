@@ -135,14 +135,13 @@
 
      .forside_diamondlamp {
          display: flex;
-         flex-direction: row-reverse;
          align-items: center;
-         padding: 0 10vw 0 40vw;
+         padding: 0 0vw 0 40vw;
 
      }
 
-     .forsi ! !de_diamondlamp h2 {
-         margin-left: 2vw !important;
+     .forside_diamondlamp h2 {
+         margin-left: 10vw !important;
          text-align: center;
          line-height: 30px;
 
@@ -153,6 +152,28 @@
      button {
          margin-left: 10vw;
          margin-bottom: 10vw;
+     }
+
+     .forside_intro {
+         display: flex;
+         flex-wrap: wrap;
+         flex-direction: row-reverse;
+     }
+
+     .forside_col {
+         flex-basis: 300px;
+         flex-grow: 1;
+     }
+
+     .forside_col img {
+         height: auto !important;
+         padding-left: 10vw;
+     }
+
+     .forside_col button {}
+
+     .forside_col p {
+         margin-left: 10vw;
      }
 
 

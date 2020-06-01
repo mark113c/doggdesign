@@ -97,6 +97,32 @@
         text-align: right;
     }
 
+    #splash_forside .dogg {
+        padding-top: 20vw;
+        font-size: 90px;
+        text-align: end;
+        position: relative;
+        top: 8vw;
+        right: 0;
+
+
+    }
+
+    #splash_forside .design {
+        font-size: 90px;
+        text-align: end;
+        position: relative;
+        top: 12vw;
+        right: 0;
+
+
+    }
+
+    .forside_overskrift {
+        margin-right: -10px;
+
+
+    }
 </style>
 
 <body>
@@ -132,24 +158,31 @@
 
 
     <section id="splash_forside">
+        <div class="forside_overskrift">
+            <h1 class="dogg">DÖGG</h1>
+            <h1 class="design">DESIGN</h1>
+        </div>
 
+        <!--
         <img id="splash_mobil" src="img/splash_mobil.svg" alt="dogg design">
         <img id="splash_under_text" src="img/under_splash_text.svg">
-        <!--        <p id="splashimage_text">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>-->
-
-        <img src="img/hiti2%20(1).png" alt="dogg design hiti lamp">
-        <!--
-        <h1>DÖGG DESIGN</h1>
-        <p id="undertekst">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>
 -->
-        <div class="quote">
-            <p>Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak. </p>
-        </div>
-        <div class="button">
-            <button class="cta" id="splash_cta">SHOWROOM
-            </button>
-        </div>
+        <!--        <p id="splashimage_text">UNIQUE DESIGN / SUSTAINABLE INNOVATION</p>-->
+        <div class="forside_intro">
+            <div class="forside_col">
+                <img src="img/hitisplash.png" alt="dogg design hiti lamp">
+            </div>
+            <div class="forside_col">
+                <div class="quote">
+                    <p>Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak. </p>
+                </div>
 
+                <div class="button">
+                    <button class="cta" id="splash_cta">SHOWROOM
+                    </button>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section id="forside">
@@ -218,8 +251,5 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
