@@ -1,0 +1,855 @@
+/*----------------------------------------GENERELT----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2EF;
+}
+
+img {
+    width: 100%;
+}
+
+#about {
+    padding-top: 19vw;
+}
+
+
+
+/*
+section {
+    margin-top: 10vw;
+}
+
+h1 {
+    margin-top: 30vw;
+}
+*/
+
+/*HEADER*/
+
+
+/*HEADER-SLUT*/
+
+/*BURGERMENU*/
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+}
+
+.header-wrapper {
+    padding-top: 5vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F2F2EF;
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+}
+
+.logo img {
+    width: 8vw;
+
+    margin: 0 3vw;
+}
+
+#burger {
+    width: 36px;
+    height: 30px;
+    margin: 5vw;
+    cursor: pointer;
+    right: 2.5vw;
+}
+
+.bar {
+    height: 3px;
+    width: 100%;
+    display: block;
+    border-radius: 1px;
+    background-color: black;
+    transition: 0.3s ease;
+}
+
+#bar1 {
+    transform: translateY(-6px)
+}
+
+#bar3 {
+    transform: translateY(6px)
+}
+
+.change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+
+}
+
+.change #bar3 {
+    transform: translateY(-2px) rotateZ(45deg);
+}
+
+.change #bar2 {
+    opacity: 0;
+}
+
+.nav {
+    display: none;
+    transition: 1s ease;
+    background-color: #F2F2EF;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    position: fixed;
+    margin: 0;
+}
+
+.change {
+    display: block;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav li {
+    list-style: none;
+    padding: 7vw 10vw;
+    text-align: right;
+    transition: 0.3s ease;
+}
+
+
+
+
+/*BURGERMENU*/
+
+
+/*FOOTER*/
+/*FOOTER-SLUT*/
+
+/*CALL-TO-ACTION-BUTTONS*/
+.cta {
+    border: 1px solid #000000;
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-family: manropebold;
+    letter-spacing: 1.5px;
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0 20px 0 20px;
+    margin-top: 25px;
+}
+
+button {
+    margin: auto;
+    display: block;
+    margin-bottom: 15vw;
+}
+
+/*CALL-TO-ACTION-BUTTONS-SLUT*/
+
+/*QUOTES*/
+.quote p {
+    font-size: 1.4rem;
+    font-family: manropelight;
+    margin: 0;
+    margin: 75px 4vw 75px 4vw;
+    max-width: 1200px;
+}
+
+/*QUOTES-SLUT*/
+
+.sectionwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/*FONT STYLING START*/
+h1 {
+    font-size: 1.5rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+
+}
+
+p {
+    font-family: manropelight;
+    font-size: 1rem;
+}
+
+a {
+    font-size: 1.2rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+/*FONT STYLING SLUT*/
+/*UNDERLINE TIL OVERSKRIFTER START*/
+/*
+.underline {
+    width: 60vw;
+    height: 1px;
+    background-color: black;
+    float: right;
+}
+*/
+
+
+
+/*UNDERLINE TIL OVERSKRIFTER SLUT*/
+
+/*
+.h1_container {
+    top: 6vw;
+    left: 40vw;
+    position: relative;
+    width: 50vw;
+    line-height: 1.4;
+}
+*/
+
+#showroom h2 {
+    line-height: 0.9;
+    margin: 0;
+}
+
+#showroom .h2 {
+    width: 50vw;
+    position: relative;
+
+    left: 50vw;
+}
+
+#showroom .underline2 {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+h1 {
+    line-height: 0.9;
+    margin: 0;
+}
+
+.h1 {
+    width: 50vw;
+    position: relative;
+    left: 50vw;
+    margin-top: 200px;
+}
+
+
+
+.underline {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+#showroom {}
+
+/*
+.underline2 {
+    width: 50vw;
+    height: 1px;
+    background-color: black;
+    float: right;
+}
+*/
+
+/*
+.h2_container {
+    top: 6vw;
+    left: 40vw;
+    position: relative;
+    width: 50vw;
+    line-height: 1.4;
+}
+*/
+
+/*BILLEDEKARRUSELLER START*/
+main {
+    width: 100%;
+}
+
+.carousel {
+    width: 90%;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.caro_imgs {
+    width: 100%;
+
+}
+
+.container {
+    display: flex;
+    overflow: scroll;
+    scroll-snap-type: x mandatory;
+
+}
+
+.container section {
+    scroll-snap-align: start;
+
+}
+
+.carousel_inner {
+    display: flex;
+
+}
+
+.bwd,
+.fwd {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.bwd img,
+.fwd img {
+    position: absolute;
+    z-index: 10;
+
+}
+
+.fwd img {
+
+    width: 2%;
+    margin-left: 10px;
+}
+
+.bwd img {
+
+    width: 2%;
+    margin-left: -22px;
+}
+
+/*BILLEDEKARRUSELLER SLUT*/
+
+
+/*----------------------------------------GENERELT-SLUT----------------------------------------*/
+
+/*----------------------------------------FORSIDE-START---------------------------------------*/
+
+/*SPLASH-SECTION-FORSIDE*/
+
+#forside img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15vw;
+}
+
+#splash_forside img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15vw;
+}
+
+#splashimage_text {
+    font-size: 1rem;
+    font-family: manropelight;
+    text-align: center;
+}
+
+#splash_under_text {
+    margin-top: 5vw;
+    padding: 0 15vw 0 5vw;
+}
+
+#splash_forside #splash_mobil {
+    margin-top: 40vw;
+    margin-bottom: 0;
+}
+
+
+#splash_mobil {
+    margin-top: 40vw;
+}
+
+/*SPLASH-SECTION-FORSIDE-SLUT*/
+
+#forside h2 {
+
+    font-family: manropebold;
+    margin-bottom: 2vw;
+    margin-left: 4vw;
+    letter-spacing: 5px;
+    line-height: 30px;
+}
+
+#forside .sectionwrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*----------------------------------------FORSIDE-SLUT----------------------------------------*/
+
+
+/*----------------------------------------WEBSHOP-START----------------------------------------*/
+
+/*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
+
+/*----------------------------------------DETALJEVIEW-START----------------------------------------*/
+
+/*Overskrift og underline start*/
+
+#detaljeview_article .h1_container {
+    position: relative;
+    width: 50vw;
+    top: 2.8vw;
+    left: 39.8vw;
+    text-align: start;
+    line-height: .9;
+}
+
+#detaljeview_article .underline {
+    width: 60vw;
+    height: 1px;
+    background-color: black;
+    position: absolute;
+    top: 15vw;
+    right: 0vw;
+    float: right;
+}
+
+/*Overskrift og underline slut*/
+
+.detaljeview_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: 0;
+}
+
+.detaljeview_col {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 4vw;
+}
+
+
+
+/*----------------------------------------DETALJEVIEW-SLUT----------------------------------------*/
+
+/*----------------------------------------SHOWROOM-START----------------------------------------*/
+
+.showroom {
+    width: 100%;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+}
+
+.explainer {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+
+.video_container {}
+
+
+
+
+
+
+
+#showroom .filter-menu {
+
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+
+}
+
+#showroom .filter-menu p {
+    margin: 0 1.7vw 0 1.7vw;
+}
+
+/*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
+
+
+/*----------------------------------------ABOUT-START----------------------------------------*/
+
+
+
+
+
+#about .h2_container {
+    left: 40vw;
+}
+
+#about_sustainability .underline {
+    width: 65%;
+}
+
+#about p {
+    margin: 10vw 4vw 10vw 4vw;
+}
+
+
+
+/*----------------------------------------ABOUT-SLUT----------------------------------------*/
+
+
+/*----------------------------------------EXHIBITIONS-START----------------------------------------*/
+#exhibitions p {
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+}
+
+
+
+#exhibitions h3 {
+    padding-left: 4vw;
+    padding-top: 10vw;
+}
+
+.content_wrapper {
+    margin-top: 20vw;
+}
+
+/*----------------------------------------EXHIBITIONS-SLUT----------------------------------------*/
+
+
+/*----------------------------------------PRESS-START----------------------------------------*/
+/*
+#press {
+    padding-top: 19vw;
+}
+*/
+
+#press h2,
+#press p {
+    text-align: center;
+}
+
+#press article {
+    margin: 10vw 3vw 0 2vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+#press {
+    padding: 10vw 10vw 3vw 10vw;
+}
+
+
+/*----------------------------------------PRESS-SLUT----------------------------------------*/
+
+/*----------------------------------------FOOTERPAGES-START----------------------------------------*/
+/*TERMS AND CONDITIONS START*/
+#termsandconditions {
+    padding-top: 19vw;
+}
+
+#termsandconditions p {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+#termsandconditions a {
+    text-decoration: none;
+}
+
+/*TERMS AND CONDITIONS SLUT*/
+
+/*RETURN POLICY START*/
+
+#returnpolicy {
+    padding-top: 19vw;
+}
+
+#returnpolicy p,
+ul {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+#returnpolicy ul {
+    margin: 0 4vw;
+}
+
+#returnpolicy li {
+    margin-top: 1vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+#returnpolicy li p {
+    margin-top: 0vw;
+    padding-left: 0vw;
+    padding-right: 0vw;
+}
+
+
+#returnpolicy a {
+    text-decoration: none;
+}
+
+/*RETURN POLICY SLUT*/
+
+
+/*RETAILERS START*/
+
+#retailers {
+    padding-top: 19vw;
+}
+
+#retailers p {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+#retailers .h2_container {
+    left: 40vw;
+}
+
+
+
+#retailers .cta_links {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#retailers .cta {
+    width: 60vw;
+    margin-top: 4vw;
+
+}
+
+
+
+/*RETAILERS SLUT*/
+
+/*SHIPPING INFO START*/
+
+#shipping_info {
+    padding-top: 19vw;
+}
+
+#shipping_info p {
+    margin-top: 10vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+}
+
+/*SHIPPING INFO SLUT*/
+
+/*----------------------------------------FOOTERPAGES-SLUT----------------------------------------*/
+
+/*----------------------------------------IPAD START----------------------------------------*/
+
+@media only screen and (min-width : 768px) {
+
+    /*----------------------------------------IPAD GENERELT-START----------------------------------------*/
+    h1 {
+        font-size: 2.5rem;
+
+
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+
+
+
+    /*
+        .h2_container {
+            top: 5vw;
+            margin-top: 10vw;
+        }
+*/
+
+
+    /*----------------------------------------IPAD GENERALT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD WEBSHOP-START----------------------------------------*/
+
+
+    /*----------------------------------------IPAD WEBSHOP-SLUT----------------------------------------*/
+    /*----------------------------------------SHOWROOM-START----------------------------------------*/
+
+    #showroom .h2_container {
+        top: 5vw;
+        margin-top: 10vw;
+    }
+
+
+    /*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD ABOUT-START----------------------------------------*/
+
+    #about .h1_container {
+        top: 5vw;
+    }
+
+    .contact .h1_container {
+        top: 5vw;
+    }
+
+    /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
+
+    /*----------------------------------------IPAD CONTACT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD PRESS-START----------------------------------------*/
+
+
+    #press img {
+        padding: 12vw 12vw 3vw 12vw;
+    }
+
+    #press {
+        padding-top: 3vw;
+    }
+
+    /*----------------------------------------IPAD PRESS-SLUT----------------------------------------*/
+
+
+    /*----------------------------------------IPAD FOOTERPAGES-START----------------------------------------*/
+
+
+    #returnpolicy,
+    #termsandconditions,
+    #shipping_info,
+    #retailers .h1_container {
+        top: 6vw;
+        left: 35vw;
+
+    }
+
+    #returnpolicy,
+    #termsandconditions,
+    #shipping_info,
+    #retailers.underline {}
+
+
+
+    /*----------------------------------------IPAD FOOTERPAGES-SLUT----------------------------------------*/
+    /*----------------------------------------IPAD FORSIDE START----------------------------------------*/
+    .quote p {
+        font-size: 2rem;
+
+    }
+
+    .cta {
+        border: 1px solid #000000;
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-family: manropebold;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding: 15px 20px 15px 20px;
+
+
+    }
+
+    /*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD-SLUT----------------------------------------*/
+
+
+
+}
+
+@media only screen and (min-width : 768px) {
+
+    .quote p {
+        font-size: 1.5rem;
+        font-family: manropelight;
+        margin: 0;
+        margin: 15vw 10vw 10vw 10vw;
+        max-width: 500px;
+    }
+
+    .showroom {
+        width: 100%;
+        margin-top: 5vw;
+        margin-bottom: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+    }
+
+    .explainer {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .showroom_placeholder {
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+@media only screen and (min-width : 768px) {
+    .quote p {
+        font-size: 2rem;
+    }
+
+    @media only screen and (min-width : 768px) {
+        .quote p {
+            font-size: 2rem;
+            font-family: manropelight;
+            margin: 0;
+            margin: 15vw 10vw 10vw 10vw;
+            max-width: 600px;
+        }
+    }
