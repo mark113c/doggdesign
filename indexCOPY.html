@@ -7,7 +7,7 @@
     <title>Forside</title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style_forside.css">
+
 </head>
 <style>
     #forside footer {
@@ -97,24 +97,39 @@
         text-align: right;
     }
 
-    #splash_forside .dogg {
-        padding-top: 20vw;
-        font-size: 90px;
-        text-align: end;
-        /*        position: relative;*/
-        top: 8vw;
-        right: 0;
+    #forside {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+
+    }
+
+
+
+    #forside .forside_vagn,
+    #forside .forside_fifty,
+    #forside .forside_wing,
+    #forside .forside_hiti,
+    #forside .forside_resit,
+    #forside .forside_rockytre,
+    #forside .forside_trinitas,
+    #forside .forside_diamondlamp {
+        grid-column: 1/-1;
+        margin-bottom: 15vw;
 
 
     }
 
-    #splash_forside .design {
-        font-size: 90px;
-        text-align: end;
-        /*        position: relative;*/
-        top: 12vw;
-        right: 0;
+    #forside .forside_quote1,
+    #forside .forside_quote2,
+    #forside .forside_quote3 {
+        grid-column: 1/-1;
     }
+
+
+
+
 
     .h1_invisible {
         opacity: 0;
@@ -122,20 +137,49 @@
 
     #splash_forside .mobil_splash {
         width: 90%;
-        float: right;
+
         padding-top: 100px;
+
+
     }
 
+
     #splash_forside img {
-        margin-left: 4vw;
+        margin-left: 30vw;
         width: 80%;
-        margin: 5vw;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        float: right;
+
     }
+
 
     .splash_mobil {}
 
     .splash_web {
         display: none;
+    }
+
+    @media only screen and (min-width : 768px) {
+        .splash_mobil {
+            display: none;
+
+        }
+
+        .splash_web {
+            display: block;
+            padding-top: 50px;
+
+        }
+
+        #splash_forside img {
+
+
+            margin-top: 25px;
+            margin-bottom: 50px;
+
+
+        }
     }
 
     @media only screen and (min-width : 1024px) {
@@ -147,10 +191,254 @@
         .splash_web {
             display: block;
             padding-top: 50px;
+            width: 90%;
+            margin-left: 10vw;
         }
 
         #splash_forside .quote p {
             margin-right: 0;
+            max-width: 1000px;
+        }
+
+        #splash_forside img {
+            margin-left: 10vw;
+            width: 80%;
+            margin-top: 0px;
+            margin-bottom: 50px;
+
+        }
+
+        .forside_vagn,
+        .forside_fifty {
+            display: flex;
+        }
+
+        .forside_wing {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 30vw 0 30vw;
+            align-items: center;
+        }
+
+        .forside_wing img {
+            width: 50%;
+        }
+
+        .forside_wing h2 {
+
+            margin-left: 2vw !important;
+        }
+
+        .forside_quote2 {
+            margin-left: 30vw;
+        }
+
+
+        .forside_vagn {
+            justify-content: center;
+            align-items: center;
+            padding: 0 20vw 0 20vw;
+        }
+
+        .forside_vagn h2 {
+            margin-right: 2vw;
+        }
+
+        .forside_fifty {
+            padding: 0 20vw 0 20vw;
+            align-items: center;
+        }
+
+        #forside .quote p {
+            max-width: 500px;
+            margin-left: 10vw;
+
+        }
+
+        .forside_hiti {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 50vw 0 0vw;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .forside_hiti h2 {
+
+            margin-left: -10vw !important;
+
+        }
+
+        .forside_resit {
+            display: flex;
+            align-items: center;
+            padding: 0 25vw 0 20vw;
+        }
+
+        .forside_resit h2 {
+            margin-left: 0 !important;
+            min-width: 150px;
+
+        }
+
+        .forside_quote3 {
+            margin-bottom: 0;
+        }
+
+        .forside_rockytre {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 10vw 0 35vw;
+            align-items: center;
+        }
+
+        .forside_rockytre h2 {
+            margin-left: -5vw !important;
+            min-width: 250px;
+        }
+
+        .forside_trinitas {
+            display: flex;
+            align-items: center;
+            padding: 0 40vw 0 5vw;
+        }
+
+        .forside_trinitas h2 {
+            margin-right: 2vw !important;
+        }
+
+        .forside_diamondlamp {
+            display: flex;
+            align-items: center;
+            padding: 0 0vw 0 40vw;
+
+        }
+
+        .forside_diamondlamp h2 {
+            margin-left: 10vw !important;
+            text-align: center;
+            line-height: 30px;
+
+        }
+
+
+
+        button {
+            margin-left: 10vw;
+            margin-bottom: 10vw;
+        }
+
+        .forside_intro {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+
+        .forside_col {
+            flex-basis: 400px;
+            flex-grow: 1;
+        }
+
+        .forside_col_img {
+            flex-basis: 600px;
+            flex-grow: 2;
+        }
+
+        .forside_col img {
+            height: auto !important;
+
+        }
+
+        .forside_col button {}
+
+        .forside_col p {
+            margin-left: 10vw;
+        }
+
+        .quote p {
+            margin-left: 10vw;
+        }
+    }
+
+    @media only screen and (min-width : 1101px) {
+        .forside_col {
+            flex-basis: 500px;
+            flex-grow: 1;
+        }
+
+        .forside_col_img {
+            flex-basis: 600px;
+            flex-grow: 2;
+        }
+
+        .quote p {
+            margin-left: 10vw;
+        }
+
+        .quote p {
+            font-size: 2.2rem;
+
+        }
+    }
+
+    @media only screen and (min-width : 1200px) {
+        #forside .quote p {
+            max-width: 600px;
+            margin-left: 10vw;
+
+        }
+    }
+
+    @media only screen and (min-width : 1330px) {
+        #forside .quote p {
+            max-width: 700px;
+            margin-left: 10vw;
+
+        }
+
+        .splash_mobil {
+            display: none;
+
+        }
+
+        .splash_web {
+            display: block;
+            padding-top: 50px;
+
+        }
+
+        #splash_forside .forside_col_img {
+
+
+            margin-top: 25px;
+            margin-bottom: 50px;
+        }
+
+        .forside_col {
+            flex-basis: 500px;
+            flex-grow: 1;
+        }
+
+        .forside_col_img {
+            flex-basis: 500px;
+            flex-grow: 2;
+        }
+
+        .quote p {
+            font-size: 2.5rem;
+        }
+
+    }
+
+    @media only screen and (min-width : 1454px) {
+        .forside_col {
+            flex-basis: 500px;
+            flex-grow: 1;
+        }
+
+        .forside_col_img {
+            flex-basis: 200px;
+            flex-grow: 2;
         }
     }
 </style>
@@ -209,7 +497,7 @@
             <div class="forside_col">
                 <img src="img/hitisplash.png" alt="dogg design hiti lamp">
             </div>
-            <div class="forside_col">
+            <div class="forside_col_img">
                 <div class="quote">
                     <p>Inspired by mountains, trees, bays, cracked ice and dried sand, she explores asymmetrical folded forms using aluminum, metal and oak. </p>
                 </div>
