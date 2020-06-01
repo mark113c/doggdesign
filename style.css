@@ -19,7 +19,35 @@ img {
 }
 
 
+/* STYLING AF HEADERE START  */
 
+.h1_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 200px;
+}
+
+.underline {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+.h2_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 50px;
+}
+
+.underline2 {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+/* STYLING AF HEADERE SLUT  */
 /*
 section {
     margin-top: 10vw;
