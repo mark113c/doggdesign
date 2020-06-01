@@ -114,13 +114,45 @@
         /*        position: relative;*/
         top: 12vw;
         right: 0;
-
-
-
-
     }
 
-    .forside_overskrift {}
+    .h1_invisible {
+        opacity: 0;
+    }
+
+    #splash_forside .mobil_splash {
+        width: 90%;
+        float: right;
+        padding-top: 100px;
+    }
+
+    #splash_forside img {
+        margin-left: 4vw;
+        width: 80%;
+        margin: 5vw;
+    }
+
+    .splash_mobil {}
+
+    .splash_web {
+        display: none;
+    }
+
+    @media only screen and (min-width : 1024px) {
+        .splash_mobil {
+            display: none;
+
+        }
+
+        .splash_web {
+            display: block;
+            padding-top: 50px;
+        }
+
+        #splash_forside .quote p {
+            margin-right: 0;
+        }
+    }
 </style>
 
 <body>
@@ -156,10 +188,17 @@
 
 
     <section id="splash_forside">
-        <div class="forside_overskrift">
-            <h1 class="dogg">DÖGG</h1>
-            <h1 class="design">DESIGN</h1>
+        <div class="forside_overskrift splash_mobil">
+            <img class="mobil_splash" src="img/splash_mobil.svg" alt="¨dogg design">
+            <h1 class="h1_invisible">DÖGG DESIGN</h1>
         </div>
+
+
+        <div class="forside_overskrift splash_web">
+            <img class="mobil_splash" src="img/splash.svg" alt="¨dogg design">
+            <h1 class="h1_invisible">DÖGG DESIGN</h1>
+        </div>
+
 
         <!--
         <img id="splash_mobil" src="img/splash_mobil.svg" alt="dogg design">
