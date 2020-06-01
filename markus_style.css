@@ -14,11 +14,35 @@ img {
     width: 100%;
 }
 
-#about {
-    padding-top: 19vw;
+/* STYLING AF HEADERE START  */
+
+.h1_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 200px;
 }
 
+.underline {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
 
+.h2_container {
+    width: 70vw;
+    position: relative;
+    left: 30vw;
+    margin-top: 50px;
+}
+
+.underline2 {
+    width 50vw;
+    height: 1px;
+    background-color: black;
+}
+
+/* STYLING AF HEADERE SLUT  */
 
 /*
 section {
@@ -207,13 +231,17 @@ h1 {
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
+    line-height: 0.9;
+    margin: 0;
 }
 
 h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
+    line-height: 0.9;
+    margin: 0;
 }
 
 h3 {
@@ -237,38 +265,7 @@ a {
 }
 
 /*FONT STYLING SLUT*/
-/*UNDERLINE TIL OVERSKRIFTER START*/
-.underline {
-    width: 60vw;
-    height: 1px;
-    background-color: black;
-    float: right;
-}
 
-.underline2 {
-    width: 50vw;
-    height: 1px;
-    background-color: black;
-    float: right;
-}
-
-/*UNDERLINE TIL OVERSKRIFTER SLUT*/
-
-.h1_container {
-    top: 6vw;
-    left: 40vw;
-    position: relative;
-    width: 50vw;
-    line-height: 1.4;
-}
-
-.h2_container {
-    top: 6vw;
-    left: 40vw;
-    position: relative;
-    width: 50vw;
-    line-height: 1.4;
-}
 
 /*BILLEDEKARRUSELLER START*/
 main {
@@ -394,6 +391,59 @@ main {
 
 /*----------------------------------------WEBSHOP-START----------------------------------------*/
 
+#webshop {
+
+    padding: 15vw;
+}
+
+
+#webshop h1,
+#webshop h2,
+#webshop .price {
+    text-align: center;
+}
+
+#webshop h2,
+#webshop p {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+
+#webshop img {
+    width: 100%;
+}
+
+#webshop article {
+    margin: 12vw 3vw 0 2vw;
+}
+
+
+.filter-menu button {
+    background: none;
+
+
+    /*            transition: 1s ease;*/
+}
+
+.valgt {
+
+    text-decoration: underline;
+}
+
+.filter-menu {
+    margin-top: 25vw;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.filter-menu p {
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+}
+
 /*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
 
 /*----------------------------------------DETALJEVIEW-START----------------------------------------*/
@@ -472,18 +522,15 @@ main {
 /*----------------------------------------ABOUT-START----------------------------------------*/
 
 
-
-
-
+/*
 #about .h2_container {
     left: 40vw;
 }
+*/
 
-#about_sustainability .underline {
-    width: 65%;
-}
+#about_sustainability .underline {}
 
-#about h3,
+#about_sustainability #about h3,
 p {
     margin: 10vw 4vw 10vw 4vw;
 }
@@ -710,15 +757,60 @@ ul {
 
     /*----------------------------------------IPAD ABOUT-START----------------------------------------*/
 
-    #about .h1_container {
-        top: 5vw;
-    }
+
 
     .contact .h1_container {
         top: 5vw;
     }
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
+
+    #about {
+        padding-top: 30vw
+    }
+
+    #about .h2_container {
+        left: 49vw;
+    }
+
+    #about_sustainability .underline {
+        width: 65%;
+    }
+
+    #about h3,
+    p {
+        margin: 10vw 4vw 10vw 4vw;
+    }
+
+    #about p {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    #about_CV p {
+        margin-top: 2vw;
+        margin-bottom: 4vw
+    }
+
+    #about_sustainability,
+    #about_intro,
+    #about_story,
+    #about_CV {
+        margin-top: 10vw;
+        margin-bottom: 2vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    #about h3 {
+        margin: 4vw 0vw 2vw 0vw;
+    }
+
+
+
+
 
     /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
 
@@ -977,6 +1069,10 @@ ul {
         margin-bottom: 2vw;
         margin-left: 10vw;
         margin-right: 10vw;
+    }
+
+    #about h3 {
+        margin: 4vw 0vw 2vw 0vw;
     }
 
 
