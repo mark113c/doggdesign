@@ -148,6 +148,7 @@ header {
     line-height: 50px;
     text-transform: uppercase;
     padding: 0 20px 0 20px;
+    margin-top: 25px;
 }
 
 button {
@@ -159,8 +160,8 @@ button {
 /*CALL-TO-ACTION-BUTTONS-SLUT*/
 
 /*QUOTES*/
-.quote {
-    font-size: 1.8rem;
+.quote p {
+    font-size: 1.4rem;
     font-family: manropelight;
     margin: 0;
     margin-left: 4vw;
@@ -500,16 +501,16 @@ main {
 }
 
 #press article {
-    margin: 12vw 3vw 0 2vw;
+    margin: 10vw 3vw 0 2vw;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 20px;
 }
 
-#press img {
+#press {
     padding: 10vw 10vw 3vw 10vw;
 }
 
@@ -717,16 +718,29 @@ ul {
 
 
     /*----------------------------------------IPAD FOOTERPAGES-SLUT----------------------------------------*/
+    /*----------------------------------------IPAD FORSIDE START----------------------------------------*/
+    .quote p {
+        font-size: 2rem;
+
+    }
+
+    .cta {
+        border: 1px solid #000000;
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-family: manropebold;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding: 15px 20px 15px 20px;
+
+
+    }
+
+    /*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD-SLUT----------------------------------------*/
+
 
 
 }
-
-/*----------------------------------------IPAD FORSIDE START----------------------------------------*/
-.quote p {
-    font-size: 2rem;
-
-}
-
-/*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
-
-/*----------------------------------------IPAD-SLUT----------------------------------------*/
