@@ -435,6 +435,52 @@ main {
 
 /*----------------------------------------WEBSHOP-START----------------------------------------*/
 
+#webshop h1,
+#webshop h2,
+#webshop .price {
+    text-align: center;
+}
+
+#webshop h2,
+#webshop p {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+
+#webshop img {
+    width: 100%;
+}
+
+#webshop article {
+    margin: 12vw 3vw 0 2vw;
+}
+
+.filter-menu button {
+    background: none;
+
+
+    /*            transition: 1s ease;*/
+}
+
+.valgt {
+
+    text-decoration: underline;
+}
+
+.filter-menu {
+
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.filter-menu p {
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+}
+
 /*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
 
 /*----------------------------------------DETALJEVIEW-START----------------------------------------*/
@@ -476,8 +522,6 @@ main {
 }
 
 #showroom .filter-menu {
-
-    margin-top: 30vw;
     display: flex;
     justify-content: center;
 
@@ -617,11 +661,7 @@ ul {
 
 #retailers p {
     margin-top: 10vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
 }
-
-
 
 
 #retailers .cta_links {
