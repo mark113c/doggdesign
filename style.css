@@ -443,8 +443,7 @@ main {
 .detaljeview_wrapper {
     display: flex;
     flex-wrap: wrap;
-
-    margin-top: 30vw;
+    margin-top: 10vw;
 }
 
 .detaljeview_col {
@@ -700,12 +699,200 @@ ul {
         font-size: 1.3rem;
     }
 
+    /* STYLING AF HEADERE START  */
 
+    .h1_container {
+        width: 70vw;
+        position: relative;
+        left: 30vw;
+        margin-top: 100px;
+    }
+
+    .underline {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
 
     .h2_container {
-        top: 5vw;
-        margin-top: 10vw;
+        width: 70vw;
+        position: relative;
+        left: 30vw;
+        margin-top: 100px;
     }
+
+    .underline2 {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
+
+    /* STYLING AF HEADERE SLUT  */
+
+    /*BURGERMENU*/
+    nav {
+        display: flex;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+    }
+
+    .header-wrapper {
+        padding-top: 5vw;
+        display: flex;
+        justify-content: space-between;
+        background-color: #F2F2EF;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+    }
+
+    .logo img {
+        width: 8vw;
+
+        margin: 0 3vw;
+    }
+
+    .cart img {
+        width: 3vw;
+        margin: 0vw;
+    }
+
+    .cart {
+        margin: 0 0 0 52vw;
+
+    }
+
+    #burger {
+        width: 36px;
+        height: 30px;
+        margin-top: 5vw;
+        margin-right: 5vw;
+        cursor: pointer;
+        right: 2.5vw;
+        z-index: 10000;
+    }
+
+    .bar {
+        height: 3px;
+        width: 100%;
+        display: block;
+        border-radius: 1px;
+        background-color: black;
+        transition: 0.3s ease;
+    }
+
+    #bar1 {
+        transform: translateY(-6px)
+    }
+
+    #bar3 {
+        transform: translateY(6px)
+    }
+
+    .change #bar1 {
+        transform: translateY(4px) rotateZ(-45deg);
+
+    }
+
+    .change #bar3 {
+        transform: translateY(-2px) rotateZ(45deg);
+    }
+
+    .change #bar2 {
+        opacity: 0;
+    }
+
+    .nav {
+        padding-top: 14vw;
+        display: none;
+        transition: 1s ease;
+        background-color: #F2F2EF;
+        width: 100%;
+        height: 100vh;
+        z-index: 1000;
+        position: fixed;
+        margin: 0;
+    }
+
+    .change {
+        display: block;
+    }
+
+    .nav li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav li {
+        list-style: none;
+        padding: 7vw 10vw;
+        text-align: right;
+        transition: 0.3s ease;
+    }
+
+    .cart img {
+        width: 13vw;
+        margin: 0 3vw;
+    }
+
+    .cart_web {
+        display: none;
+    }
+
+
+    /*BURGERMENU*/
+
+    /*FONT STYLING START*/
+    h1 {
+        font-size: 1.5rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 0;
+        line-height: 0.9;
+
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 0.9;
+        margin: 0;
+
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        font-family: manropelight;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        color: black;
+
+    }
+
+    /*FONT STYLING SLUT*/
 
 
     /*----------------------------------------IPAD GENERALT-SLUT----------------------------------------*/
@@ -812,6 +999,473 @@ ul {
 
 
     /*----------------------------------------IPAD-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD PRO  START----------------------------------------*/
+
+    @media only screen and (min-width : 1024px) {
+
+        /*----------------------------------------IPAD PRO GENERAL START----------------------------------------*/
+
+        /* STYLING AF HEADERE START  */
+
+        .h1_container {
+            width: 70vw;
+            position: relative;
+            left: 30vw;
+            margin-top: 100px;
+        }
+
+        .underline {
+            width 50vw;
+            height: 1px;
+            background-color: black;
+        }
+
+        .h2_container {
+            width: 70vw;
+            position: relative;
+            left: 30vw;
+            margin-top: 100px;
+        }
+
+        .underline2 {
+            width 50vw;
+            height: 1px;
+            background-color: black;
+        }
+
+        /* STYLING AF HEADERE SLUT  */
+
+        /*BURGERMENU*/
+
+        nav {
+            display: flex;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+
+        }
+
+        .header-wrapper {
+            padding-top: 5vw;
+            display: flex;
+            justify-content: space-between;
+            background-color: #F2F2EF;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+
+        .logo img {
+            width: 8vw;
+
+            margin: 0 3vw;
+        }
+
+        .cart img {
+            width: 3vw;
+            margin: 0vw;
+        }
+
+        .cart {
+            margin: 0 0 0 52vw;
+
+        }
+
+        #burger {
+            width: 36px;
+            height: 30px;
+            margin-top: 5vw;
+            margin-right: 5vw;
+            cursor: pointer;
+            right: 2.5vw;
+            z-index: 10000;
+        }
+
+        .nav {
+            padding-top: 14vw;
+            display: none;
+            transition: 1s ease;
+            background-color: #F2F2EF;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            position: fixed;
+            margin: 0;
+        }
+
+
+        .nav li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav li {
+            list-style: none;
+            padding: 7vw 10vw;
+            text-align: right;
+            transition: 0.3s ease;
+        }
+
+        .cart img {
+            width: 13vw;
+            margin: 0 3vw;
+        }
+
+        .cart_web {
+            display: none;
+        }
+
+
+
+
+        /* MENU SLUT */
+
+        /*FONT STYLING START*/
+        h1 {
+            font-size: 1.5rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+            line-height: 0.9;
+
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 0.9;
+            margin: 0;
+
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+
+        }
+
+        p {
+            font-family: manropelight;
+            font-size: 1rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            color: black;
+
+        }
+
+        /*FONT STYLING SLUT*/
+
+
+        /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
+
+
+
+        /*----------------------------------------IPAD PRO ABOUT START----------------------------------------*/
+
+        #about {
+            padding-top: 10vw;
+
+        }
+
+        #about .h2_container {
+            left: 40vw;
+        }
+
+        #about_sustainability .underline {
+            width: 65%;
+        }
+
+        #about p {
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        #about_CV p {
+            margin-top: 2vw;
+            margin-bottom: 4vw
+        }
+
+        #about_sustainability,
+        #about_intro,
+        #about_story,
+        #about_CV {
+            margin-top: 10vw;
+            margin-bottom: 2vw;
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+
+        #about h3 {
+            margin: 4vw 0vw 2vw 0vw;
+        }
+
+
+        /*----------------------------------------IPAD PRO ABOUT SLUT----------------------------------------*/
+
+    }
+
+    /*----------------------------------------LAPTOP STOR  START----------------------------------------*/
+
+    @media only screen and (min-width : 1440px) {
+
+        /*----------------------------------------LAPTOP STOR GENERAL START----------------------------------------*/
+
+        /* STYLING AF HEADERE START  */
+
+        .h1_container {
+            width: 70vw;
+            position: relative;
+            left: 30vw;
+            margin-top: 100px;
+        }
+
+        .underline {
+            width 50vw;
+            height: 1px;
+            background-color: black;
+        }
+
+        .h2_container {
+            width: 70vw;
+            position: relative;
+            left: 30vw;
+            margin-top: 100px;
+        }
+
+        .underline2 {
+            width 50vw;
+            height: 1px;
+            background-color: black;
+        }
+
+        /* STYLING AF HEADERE SLUT  */
+
+        /*BURGERMENU*/
+
+        nav {
+            display: flex;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+
+        }
+
+        .header-wrapper {
+            padding-top: 5vw;
+            display: flex;
+            justify-content: space-between;
+            background-color: #F2F2EF;
+            width: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+
+        }
+
+        .logo img {
+            width: 8vw;
+
+            margin: 0 3vw;
+        }
+
+        .cart img {
+            width: 3vw;
+            margin: 0vw;
+        }
+
+        .cart {
+            margin: 0 0 0 52vw;
+
+        }
+
+        #burger {
+            width: 36px;
+            height: 30px;
+            margin-top: 5vw;
+            margin-right: 5vw;
+            cursor: pointer;
+            right: 2.5vw;
+            z-index: 10000;
+        }
+
+        .nav {
+            padding-top: 14vw;
+            display: none;
+            transition: 1s ease;
+            background-color: #F2F2EF;
+            width: 100%;
+            height: 100vh;
+            z-index: 1000;
+            position: fixed;
+            margin: 0;
+        }
+
+
+        .nav li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .nav li {
+            list-style: none;
+            padding: 7vw 10vw;
+            text-align: right;
+            transition: 0.3s ease;
+        }
+
+        .cart img {
+            width: 13vw;
+            margin: 0 3vw;
+        }
+
+        .cart_web {
+            display: none;
+        }
+
+
+
+
+        /* MENU SLUT */
+
+        /*FONT STYLING START*/
+        h1 {
+            font-size: 1.5rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin: 0;
+            line-height: 0.9;
+
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            line-height: 0.9;
+            margin: 0;
+
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+
+        }
+
+        p {
+            font-family: manropelight;
+            font-size: 1rem;
+        }
+
+        a {
+            font-size: 1.2rem;
+            font-family: manropebold;
+            text-transform: uppercase;
+            color: black;
+
+        }
+
+        /*FONT STYLING SLUT*/
+
+        /*----------------------------------------LAPTOP STOR GENERAL SLUT----------------------------------------*/
+
+
+
+        /*----------------------------------------LAPTOP STOR ABOUT START----------------------------------------*/
+
+        #about {
+            padding-top: 7vw;
+
+        }
+
+        #about .h1_container {
+            top: 6vw;
+            left: 40vw;
+            position: relative;
+            width: 50vw;
+            line-height: 3.1;
+        }
+
+        #about .h2_container {
+            top: 2.4vw;
+            left: 49vw;
+            position: relative;
+            width: 45vw;
+            line-height: 1.4;
+        }
+
+        #about_sustainability .underline {
+            width: 65%;
+        }
+
+        #about p {
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+            margin-left: 0vw;
+            margin-right: 0vw;
+        }
+
+        #about_CV p {
+            margin-top: 2vw;
+            margin-bottom: 4vw
+        }
+
+        #about h3 {
+            margin: 4vw 0vw 2vw 0vw;
+        }
+
+
+
+        #about_CV {
+            margin-top: 6vw;
+            margin-bottom: 2vw;
+            margin-left: 13vw;
+            margin-right: 13vw;
+        }
+
+        #about_sustainability,
+        #about_intro,
+        #about_story {
+            margin-top: 6vw;
+            margin-bottom: 2vw;
+            margin-left: 13vw;
+            margin-right: 30vw;
+        }
+
+
+        /*----------------------------------------LAPTOP STOR ABOUT SLUT----------------------------------------*/
+
+
+        /*----------------------------------------LAPTOP STOR  SLUT----------------------------------------*/
+
+    }
+
 
 
 
