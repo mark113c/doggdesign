@@ -8,6 +8,43 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    .breadcrumb {
+
+        list-style: none;
+        display: flex;
+        position: absolute;
+
+
+    }
+
+    .breadcrumb img {
+        width: 8vw;
+
+        padding: 0 3vw 0 3vw;
+    }
+
+    .breadcrumb a {
+        font-family: manropelight;
+        font-size: .8rem;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    @media only screen and (min-width : 768px) {
+        .breadcrumb img {
+            width: 7vw;
+
+            padding: 0 2vw 0 2vw;
+        }
+
+    }
+
+</style>
 
 
 <body>
@@ -49,7 +86,11 @@
     </header>
     <!--    BURGER MENU SLUT    -->
     <section id="webshop_detaljeview">
-
+        <ul class="breadcrumb">
+            <li><a href="webshop.html">Produktoverview</a></li>
+            <img src="img/forwardpil.svg" alt="forwardpil">
+            <li><a class="brodkrummesti" href="#"></a></li>
+        </ul>
         <article id="detaljeview_article">
             <div class="h1_container">
                 <h1></h1>
@@ -148,11 +189,15 @@
                     detaljeview.querySelector(".price").innerHTML = elm.price;
                     detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
                     detaljeview.querySelector(".materials").innerHTML += elm.material;
+                    detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
+
 
 
                 }
             });
         }
+
+
 
         function visBilledkarrusel() {
             numberOfPicsInCaro = karrusel.product_gallery.length;
@@ -216,5 +261,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
