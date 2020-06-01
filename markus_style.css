@@ -68,12 +68,24 @@ header {
     margin: 0 3vw;
 }
 
+.cart img {
+    width: 3vw;
+    margin: 0vw;
+}
+
+.cart {
+    margin: 0 0 0 52vw;
+
+}
+
 #burger {
     width: 36px;
     height: 30px;
-    margin: 5vw;
+    margin-top: 5vw;
+    margin-right: 5vw;
     cursor: pointer;
     right: 2.5vw;
+    z-index: 10000;
 }
 
 .bar {
@@ -107,6 +119,7 @@ header {
 }
 
 .nav {
+    padding-top: 14vw;
     display: none;
     transition: 1s ease;
     background-color: #F2F2EF;
@@ -138,6 +151,9 @@ header {
     margin: 0 3vw;
 }
 
+.cart_web {
+    display: none;
+}
 
 
 
@@ -201,7 +217,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: manropebold;
     text-transform: uppercase;
 
@@ -467,9 +483,14 @@ main {
     width: 65%;
 }
 
-#about p {
+#about h3,
+p {
     margin: 10vw 4vw 10vw 4vw;
 }
+
+
+
+
 
 
 
@@ -786,7 +807,7 @@ ul {
         flex-direction: row;
         position: fixed;
         width: 100%;
-        height: 7vh;
+
         top: 0;
         left: 0;
         z-index: 10;
@@ -823,15 +844,30 @@ ul {
         margin: 0 3vw;
     }
 
+    .cart {
+        display: none;
+    }
+
+    .cart_web {
+
+        display: block;
+    }
+
+    .cart_web img {
+        width: 3vw;
+        margin-right: 3vw;
+    }
+
     #burger {
         display: none;
     }
 
     .nav {
+        padding-top: 0.5vw;
         display: flex;
         width: 100%;
         margin: 0;
-        height: 3vh;
+        height: 0vw;
         position: relative;
 
     }
@@ -850,6 +886,7 @@ ul {
         list-style: none;
 
     }
+
 
     /* MENU SLUT */
 
@@ -947,6 +984,74 @@ ul {
 
 }
 
-/*----------------------------------------LAPTOP  PRO  START----------------------------------------*/
+/*----------------------------------------LAPTOP STOR  START----------------------------------------*/
 
-@media only screen and (min-width : 1440px) {}
+@media only screen and (min-width : 1440px) {
+    /*----------------------------------------LAPTOP STOR ABOUT START----------------------------------------*/
+
+    #about {
+        padding-top: 7vw;
+
+    }
+
+    #about .h1_container {
+        top: 6vw;
+        left: 40vw;
+        position: relative;
+        width: 50vw;
+        line-height: 3.1;
+    }
+
+    #about .h2_container {
+        top: 2.4vw;
+        left: 49vw;
+        position: relative;
+        width: 45vw;
+        line-height: 1.4;
+    }
+
+    #about_sustainability .underline {
+        width: 65%;
+    }
+
+    #about p {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    #about_CV p {
+        margin-top: 2vw;
+        margin-bottom: 4vw
+    }
+
+    #about h3 {
+        margin: 4vw 0vw 2vw 0vw;
+    }
+
+
+
+    #about_CV {
+        margin-top: 6vw;
+        margin-bottom: 2vw;
+        margin-left: 13vw;
+        margin-right: 13vw;
+    }
+
+    #about_sustainability,
+    #about_intro,
+    #about_story {
+        margin-top: 6vw;
+        margin-bottom: 2vw;
+        margin-left: 13vw;
+        margin-right: 30vw;
+    }
+
+
+    /*----------------------------------------LAPTOP STOR ABOUT SLUT----------------------------------------*/
+
+
+    /*----------------------------------------LAPTOP STOR  SLUT----------------------------------------*/
+
+}
