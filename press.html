@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,47 @@
     <link rel="stylesheet" href="fonts.css">
 
 </head>
+<style>
+    img {
+        width: 100%;
+    }
+
+    #press_template {}
+
+    #press h2,
+    #press p {
+        text-align: center;
+    }
+
+    #press article {
+        margin: 12vw 3vw 0 2vw;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 20px;
+    }
+
+    #press img {
+        padding: 15vw;
+    }
+
+    @media only screen and (min-width : 768px) {
+
+        #press img {
+            padding: 12vw 12vw 3vw 12vw;
+        }
+
+        #press {
+            padding-top: 3vw;
+        }
+
+
+
+    }
+
+</style>
 
 <body>
     <!--    BURGER MENU START    -->
@@ -39,129 +81,79 @@
     </header>
 
     <!--    BURGER MENU SLUT    -->
-    <div id="press">
+    <div class="content_wrapper contact">
         <div class="h1_container">
-            <h2>Press</h2>
+            <h1>Press</h1>
         </div>
         <div class="underline"></div>
-        <section id="about_press">
-            <template id="press_template">
+        <div id="press">
 
-                <img class="caro_imgs" src="" alt="">
 
-            </template>
+            <section id="about_press" class="grid">
 
-        </section>
-        <main id="press_carousel">
+            </section>
 
-            <div class="carousel">
-                <div class="carousel_inner">
-
-                    <div class="bwd">
-                        <img src="img/tilbagepil.svg" alt="tilbagepil">
-                    </div>
-                    <div class="container">
-
-                    </div>
-                    <div class="fwd">
-                        <img src="img/forwardpil.svg" alt="forwardpil">
-                    </div>
-                </div>
-                <div class="legend-container"></div>
-            </div>
-
-        </main>
-
+        </div>
     </div>
+    <template id="press_template">
+
+
+        <article>
+            <img src="" alt="">
+            <h2></h2>
+        </article>
+
+
+    </template>
 
     <script src="script.js"></script>
 
     <script>
-        let karrusel;
-        let numberOfPicsInCaro;
-        let caroCurrentNum = 0;
-        const aboutPressEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press/125";
+        let pressData = [];
+        const pressEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press";
+        let pressTemplate = document.querySelector("#press_template");
+        const listeElm = document.querySelector("#about_press");
 
         document.addEventListener("DOMContentLoaded", start);
 
 
         function start() {
             hentData();
-            document.querySelector(".fwd").addEventListener("click", fwd);
-            document.querySelector(".bwd").addEventListener("click", bwd);
+
 
         }
 
         async function hentData() {
 
 
-            const aboutPressResponse = await fetch(aboutPressEndpoint);
-            console.log(aboutPressResponse);
-            karrusel = await aboutPressResponse.json();
-            visAboutPress();
+            const pressResponse = await fetch(pressEndpoint);
+            console.log(pressResponse);
+            pressData = await pressResponse.json();
+            visPress();
 
         }
 
-        function visAboutPress() {
-            numberOfPicsInCaro = karrusel.image.length;
-            console.log("image", karrusel.image);
-            karrusel.image.forEach((image, index) => {
-                const theClone =
-                    document.querySelector("#press_template").cloneNode(true).content;
-                const secondClone = document.querySelector("#press_template").cloneNode(true).content;
-                theClone.querySelector(".caro_imgs").src = image.guid;
-                secondClone.querySelector(".caro_imgs").src = image.guid;
-                document.querySelector(".container").appendChild(theClone);
-                document.querySelector(".legend-container").appendChild(theClone);
-            })
-            document.querySelector(".container").addEventListener("scroll", scrollFunction);
-        }
+        function visPress() {
 
-        function fwd() {
-            if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                caroCurrentNum++;
-                navigate();
-            }
-        }
+            console.log(pressData);
 
-        function bwd() {
-            if (caroCurrentNum > 0)
-                caroCurrentNum--;
-            navigate();
-        }
+            pressData.forEach(elm => {
 
-        function navigate() {
-            document.querySelector(".container").scrollTo({
-                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
-                behavior: "smooth"
-            })
-            setBtns();
-        }
+                const klon = pressTemplate.cloneNode(true).content;
 
-        function scrollFunction() {
-            //  console.log("scrollFunction");
+                klon.querySelector("img").src = elm.image.guid;
 
-            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
-            console.log(caroCurrentNum);
-            setBtns();
+                klon.querySelector("h2").innerHTML = elm.magazine;
+
+
+
+                listeElm.appendChild(klon);
+
+            });
 
         }
 
-        function setBtns() {
-            if (caroCurrentNum < numberOfPicsInCaro - 1) {
-                document.querySelector(".fwd").style.opacity = 1;
-                document.querySelector(".fwd").style.cursor = "pointer";
-            } else {
-                document.querySelector(".fwd").style.opacity = 0.2;
-                document.querySelector(".fwd").style.cursor = "default";
-            }
-            if (caroCurrentNum > 0) {
-                document.querySelector(".bwd").style.opacity = 1;
-                document.querySelector(".bwd").style.cursor = "pointer";
-            } else {
-                document.querySelector(".bwd").style.opacity = 0.2;
-                document.querySelector(".bwd").style.cursor = "default";
-            }
-        }
     </script>
-</body></html>
+</body>
+
+</html>
