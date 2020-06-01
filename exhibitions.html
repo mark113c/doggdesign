@@ -57,7 +57,7 @@
         <div class="underline"></div>
     </div>
     <section id="exhibitions">
-        <template>
+        <template id="exhibitions_karrusel">
 
             <img class="caro_imgs" src="" alt="">
 
@@ -98,10 +98,18 @@
         let exhibitionsTemplate = document.querySelector("#exhibitions_template");
         const listeElm = document.querySelector("#exhibitions");
 
+        //Karrusel
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+        const exhibitionsKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibitions_billede/371";
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
             hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
         }
 
         async function hentData() {
@@ -109,6 +117,11 @@
             console.log(exhibitionsResponse);
             exhibitionsData = await exhibitionsResponse.json();
             visExhibitions();
+
+            const karruselResponse = await fetch(exhibitionsKarruselEndpoint);
+            console.log("BABAGANUSH" + karruselResponse);
+            karrusel = await karruselResponse.json();
+            visBilledkarrusel();
 
         }
 
@@ -121,6 +134,69 @@
 
                 listeElm.appendChild(klon);
             });
+        }
+
+        function visBilledkarrusel() {
+            numberOfPicsInCaro = karrusel.billeder.length;
+            console.log("billeder", karrusel.billeder);
+            karrusel.billeder.forEach((billeder, index) => {
+                const theClone =
+                    document.querySelector("#exhibitions_karrusel").cloneNode(true).content;
+                const secondClone = document.querySelector("#exhibitions_karrusel").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = billeder.guid;
+                secondClone.querySelector(".caro_imgs").src = billeder.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
         }
     </script>
 </body></html>
