@@ -64,6 +64,9 @@ h1 {
 /*HEADER-SLUT*/
 
 /*BURGERMENU*/
+nav {
+    display: flex;
+}
 
 header {
     position: fixed;
@@ -92,12 +95,24 @@ header {
     margin: 0 3vw;
 }
 
+.cart img {
+    width: 3vw;
+    margin: 0vw;
+}
+
+.cart {
+    margin: 0 0 0 52vw;
+
+}
+
 #burger {
     width: 36px;
     height: 30px;
-    margin: 5vw;
+    margin-top: 5vw;
+    margin-right: 5vw;
     cursor: pointer;
     right: 2.5vw;
+    z-index: 10000;
 }
 
 .bar {
@@ -131,6 +146,7 @@ header {
 }
 
 .nav {
+    padding-top: 14vw;
     display: none;
     transition: 1s ease;
     background-color: #F2F2EF;
@@ -157,7 +173,14 @@ header {
     transition: 0.3s ease;
 }
 
+.cart img {
+    width: 13vw;
+    margin: 0 3vw;
+}
 
+.cart_web {
+    display: none;
+}
 
 
 /*BURGERMENU*/
@@ -207,6 +230,8 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 0;
+    line-height: 0.9;
+
 }
 
 h2 {
@@ -214,7 +239,9 @@ h2 {
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
+    line-height: 0.9;
     margin: 0;
+
 }
 
 h3 {
@@ -239,6 +266,7 @@ a {
 
 /*FONT STYLING SLUT*/
 /*UNDERLINE TIL OVERSKRIFTER START*/
+/*
 .underline {
     width: 60vw;
     height: 1px;
@@ -260,7 +288,7 @@ a {
 
 }
 
-/*UNDERLINE TIL OVERSKRIFTER SLUT*/
+UNDERLINE TIL OVERSKRIFTER SLUT
 
 .h1_container {
     top: 23.8vw;
@@ -277,6 +305,7 @@ a {
     width: 50vw;
     line-height: .68;
 }
+*/
 
 /*BILLEDEKARRUSELLER START*/
 main {
