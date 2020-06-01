@@ -14,9 +14,11 @@ img {
     width: 100%;
 }
 
+/*
 #about p:nth-child(1) {
     padding-top: 30vw;
 }
+*/
 
 
 /* STYLING AF HEADERE START  */
@@ -38,7 +40,7 @@ img {
     width: 70vw;
     position: relative;
     left: 30vw;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .underline2 {
@@ -59,13 +61,13 @@ img {
 #about,
 #press,
 #showroom,
-#showroom_single {
+#showroom_single,
+#webshop,
+#contact {
     padding-top: 10vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
-
-
-
-#detaljeview .detaljeview_col {}
 
 /* STYLING AF INDHOLDSECTIONER SLUT  */
 
@@ -434,6 +436,49 @@ main {
 
 /*----------------------------------------WEBSHOP-START----------------------------------------*/
 
+#webshop h1,
+#webshop h2,
+#webshop .price {
+    text-align: center;
+}
+
+#webshop h2,
+#webshop p {
+    margin-top: 1vw;
+    margin-bottom: 2vw;
+}
+
+
+#webshop img {
+    width: 100%;
+}
+
+
+
+.filter-menu button {
+    background: none;
+
+
+    /*            transition: 1s ease;*/
+}
+
+.valgt {
+
+    text-decoration: underline;
+}
+
+.filter-menu {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.filter-menu p {
+    margin-left: 1.7vw;
+    margin-right: 1.7vw;
+}
+
 /*----------------------------------------WEBSHOP-SLUT----------------------------------------*/
 
 /*----------------------------------------DETALJEVIEW-START----------------------------------------*/
@@ -475,8 +520,6 @@ main {
 }
 
 #showroom .filter-menu {
-
-    margin-top: 30vw;
     display: flex;
     justify-content: center;
 
@@ -492,18 +535,6 @@ main {
 /*----------------------------------------ABOUT-START----------------------------------------*/
 
 
-
-
-
-
-
-#about_sustainability .underline {
-    width: 65%;
-}
-
-#about p {
-    margin: 10vw 4vw 10vw 4vw;
-}
 
 
 
@@ -561,6 +592,7 @@ main {
 /*----------------------------------------PRESS-SLUT----------------------------------------*/
 
 /*----------------------------------------CONTACT-START----------------------------------------*/
+/*
 #contact p:nth-child(1) {
     padding-top: 30vw;
 
@@ -569,6 +601,7 @@ main {
 #contact p {
     padding-left: 4vw;
 }
+*/
 
 
 
@@ -578,11 +611,13 @@ main {
 /*TERMS AND CONDITIONS START*/
 
 
+/*
 #termsandconditions p {
     margin-top: 10vw;
     padding-left: 4vw;
     padding-right: 4vw;
 }
+*/
 
 #termsandconditions a {
     text-decoration: none;
@@ -593,12 +628,14 @@ main {
 /*RETURN POLICY START*/
 
 
-#returnpolicy p,
+/*
+#returnpolicy p
 ul {
     margin-top: 10vw;
     padding-left: 4vw;
     padding-right: 4vw;
 }
+*/
 
 #returnpolicy ul {
     margin: 0 4vw;
@@ -626,13 +663,6 @@ ul {
 
 /*RETAILERS START*/
 
-#retailers p {
-    margin-top: 10vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-}
-
-
 
 
 #retailers .cta_links {
@@ -658,11 +688,13 @@ ul {
 
 
 
+/*
 #shipping_info p {
     margin-top: 10vw;
     padding-left: 4vw;
     padding-right: 4vw;
 }
+*/
 
 /*SHIPPING INFO SLUT*/
 
@@ -684,7 +716,7 @@ ul {
     }
 
     .underline {
-        width 50vw;
+        width 150vw;
         height: 1px;
         background-color: black;
     }
@@ -692,7 +724,7 @@ ul {
     .h2_container {
         width: 50vw;
         position: relative;
-        left: 50vw;
+        left: 45vw;
         margin-top: 100px;
     }
 
@@ -834,6 +866,28 @@ ul {
 
     /*FONT STYLING SLUT*/
 
+    /* STYLING AF INDHOLDSECTIONER START  */
+
+    #exhibitions,
+    #shipping_info,
+    #returnpolicy,
+    #termsandconditions,
+    #retailers,
+    #about,
+    #press,
+    #showroom,
+    #showroom_single,
+    #webshop,
+    #contact {
+        padding-top: 8vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    /* STYLING AF INDHOLDSECTIONER SLUT  */
+
+
+
 
     /*----------------------------------------IPAD GENERALT-SLUT----------------------------------------*/
 
@@ -879,6 +933,7 @@ ul {
     /*----------------------------------------SHOWROOM-SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD ABOUT-START----------------------------------------*/
+    /*
 
     #about_intro .quote {
         padding-top: 30vw;
@@ -887,16 +942,13 @@ ul {
     #about p:nth-child(1) {
         padding-top: 0vw;
     }
+*/
 
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
 
-    #contact p:nth-child(1) {
-        padding-top: 20vw;
-
-    }
 
 
 
@@ -905,9 +957,11 @@ ul {
     /*----------------------------------------IPAD PRESS-START----------------------------------------*/
 
 
+    /*
     #press img {
         padding: 12vw 12vw 3vw 12vw;
     }
+*/
 
     #press {
         padding-top: 3vw;
@@ -960,8 +1014,9 @@ ul {
         .h2_container {
             width: 45vw;
             position: relative;
-            left: 55vw;
+            left: 45vw;
             margin-top: 100px;
+            margin-bottom: 50px;
         }
 
         .underline2 {
@@ -1103,37 +1158,46 @@ ul {
 
         /*FONT STYLING SLUT*/
 
+        /* STYLING AF INDHOLDSECTIONER START  */
+
+        #exhibitions,
+        #shipping_info,
+        #returnpolicy,
+        #termsandconditions,
+        #retailers,
+        #about,
+        #press,
+        #showroom,
+        #showroom_single,
+        #webshop,
+        #contact {
+            padding-top: 10vw;
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+
+        /* STYLING AF INDHOLDSECTIONER SLUT  */
+
 
         /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
 
 
 
         /*----------------------------------------IPAD PRO ABOUT START----------------------------------------*/
-
-
-
+        #about img {
+            margin-top: 4vw;
+        }
 
         #about p {
-            margin-top: 3vw;
-            margin-bottom: 3vw;
-            margin-left: 0vw;
-            margin-right: 0vw;
+            max-width: 60vw;
         }
+
 
         #about_CV p {
             margin-top: 2vw;
             margin-bottom: 4vw
         }
 
-        #about_sustainability,
-        #about_intro,
-        #about_story,
-        #about_CV {
-            margin-top: 10vw;
-            margin-bottom: 2vw;
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
 
         #about h3 {
             margin: 4vw 0vw 2vw 0vw;
@@ -1168,7 +1232,7 @@ ul {
         .h2_container {
             width: 45vw;
             position: relative;
-            left: 55vw;
+
             margin-top: 100px;
         }
 
@@ -1311,6 +1375,26 @@ ul {
 
         /*FONT STYLING SLUT*/
 
+        /* STYLING AF INDHOLDSECTIONER START  */
+
+        #exhibitions,
+        #shipping_info,
+        #returnpolicy,
+        #termsandconditions,
+        #retailers,
+        #about,
+        #press,
+        #showroom,
+        #showroom_single,
+        #webshop,
+        #contact {
+            padding-top: 5vw;
+            margin-left: 15vw;
+            margin-right: 15vw;
+        }
+
+        /* STYLING AF INDHOLDSECTIONER SLUT  */
+
         /*----------------------------------------LAPTOP STOR GENERAL SLUT----------------------------------------*/
 
 
@@ -1319,21 +1403,10 @@ ul {
 
 
 
-
-        #about p {
-            margin-top: 3vw;
-            margin-bottom: 3vw;
-            margin-left: 0vw;
-            margin-right: 0vw;
-        }
-
+        /*
         #about_CV p {
             margin-top: 2vw;
             margin-bottom: 4vw
-        }
-
-        #about h3 {
-            margin: 4vw 0vw 2vw 0vw;
         }
 
 
@@ -1343,16 +1416,9 @@ ul {
             margin-bottom: 2vw;
             margin-left: 13vw;
             margin-right: 13vw;
-        }
+        }*/
 
-        #about_sustainability,
-        #about_intro,
-        #about_story {
-            margin-top: 6vw;
-            margin-bottom: 2vw;
-            margin-left: 13vw;
-            margin-right: 30vw;
-        }
+
 
 
         /*----------------------------------------LAPTOP STOR ABOUT SLUT----------------------------------------*/
