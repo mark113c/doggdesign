@@ -48,22 +48,28 @@ img {
 }
 
 /* STYLING AF HEADERE SLUT  */
-/*
-section {
-    margin-top: 10vw;
+
+/* STYLING AF INDHOLDSECTIONER START  */
+
+#exhibitions,
+#shipping_info,
+#returnpolicy,
+#termsandconditions,
+#retailers,
+#about,
+#press,
+#showroom,
+#showroom_single {
+    padding-top: 10vw;
 }
 
-h1 {
-    margin-top: 30vw;
-}
-*/
-
-/*HEADER*/
 
 
-/*HEADER-SLUT*/
+#detaljeview .detaljeview_col {}
 
-/*BURGERMENU*/
+/* STYLING AF INDHOLDSECTIONER SLUT  */
+
+
 nav {
     display: flex;
 }
@@ -230,7 +236,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 0;
-    line-height: 0.9;
+    line-height: 0.8;
 
 }
 
@@ -794,7 +800,6 @@ ul {
         text-transform: uppercase;
         letter-spacing: 5px;
         margin: 0;
-        line-height: 0.9;
 
     }
 
@@ -803,7 +808,6 @@ ul {
         font-family: manropebold;
         text-transform: uppercase;
         letter-spacing: 5px;
-        line-height: 0.9;
         margin: 0;
 
     }
@@ -1064,7 +1068,6 @@ ul {
             text-transform: uppercase;
             letter-spacing: 5px;
             margin: 0;
-            line-height: 0.9;
 
         }
 
@@ -1272,7 +1275,7 @@ ul {
             text-transform: uppercase;
             letter-spacing: 5px;
             margin: 0;
-            line-height: 0.9;
+
 
         }
 
