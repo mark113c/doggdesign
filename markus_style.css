@@ -37,6 +37,10 @@ h1 {
 
 /*BURGERMENU*/
 
+nav {
+    display: flex;
+}
+
 header {
     position: fixed;
     width: 100%;
@@ -129,6 +133,11 @@ header {
     transition: 0.3s ease;
 }
 
+.cart img {
+    width: 13vw;
+    margin: 0 3vw;
+}
+
 
 
 
@@ -148,6 +157,7 @@ header {
     line-height: 50px;
     text-transform: uppercase;
     padding: 0 20px 0 20px;
+    margin-top: 25px;
 }
 
 button {
@@ -159,12 +169,13 @@ button {
 /*CALL-TO-ACTION-BUTTONS-SLUT*/
 
 /*QUOTES*/
-.quote {
+.quote p {
     font-size: 1.4rem;
     font-family: manropelight;
-    margin: 0 auto;
-    display: block;
-    max-width: 350px;
+    margin: 0;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    max-width: 1200px;
 }
 
 /*QUOTES-SLUT*/
@@ -328,16 +339,18 @@ main {
     font-size: 1rem;
     font-family: manropelight;
     text-align: center;
-
 }
 
-#splash_quote {
-    font-size: 1.4rem;
-    font-family: manropelight;
-    margin: 0 auto;
-    display: block;
-    max-width: 350px;
+#splash_under_text {
+    margin-top: 5vw;
+    padding: 0 15vw 0 5vw;
 }
+
+#splash_forside #splash_mobil {
+    margin-top: 40vw;
+    margin-bottom: 0;
+}
+
 
 #splash_mobil {
     margin-top: 40vw;
@@ -445,14 +458,6 @@ main {
 
 
 
-#about .quote p {
-    font-family: manropelight;
-    max-width: 350px;
-    font-size: 1.4rem;
-    display: block;
-    margin: 0 auto;
-    padding-top: 10vw;
-}
 
 #about .h2_container {
     left: 40vw;
@@ -493,8 +498,29 @@ main {
 
 
 /*----------------------------------------PRESS-START----------------------------------------*/
+/*
 #press {
     padding-top: 19vw;
+}
+*/
+
+#press h2,
+#press p {
+    text-align: center;
+}
+
+#press article {
+    margin: 10vw 3vw 0 2vw;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+#press {
+    padding: 10vw 10vw 3vw 10vw;
 }
 
 
@@ -606,7 +632,6 @@ ul {
 
 /*SHIPPING INFO SLUT*/
 
-
 /*----------------------------------------FOOTERPAGES-SLUT----------------------------------------*/
 
 /*----------------------------------------IPAD START----------------------------------------*/
@@ -632,7 +657,17 @@ ul {
 
     .h2_container {
         top: 5vw;
-        margin-top: 10vw;
+        margin-top: 0vw;
+    }
+
+    /*    General styling   */
+
+    .h2_container {
+        top: 5vw;
+        left: 40vw;
+        position: relative;
+        width: 50vw;
+        line-height: 1.4;
     }
 
 
@@ -664,6 +699,24 @@ ul {
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
 
+    /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
+
+    /*----------------------------------------IPAD CONTACT-SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD PRESS-START----------------------------------------*/
+
+
+    #press img {
+        padding: 12vw 12vw 3vw 12vw;
+    }
+
+    #press {
+        padding-top: 3vw;
+    }
+
+    /*----------------------------------------IPAD PRESS-SLUT----------------------------------------*/
+
+
     /*----------------------------------------IPAD FOOTERPAGES-START----------------------------------------*/
 
 
@@ -684,13 +737,216 @@ ul {
 
 
     /*----------------------------------------IPAD FOOTERPAGES-SLUT----------------------------------------*/
+    /*----------------------------------------IPAD FORSIDE START----------------------------------------*/
+    .quote p {
+        font-size: 2rem;
 
-    /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
+    }
 
-    /*----------------------------------------IPAD CONTACT-SLUT----------------------------------------*/
+    .cta {
+        border: 1px solid #000000;
+        background-color: transparent;
+        font-size: 1.5rem;
+        font-family: manropebold;
+        letter-spacing: 1.5px;
+        line-height: 50px;
+        text-transform: uppercase;
+        padding: 15px 20px 15px 20px;
+
+
+    }
+
+    /*----------------------------------------IPAD FORSIDE SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD-SLUT----------------------------------------*/
 
 
 
 }
 
-/*----------------------------------------IPAD-SLUT----------------------------------------*/
+/*----------------------------------------IPAD PRO  START----------------------------------------*/
+
+@media only screen and (min-width : 1024px) {
+
+    /*----------------------------------------IPAD PRO GENERAL START----------------------------------------*/
+
+
+    .h2_container {
+        top: 3.4vw;
+        left: 40vw;
+        position: relative;
+        width: 50vw;
+        line-height: 1.4;
+    }
+
+    /* MENU */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        height: 7vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #F2F2EF;
+        padding-top: 2vw;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+    }
+
+    .header-wrapper {
+        padding-top: 0vw;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none;
+
+    }
+
+    .logo img {
+        width: 3vw;
+        margin: 0 3vw;
+    }
+
+    .cart img {
+        width: 3vw;
+        margin: 0 3vw;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        height: 3vh;
+        position: relative;
+
+    }
+
+
+
+    .nav li a {
+        text-decoration: none;
+        color: black;
+        font-size: 0.8rem;
+
+    }
+
+    .nav li {
+        padding: 0 2vw;
+        list-style: none;
+
+    }
+
+    /* MENU SLUT */
+
+
+    /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD PRO FONT STYLING START----------------------------------------*/
+    h1 {
+        font-size: 3rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        font-family: manropelight;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        color: black;
+
+    }
+
+    .quote p {
+        font-size: 1.5rem;
+        font-family: manropelight;
+        margin: 0;
+        margin-left: 4vw;
+        margin-right: 4vw;
+        max-width: 800px;
+    }
+
+
+    /*----------------------------------------IPAD PRO FONT STYLING SLUT----------------------------------------*/
+
+    /*FONT STYLING SLUT*/
+
+    /*----------------------------------------IPAD PRO ABOUT START----------------------------------------*/
+
+    #about {
+        padding-top: 10vw;
+
+    }
+
+    #about .h2_container {
+        left: 40vw;
+    }
+
+    #about_sustainability .underline {
+        width: 65%;
+    }
+
+    #about p {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        margin-left: 0vw;
+        margin-right: 0vw;
+    }
+
+    #about_CV p {
+        margin-top: 2vw;
+        margin-bottom: 4vw
+    }
+
+    #about_sustainability,
+    #about_intro,
+    #about_story,
+    #about_CV {
+        margin-top: 10vw;
+        margin-bottom: 2vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+
+    /*----------------------------------------IPAD PRO ABOUT SLUT----------------------------------------*/
+
+}
+
+/*----------------------------------------LAPTOP  PRO  START----------------------------------------*/
+
+@media only screen and (min-width : 1440px) {}
