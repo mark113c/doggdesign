@@ -329,7 +329,16 @@ main {
     font-size: 1rem;
     font-family: manropelight;
     text-align: center;
+}
 
+#splash_under_text {
+    margin-top: 5vw;
+    padding: 0 15vw 0 5vw;
+}
+
+#splash_forside #splash_mobil {
+    margin-top: 40vw;
+    margin-bottom: 0;
 }
 
 
