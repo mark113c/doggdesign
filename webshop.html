@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts.css">
     <style>
         body {
@@ -13,22 +14,19 @@
         }
 
         #webshop {
-            background-color: #F2F2EF;
+
             padding: 15vw;
         }
 
-        h2,
-        p,
-        h1 {
-            font-family: manropebold;
-        }
 
-        h1 {
+        #webshop h1,
+        #webshop h2,
+        #webshop .price {
             text-align: center;
         }
 
         #webshop h2,
-        p {
+        #webshop p {
             margin-top: 1vw;
             margin-bottom: 2vw;
         }
@@ -42,62 +40,56 @@
             margin: 12vw 3vw 0 2vw;
         }
 
-        #webshop article .price {
-            text-align: center;
-        }
 
-        #webshop article h2 {
-            text-align: center;
-        }
 
         .underline {
             width: 60vw;
             height: 1px;
             background-color: black;
             float: right;
+            position: relative;
+            top: 20vw;
+            right: 0;
+
         }
+
 
         h1 {
             text-align: left;
             line-height: .9;
+
         }
 
         .h1_container {
-            top: 6vw;
+            top: 24vw;
             left: 40vw;
             position: relative;
             width: 50vw;
+
         }
 
-        button {
+        .filter-menu button {
             background: none;
-            border: none;
-            transition: 1s ease;
-        }
 
-        .filter-menu {
-            margin-top: 10vw;
+
+            /*            transition: 1s ease;*/
         }
 
         /*
         .valgt {
-            animation-name: line_kf;
-            animation-duration: 0.5s;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
+
+            text-decoration: underline;
         }
 
-        @keyframes line_kf {
-            0% {
-                transform: scaleX(0);
-            }
+        .filter-menu {
+            margin-top: 25vw;
+            display: flex;
+            justify-content: center;
 
-            100% {
-                transform: scaleX(1);
-            }
 
         }
 */
+
 
         .valgt {
             text-decoration: underline;
@@ -108,22 +100,47 @@
         .line {
             border-style: solid;
             transform: scalex(0)
+
+        .filter-menu p {
+            margin-left: 1.7vw;
+            margin-right: 1.7vw;
+
         }
 */
 
-
-
-        /*
-        #webshop article .col {
-            display: grid;
-            grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-        }
-*/
     </style>
 </head>
 
 <body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
     <div class="h1_container">
         <h1>WEBSHOP</h1>
     </div>
@@ -131,6 +148,7 @@
     </div>
 
     <div class="filter-menu">
+
         <button id="all" class="filter valgt" data-kategori="all">ALL
 
         </button>
@@ -148,6 +166,30 @@
 
         </button>
 
+        <div id="all" class="filter valgt" data-kategori="alle">
+            <p>ALL</p>
+
+        </div>
+        <div class="line"></div>
+
+        <div class="filter" data-kategori="13">
+            <p>TABLES</p>
+        </div>
+        <div class="filter" data-kategori="14">
+            <p>CHAIRS</p>
+
+        </div>
+
+        <div class="filter" data-kategori="15">
+            <p>LAMPS</p>
+
+        </div>
+        <div class="filter" data-kategori="16">
+            <p>HOME DECOR</p>
+
+        </div>
+
+
     </div>
     <section id="webshop">
         <template id="webshop_template">
@@ -160,6 +202,7 @@
             </article>
         </template>
     </section>
+    <script src="script.js"></script>
     <script>
         let webshopData = [];
         const webshopEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop?per_page=100";
@@ -224,5 +267,8 @@
 
             visWebshop();
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

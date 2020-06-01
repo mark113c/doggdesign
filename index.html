@@ -95,9 +95,39 @@
     .text p:nth-child(2) {
         text-align: right;
     }
+
 </style>
 
 <body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
 
 
     <section id="splash_forside">
@@ -121,6 +151,7 @@
     <section id="forside">
 
     </section>
+
 
     <footer>
         <div class="footer_top">
@@ -158,6 +189,9 @@
     </footer>
 
 
+
+    <script src="script.js"></script>
+
     <script>
         let forsideData;
         const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/13";
@@ -180,5 +214,8 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

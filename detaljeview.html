@@ -6,117 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webshop</title>
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-        margin: 0;
-    }
 
-    img {
-        width: 100%;
-    }
-
-    main {
-        50vw;
-    }
-
-    .carousel {
-        width: 90%;
-        padding: 0;
-        margin-left: 20px;
-    }
-
-    .caro_imgs {
-        width: 100%;
-
-    }
-
-    .container {
-        display: flex;
-        overflow: scroll;
-        scroll-snap-type: x mandatory;
-
-    }
-
-    .container section {
-        scroll-snap-align: start;
-
-    }
-
-    .carousel_inner {
-        display: flex;
-
-
-    }
-
-    .bwd,
-    .fwd {
-        display: flex;
-        cursor: pointer;
-        align-items: center;
-
-    }
-
-    .bwd img,
-    .fwd img {
-        position: absolute;
-        z-index: 10;
-
-    }
-
-    .fwd img {
-
-        width: 2%;
-        margin-left: 10px;
-    }
-
-    .bwd img {
-
-        width: 2%;
-        margin-left: -22px;
-    }
-
-    .webshop_wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row-reverse;
-        margin-right: 0;
-    }
-
-    .webshop_col {
-        flex-basis: 300px;
-        flex-grow: 1;
-        padding: 4vw;
-    }
-
-    #detaljeview_article h1 {
-
-        text-align: start;
-        line-height: .9;
-        text-transform: uppercase;
-        font-family: manropebold;
-    }
-
-    .underline {
-        width: 60vw;
-        height: 1px;
-        background-color: black;
-        position: absolute;
-        top: 15vw;
-        right: 0vw;
-        float: right;
-    }
-
-    .h1_container {
-        position: relative;
-        width: 50vw;
-        top: 6vw;
-        left: 40vw;
-    }
-
-</style>
 
 <body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
     <section id="webshop_detaljeview">
 
         <article id="detaljeview_article">
@@ -124,17 +47,10 @@
                 <h1></h1>
             </div>
             <div class="underline"></div>
-            <div class="webshop_wrapper">
+            <div class="detaljeview_wrapper">
 
-                <div class="webshop_col">
 
-                    <!--            <img src="">-->
-                    <p class="long_description"></p>
-                    <p class="price"></p>
-                    <p class="measurements">Measurements <br></p>
-                    <p class="materials">Materials <br></p>
-                </div>
-                <div class="webshop_col">
+                <div class="detaljeview_col">
                     <template>
 
                         <img class="caro_imgs" src="" alt="">
@@ -161,11 +77,19 @@
                     </main>
 
                 </div>
+                <div class="detaljeview_col">
+
+                    <!--            <img src="">-->
+                    <p class="long_description"></p>
+                    <p class="price"></p>
+                    <p class="measurements">Measurements <br></p>
+                    <p class="materials">Materials <br></p>
+                </div>
             </div>
         </article>
 
     </section>
-
+    <script src="script.js"></script>
     <script>
         //Detaljeview tekst indhold
         const urlParams = new URLSearchParams(window.location.search)
@@ -283,8 +207,5 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
-
     </script>
-</body>
-
-</html>
+</body></html>

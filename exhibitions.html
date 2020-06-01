@@ -4,20 +4,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Exhibitions</title>
     <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        #contact {
-            margin: 20vw 10vw;
-        }
 
-    </style>
 </head>
 
 <body>
-
     <!--    BURGER MENU START    -->
     <header>
         <nav>
@@ -37,7 +31,7 @@
             <ul class="nav" id="nav">
                 <li><a href="webshop.html">WEBSHOP</a></li>
                 <li><a href="showroom.html">SHOWROOM</a></li>
-                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="exhibitions.html">EXHIBTIONS</a></li>
                 <li><a href="press.html">PRESS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -47,24 +41,29 @@
     </header>
 
     <!--    BURGER MENU SLUT    -->
-
-    <div class="content_wrapper contact">
+    <div class="content_wrapper">
         <div class="h1_container">
-            <h1>CONTACT</h1>
-        </div>
-
-        <div class="underline">
+            <h1>Exhibitions</h1>
         </div>
         <div class="underline"></div>
-        <section id="contact">
-
+        <section id="exhibitions">
+            <template id="exhibitions_template">
+                <article>
+                    <h3></h3>
+                    <p></p>
+                </article>
+            </template>
         </section>
     </div>
 
     <script src="script.js"></script>
+
     <script>
-        let contactData;
-        const endpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/74";
+        let exhibitionsData = [];
+        const exhibitionsEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/exhibition?per_page=100";
+        let exhibitionsTemplate = document.querySelector("#exhibitions_template");
+        const listeElm = document.querySelector("#exhibitions");
+
         document.addEventListener("DOMContentLoaded", start);
 
         function start() {
@@ -72,22 +71,25 @@
         }
 
         async function hentData() {
-            const response = await fetch(endpoint);
-            console.log(response);
-            contactData = await response.json();
-            visContactSide();
-
+            const exhibitionsResponse = await fetch(exhibitionsEndpoint);
+            console.log(exhibitionsResponse);
+            exhibitionsData = await exhibitionsResponse.json();
+            visExhibitions();
 
         }
 
-        function visContactSide() {
-            console.log(contactData);
-            document.querySelector("#contact").innerHTML = contactData.content.rendered;
+        function visExhibitions() {
+            console.log(exhibitionsData);
+            exhibitionsData.forEach(elm => {
+                const klon = exhibitionsTemplate.cloneNode(true).content;
+                klon.querySelector("h3").innerHTML = elm.year;
+                klon.querySelector("p").innerHTML = elm.exhibitions;
+
+                listeElm.appendChild(klon);
+            });
         }
 
     </script>
-
-
 </body>
 
 </html>

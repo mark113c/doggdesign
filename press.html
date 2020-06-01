@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts.css">
+
+</head>
+
+<body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <!--    BURGER MENU SLUT    -->
+    <div id="press">
+        <div class="h1_container">
+            <h2>Press</h2>
+        </div>
+        <div class="underline"></div>
+        <section id="about_press">
+            <template id="press_template">
+
+                <img class="caro_imgs" src="" alt="">
+
+            </template>
+
+        </section>
+        <main id="press_carousel">
+
+            <div class="carousel">
+                <div class="carousel_inner">
+
+                    <div class="bwd">
+                        <img src="img/tilbagepil.svg" alt="tilbagepil">
+                    </div>
+                    <div class="container">
+
+                    </div>
+                    <div class="fwd">
+                        <img src="img/forwardpil.svg" alt="forwardpil">
+                    </div>
+                </div>
+                <div class="legend-container"></div>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+        const aboutPressEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press/125";
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
+
+        }
+
+        async function hentData() {
+
+
+            const aboutPressResponse = await fetch(aboutPressEndpoint);
+            console.log(aboutPressResponse);
+            karrusel = await aboutPressResponse.json();
+            visAboutPress();
+
+        }
+
+        function visAboutPress() {
+            numberOfPicsInCaro = karrusel.image.length;
+            console.log("image", karrusel.image);
+            karrusel.image.forEach((image, index) => {
+                const theClone =
+                    document.querySelector("#press_template").cloneNode(true).content;
+                const secondClone = document.querySelector("#press_template").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = image.guid;
+                secondClone.querySelector(".caro_imgs").src = image.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+    </script>
+</body></html>
