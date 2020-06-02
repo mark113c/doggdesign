@@ -646,7 +646,7 @@ footer .icons img {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 20px;
 }
 
@@ -1013,6 +1013,9 @@ ul {
 
     /*----------------------------------------IPAD WEBSHOP-START----------------------------------------*/
 
+    .filter-menu {
+        margin-left: 21vw;
+    }
 
     /*----------------------------------------IPAD WEBSHOP-SLUT----------------------------------------*/
     /*----------------------------------------SHOWROOM-START----------------------------------------*/
@@ -1120,211 +1123,219 @@ ul {
 
 
     /*----------------------------------------IPAD-SLUT----------------------------------------*/
+}
 
-    /*----------------------------------------IPAD PRO  START----------------------------------------*/
-
-    @media only screen and (min-width : 1024px) {
-
-        /*----------------------------------------IPAD PRO GENERAL START----------------------------------------*/
-
-        /* STYLING AF HEADERE START  */
-
-        .h1_container {
-            width: 46vw;
-            position: relative;
-            left: 54vw;
-            margin-top: 150px;
-        }
-
-        .underline {
-            width 50vw;
-            height: 1px;
-            background-color: black;
-        }
-
-        .h2_container {
-            width: 45vw;
-            position: relative;
-            left: 45vw;
-            margin-top: 100px;
-            margin-bottom: 50px;
-        }
-
-        .underline2 {
-            width 50vw;
-            height: 1px;
-            background-color: black;
-        }
-
-        /* STYLING AF HEADERE SLUT  */
-
-        /*BURGERMENU*/
-
-        nav {
-            display: flex;
-            flex-direction: row;
-            position: fixed;
-            width: 100%;
-
-            top: 0;
-            left: 0;
-            z-index: 10;
-            background-color: #F2F2EF;
-            padding-top: 2vw;
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            height: 10vh;
-            top: 0;
-            left: 0;
-            z-index: 10;
-
-        }
-
-        .header-wrapper {
-            padding-top: 0vw;
-            position: relative;
-            top: 0;
-            left: 0;
-            background: none;
-
-        }
-
-        .logo img {
-            width: 3vw;
-            margin: 0 3vw;
-        }
-
-        .cart img {
-            width: 3vw;
-            margin: 0 3vw;
-        }
-
-        .cart {
-            display: none;
-        }
-
-        .cart_web {
-
-            display: block;
-        }
-
-        .cart_web img {
-            width: 3vw;
-            margin-right: 3vw;
-        }
-
-        #burger {
-            display: none;
-        }
-
-        .nav {
-            padding-top: 0.5vw;
-            display: flex;
-            width: 100%;
-            margin: 0;
-            height: 0vw;
-            position: relative;
-
-        }
+/*----------------------------------------IPAD PRO  START----------------------------------------*/
 
 
 
-        .nav li a {
-            text-decoration: none;
-            color: black;
-            font-size: 0.8rem;
+@media only screen and (min-width : 1024px) {
 
-        }
+    /*----------------------------------------IPAD PRO GENERAL START----------------------------------------*/
 
-        .nav li {
-            padding: 0 2vw;
-            list-style: none;
+    /* STYLING AF HEADERE START  */
 
-        }
+    .h1_container {
+        width: 46vw;
+        position: relative;
+        left: 54vw;
+        margin-top: 150px;
+    }
 
-        /* MENU SLUT */
+    .underline {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
 
-        /*FONT STYLING START*/
-        h1 {
-            font-size: 2.5rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 0;
+    .h2_container {
+        width: 45vw;
+        position: relative;
+        left: 45vw;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
 
-        }
+    .underline2 {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
 
-        h2 {
-            font-size: 1.8rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            line-height: 0.9;
-            margin: 0;
+    /* STYLING AF HEADERE SLUT  */
 
-        }
+    /*BURGERMENU*/
 
-        h3 {
-            font-size: 1.2rem;
-            font-family: manropebold;
-            text-transform: uppercase;
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
 
-        }
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #F2F2EF;
+        padding-top: 2vw;
+    }
 
-        p {
-            font-family: manropelight;
-            font-size: 0.9rem;
-        }
+    header {
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
 
-        a {
-            font-size: 1.2rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            color: black;
+    }
 
-        }
+    .header-wrapper {
+        padding-top: 0vw;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none;
 
-        /*FONT STYLING SLUT*/
+    }
 
-        /* STYLING AF INDHOLDSECTIONER START  */
+    .logo img {
+        width: 3vw;
+        margin: 0 3vw;
+    }
 
-        #exhibitions,
-        #shipping_info,
-        #returnpolicy,
-        #termsandconditions,
-        #retailers,
-        #about,
-        #press,
-        #showroom,
-        #showroom_single,
-        #webshop,
-        #contact {
-            padding-top: 10vw;
-            margin-left: 10vw;
-            margin-right: 10vw;
-        }
+    .cart img {
+        width: 3vw;
+        margin: 0 3vw;
+    }
 
-        /* STYLING AF INDHOLDSECTIONER SLUT  */
+    .cart {
+        display: none;
+    }
+
+    .cart_web {
+
+        display: block;
+    }
+
+    .cart_web img {
+        width: 3vw;
+        margin-right: 3vw;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    .nav {
+        padding-top: 0.5vw;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        height: 0vw;
+        position: relative;
+
+    }
 
 
-        /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
+
+    .nav li a {
+        text-decoration: none;
+        color: black;
+        font-size: 0.8rem;
+
+    }
+
+    .nav li {
+        padding: 0 2vw;
+        list-style: none;
+
+    }
+
+    li:active,
+    li:hover {
+        text-decoration: underline;
+    }
+
+    /* MENU SLUT */
+
+    /*FONT STYLING START*/
+    h1 {
+        font-size: 2.5rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 0;
+
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 0.9;
+        margin: 0;
+
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        font-family: manropelight;
+        font-size: 0.9rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        color: black;
+
+    }
+
+    /*FONT STYLING SLUT*/
+
+    /* STYLING AF INDHOLDSECTIONER START  */
+
+    #exhibitions,
+    #shipping_info,
+    #returnpolicy,
+    #termsandconditions,
+    #retailers,
+    #about,
+    #press,
+    #showroom,
+    #showroom_single,
+    #webshop,
+    #contact {
+        padding-top: 10vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+    }
+
+    /* STYLING AF INDHOLDSECTIONER SLUT  */
+
+
+    /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
 
 
 
-        /*----------------------------------------IPAD PRO ABOUT START----------------------------------------*/
-        #about img {
-            margin-top: 4vw;
-        }
+    /*----------------------------------------IPAD PRO ABOUT START----------------------------------------*/
+    #about img {
+        margin-top: 4vw;
+    }
 
-        #about p {
-            max-width: 60vw;
-        }
+    #about p {
+        max-width: 60vw;
+    }
 
 
-        /*
+    /*
         #about_CV p {
             margin-top: 2vw;
             margin-bottom: 4vw
@@ -1332,211 +1343,231 @@ ul {
 */
 
 
-        #about h3 {
-            margin: 4vw 0vw 2vw 0vw;
-        }
+    #about h3 {
+        margin: 4vw 0vw 2vw 0vw;
+    }
 
 
-        /*----------------------------------------IPAD PRO ABOUT SLUT----------------------------------------*/
+
+
+    /*----------------------------------------IPAD PRO ABOUT SLUT----------------------------------------*/
+
+    /*----------------------------------------IPAD PRO WEBSHOP START----------------------------------------*/
+
+
+    .filter-menu {
+        margin-left: 47vw;
+    }
+
+    /*----------------------------------------IPAD PRO WEBSHOP START----------------------------------------*/
+
+}
+
+/*----------------------------------------LAPTOP STOR  START----------------------------------------*/
+
+@media only screen and (min-width : 1440px) {
+
+    /*----------------------------------------LAPTOP STOR GENERAL START----------------------------------------*/
+
+    /* STYLING AF HEADERE START  */
+
+    .h1_container {
+        width: 60vw;
+        position: relative;
+        left: 40vw;
+        margin-top: 200px;
+    }
+
+    .underline {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
+
+    .h2_container {
+        width: 45vw;
+        position: relative;
+
+        margin-top: 100px;
+    }
+
+    .underline2 {
+        width 50vw;
+        height: 1px;
+        background-color: black;
+    }
+
+    /* STYLING AF HEADERE SLUT  */
+
+    /*BURGERMENU*/
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        background-color: #F2F2EF;
 
     }
 
-    /*----------------------------------------LAPTOP STOR  START----------------------------------------*/
+    header {
+        position: fixed;
+        width: 100%;
+        height: 5vh;
+        top: 0;
+        left: 0;
+        z-index: 10;
 
-    @media only screen and (min-width : 1440px) {
+    }
 
-        /*----------------------------------------LAPTOP STOR GENERAL START----------------------------------------*/
+    .header-wrapper {
+        padding-top: 0vw;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: none;
 
-        /* STYLING AF HEADERE START  */
+    }
 
-        .h1_container {
-            width: 60vw;
-            position: relative;
-            left: 40vw;
-            margin-top: 200px;
-        }
+    .logo img {
+        width: 2vw;
+        margin: 0 3vw;
+    }
 
-        .underline {
-            width 50vw;
-            height: 1px;
-            background-color: black;
-        }
+    .cart img {
+        width: 3vw;
+        margin: 0 3vw;
+    }
 
-        .h2_container {
-            width: 45vw;
-            position: relative;
+    .cart {
+        display: none;
+    }
 
-            margin-top: 100px;
-        }
+    .cart_web {
 
-        .underline2 {
-            width 50vw;
-            height: 1px;
-            background-color: black;
-        }
+        display: block;
+    }
 
-        /* STYLING AF HEADERE SLUT  */
+    .cart_web img {
+        width: 3vw;
+        margin-right: 3vw;
+    }
 
-        /*BURGERMENU*/
+    #burger {
+        display: none;
+    }
 
-        nav {
-            display: flex;
-            flex-direction: row;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 10;
-            background-color: #F2F2EF;
+    .nav {
+        padding-top: 0.5vw;
+        display: flex;
+        width: 100%;
+        margin: 0;
+        height: 0vw;
+        position: relative;
 
-        }
-
-        header {
-            position: fixed;
-            width: 100%;
-            height: 5vh;
-            top: 0;
-            left: 0;
-            z-index: 10;
-
-        }
-
-        .header-wrapper {
-            padding-top: 0vw;
-            position: relative;
-            top: 0;
-            left: 0;
-            background: none;
-
-        }
-
-        .logo img {
-            width: 2vw;
-            margin: 0 3vw;
-        }
-
-        .cart img {
-            width: 3vw;
-            margin: 0 3vw;
-        }
-
-        .cart {
-            display: none;
-        }
-
-        .cart_web {
-
-            display: block;
-        }
-
-        .cart_web img {
-            width: 3vw;
-            margin-right: 3vw;
-        }
-
-        #burger {
-            display: none;
-        }
-
-        .nav {
-            padding-top: 0.5vw;
-            display: flex;
-            width: 100%;
-            margin: 0;
-            height: 0vw;
-            position: relative;
-
-        }
+    }
 
 
 
-        .nav li a {
-            text-decoration: none;
-            color: black;
-            font-size: 0.8rem;
+    .nav li a {
+        text-decoration: none;
+        color: black;
+        font-size: 0.8rem;
 
-        }
+    }
 
-        .nav li {
-            padding: 0 2vw;
-            list-style: none;
+    .nav li {
+        padding: 0 2vw;
+        list-style: none;
 
-        }
+    }
 
-        /* MENU SLUT */
+    .nav ul li.active-link > a {
+        text-decoration: underline;
 
-        /*FONT STYLING START*/
-        h1 {
-            font-size: 2.5rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            margin: 0;
+    }
 
+    li:hover {
+        text-decoration: underline;
+    }
 
-        }
+    /* MENU SLUT */
 
-        h2 {
-            font-size: 1.8rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-            line-height: 0.9;
-            margin: 0;
-
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-
-        }
-
-        p {
-            font-family: manropelight;
-            font-size: 1rem;
-        }
-
-        a {
-            font-size: 1.2rem;
-            font-family: manropebold;
-            text-transform: uppercase;
-            color: black;
-
-        }
-
-        /*FONT STYLING SLUT*/
-
-        /* STYLING AF INDHOLDSECTIONER START  */
-
-        #exhibitions,
-        #shipping_info,
-        #returnpolicy,
-        #termsandconditions,
-        #retailers,
-        #about,
-        #press,
-        #showroom,
-        #showroom_single,
-        #webshop,
-        #contact {
-            padding-top: 5vw;
-            margin-left: 15vw;
-            margin-right: 15vw;
-        }
-
-        /* STYLING AF INDHOLDSECTIONER SLUT  */
-
-        /*----------------------------------------LAPTOP STOR GENERAL SLUT----------------------------------------*/
+    /*FONT STYLING START*/
+    h1 {
+        font-size: 2.5rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 0;
 
 
+    }
 
-        /*----------------------------------------LAPTOP STOR ABOUT START----------------------------------------*/
+    h2 {
+        font-size: 1.8rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        line-height: 0.9;
+        margin: 0;
+
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+
+    }
+
+    p {
+        font-family: manropelight;
+        font-size: 1rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        color: black;
+
+    }
+
+    /*FONT STYLING SLUT*/
+
+    /* STYLING AF INDHOLDSECTIONER START  */
+
+    #exhibitions,
+    #shipping_info,
+    #returnpolicy,
+    #termsandconditions,
+    #retailers,
+    #about,
+    #press,
+    #showroom,
+    #showroom_single,
+    #webshop,
+    #contact {
+        padding-top: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    /* STYLING AF INDHOLDSECTIONER SLUT  */
+
+    /*----------------------------------------LAPTOP STOR GENERAL SLUT----------------------------------------*/
 
 
 
-        /*
+    /*----------------------------------------LAPTOP STOR ABOUT START----------------------------------------*/
+
+
+
+    /*
         #about_CV p {
             margin-top: 2vw;
             margin-bottom: 4vw
@@ -1554,14 +1585,24 @@ ul {
 
 
 
-        /*----------------------------------------LAPTOP STOR ABOUT SLUT----------------------------------------*/
-
-
-        /*----------------------------------------LAPTOP STOR  SLUT----------------------------------------*/
-
+    /*----------------------------------------LAPTOP STOR ABOUT SLUT----------------------------------------*/
+    /*----------------------------------------LAPTOP WEBSHOP START----------------------------------------*/
+    .filter-menu {
+        margin-left: 13vw;
     }
 
 
 
+    /*----------------------------------------LAPTOP WEBSHOP SLUT----------------------------------------*/
+    /*----------------------------------------LAPTOP PRESS START----------------------------------------*/
+    #press article {
+        margin: 3vw 3vw 0 2vw;
+
+    }
+
+    /*----------------------------------------LAPTOP PRESS SLUT----------------------------------------*/
+
+
+    /*----------------------------------------LAPTOP STOR  SLUT----------------------------------------*/
 
 }
