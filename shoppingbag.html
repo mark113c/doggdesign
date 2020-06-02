@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .breadcrumb {
+
+        list-style: none;
+        display: flex;
+        position: absolute;
+        padding-top: 10vw;
+
+
+
+    }
+
+    .breadcrumb img {
+        width: 8vw;
+
+        padding: 0 3vw 0 3vw;
+    }
+
+    .breadcrumb a {
+        font-family: manropelight;
+        font-size: .8rem;
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .basket {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black;
+        margin-left: 2vw;
+        margin-right: 2vw;
+
+
+    }
+
+    .basket p {
+
+        /*        padding: 2vw 8vw 2vw 8vw;*/
+        margin-left: 1vw;
+        margin-right: 1vw;
+
+
+    }
+
+    .detaljeview_col:nth-child(2),
+    .detaljeview_col:nth-child(3) {
+        padding: 0 10vw 0 10vw;
+    }
+
+    /*
+    .basket p:nth-child(1),
+    .basket p:nth-child(3) {
+        font-size: 1.5rem;
+    }
+*/
+
+    .detalje_h2_container {
+        width: 70vw;
+        position: relative;
+        left: 20vw;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    /*
+    .detaljeview_col:nth-child(2) {
+        padding: 12vw 10vw 4vw 10vw !important;
+    }
+*/
+
+
+    /*                           SHOPPING CART STYLING                   */
+    .detaljeview_wrapper {
+        padding-top: 30px;
+    }
+
+    .basket_container {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .basket {
+        width: 100px;
+        height: 30px;
+    }
+
+    .detaljeview_col img {
+        width: 50vw;
+    }
+
+    .detaljeview_col {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .detaljeview_col span {
+        font-family: manropebold;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+    }
+
+    .underline {
+        width: 100%;
+    }
+
+
+    /*                           SHOPPING CART STYLING                   */
+
+
+
+
+
+
+
+    @media only screen and (min-width : 768px) {
+        .breadcrumb img {
+            width: 38px;
+
+            padding: 0 2vw 0 2vw;
+        }
+
+        .breadcrumb {
+            margin-left: 1.8vw;
+        }
+
+        .detalje_h2_container {
+
+            width: 55vw;
+            position: relative;
+            left: 35vw;
+            margin-top: 0px;
+            margin-bottom: 50px;
+
+        }
+
+        .detaljeview_col button {
+            margin: 0;
+
+        }
+
+        .detaljeview_col .cta {
+            padding: 0vw 0vw 0 0vw;
+            font-size: 1rem;
+        }
+
+        .basket p:nth-child(2) {
+            /*              padding: 1vw 4vw 1vw 4vw;*/
+            margin-left: 2vw;
+            margin-right: 2vw;
+
+
+        }
+
+
+
+
+        .detaljeview_col2 {
+            display: flex;
+
+
+        }
+
+        .detaljeview_col:nth-child(2) {
+            padding: 3vw 5vw 0 5vw;
+        }
+
+        .detaljeview_col:nth-child(3) {
+            padding-top: 10vw;
+        }
+
+        .detaljeview_col:nth-child(3) p {
+            max-width: 500px;
+        }
+
+    }
+
+    @media only screen and (min-width : 1024px) {
+
+        .breadcrumb {
+            margin-left: 2.5vw;
+            padding-top: 5vw;
+        }
+
+        .breadcrumb img {
+            width: 50px;
+
+            padding: 0 2vw 0 2vw;
+        }
+
+        .detaljeview_col:nth-child(3) p {
+            max-width: 700px;
+        }
+
+        .detaljeview_col:nth-child(3) {
+            padding-left: 6vw;
+        }
+
+        .detalje_h2_container {
+            width: 45vw;
+            left: 50vw;
+        }
+
+
+    }
+</style>
+
+
+<body>
+    <!--    BURGER MENU START    -->
+    <header>
+        <nav>
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/dogg_logo.png" alt="Dogg logo"></a>
+                </div>
+
+                <div class="cart">
+                    <a href="index.html"><img src="img/cart_icon.svg" alt="Shopping cart"></a>
+                </div>
+
+                <div id="burger" onclick="onClickMenu()">
+                    <div id="bar1" class="bar"></div>
+                    <div id="bar2" class="bar"></div>
+                    <div id="bar3" class="bar"></div>
+                </div>
+
+            </div>
+
+
+            <ul class="nav" id="nav">
+                <li><a href="webshop.html">WEBSHOP</a></li>
+                <li><a href="showroom.html">SHOWROOM</a></li>
+                <li><a href="exhibitions.html">EXHIBITIONS</a></li>
+                <li><a href="press.html">PRESS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+
+            <div class="cart_web">
+                <a href="index.html"><img src="img/cart_icon.svg" alt="Shopping cart"></a>
+            </div>
+
+        </nav>
+    </header>
+    <!--    BURGER MENU SLUT    -->
+    <section id="webshop_detaljeview">
+        <ul class="breadcrumb">
+            <li><a href="webshop.html">WEBSHOP</a></li>
+            <img src="img/forwardpil.svg" alt="forwardpil">
+            <li><a class="brodkrummesti" href="#"></a></li>
+        </ul>
+        <article id="detaljeview_article">
+            <div class="h1_container">
+                <h1>bag</h1>
+
+                <div class="underline"></div>
+            </div>
+
+            <div class="detaljeview_wrapper">
+
+
+                <div class="detaljeview_col">
+                    <img src="img/hiti_product.jpg" alt="HITI lamp">
+                    <p>Hiti lamp</p>
+                </div>
+
+                <div class="detaljeview_col">
+
+
+                    <div class="basket_container">
+                        <div class="basket">
+                            <p>-</p>
+                            <p>1</p>
+                            <p>+</p>
+                        </div>
+
+                    </div>
+                    <div class="underline"></div>
+                </div>
+                <div class="detaljeview_col">
+                    <button class="cta">Checkout</button>
+                </div>
+
+
+
+            </div>
+
+        </article>
+
+    </section>
+    <script src="script.js"></script>
+    <script>
+        //Detaljeview tekst indhold
+        const urlParams = new URLSearchParams(window.location.search)
+        const id = urlParams.get("id");
+        const detaljeviewEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop";
+        let detaljeviewData = [];
+        const detaljeview = document.querySelector("#webshop_detaljeview");
+
+
+        //Detaljeview karussel
+        let karrusel;
+        let numberOfPicsInCaro;
+        let caroCurrentNum = 0;
+        const detaljeKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop/" + id;
+
+        document.addEventListener("DOMContentLoaded", start);
+
+
+        function start() {
+            hentData();
+            document.querySelector(".fwd").addEventListener("click", fwd);
+            document.querySelector(".bwd").addEventListener("click", bwd);
+        }
+
+        async function hentData() {
+            //Henter data ind for tekst indhold
+            const detaljeviewResponse = await fetch(detaljeviewEndpoint);
+            //console.log(detaljeviewResponse);
+            detaljeviewData = await detaljeviewResponse.json();
+            visDetaljeview();
+
+            //Billedkarrusel
+            const karruselResponse = await fetch(detaljeKarruselEndpoint);
+            console.log("BABAGANUSH" + karruselResponse);
+            karrusel = await karruselResponse.json();
+            visBilledkarrusel();
+
+        }
+
+        function visDetaljeview() {
+            //console.log("visDetaljeview");
+            detaljeviewData.forEach(elm => {
+                console.log(detaljeviewData);
+                if (elm.id == id) {
+                    detaljeview.querySelector("h1").innerHTML = elm.product_name;
+                    detaljeview.querySelector(".long_description").innerHTML = elm.long_description;
+                    detaljeview.querySelector(".price").innerHTML += elm.price;
+                    detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
+                    detaljeview.querySelector(".materials").innerHTML += elm.material;
+                    detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
+
+
+
+                }
+            });
+        }
+
+
+
+        function visBilledkarrusel() {
+            numberOfPicsInCaro = karrusel.product_gallery.length;
+            //            console.log("product_gallery", karrusel.product_gallery);
+            karrusel.product_gallery.forEach((product_gallery, index) => {
+                const theClone =
+                    document.querySelector("template").cloneNode(true).content;
+                const secondClone = document.querySelector("template").cloneNode(true).content;
+                theClone.querySelector(".caro_imgs").src = product_gallery.guid;
+                secondClone.querySelector(".caro_imgs").src = product_gallery.guid;
+                document.querySelector(".container").appendChild(theClone);
+                document.querySelector(".legend-container").appendChild(theClone);
+            })
+            document.querySelector(".container").addEventListener("scroll", scrollFunction);
+
+        }
+
+        function fwd() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                caroCurrentNum++;
+                navigate();
+            }
+        }
+
+        function bwd() {
+            if (caroCurrentNum > 0)
+                caroCurrentNum--;
+            navigate();
+        }
+
+        function navigate() {
+            document.querySelector(".container").scrollTo({
+                left: caroCurrentNum * document.querySelector(".caro_imgs").width,
+                behavior: "smooth"
+            })
+            setBtns();
+        }
+
+        function scrollFunction() {
+            //  console.log("scrollFunction");
+
+            caroCurrentNum = Math.round(document.querySelector(".container").scrollLeft / document.querySelector(".caro_imgs").width);
+            console.log(caroCurrentNum);
+            setBtns();
+
+        }
+
+        function setBtns() {
+            if (caroCurrentNum < numberOfPicsInCaro - 1) {
+                document.querySelector(".fwd").style.opacity = 1;
+                document.querySelector(".fwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".fwd").style.opacity = 0.2;
+                document.querySelector(".fwd").style.cursor = "default";
+            }
+            if (caroCurrentNum > 0) {
+                document.querySelector(".bwd").style.opacity = 1;
+                document.querySelector(".bwd").style.cursor = "pointer";
+            } else {
+                document.querySelector(".bwd").style.opacity = 0.2;
+                document.querySelector(".bwd").style.cursor = "default";
+            }
+        }
+    </script>
+</body></html>
