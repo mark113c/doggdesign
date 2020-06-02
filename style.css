@@ -377,6 +377,70 @@ main {
 
 /*BILLEDEKARRUSELLER SLUT*/
 
+/* FOOTER START */
+
+footer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+
+footer img {
+    width: 30px;
+
+}
+
+.footer_link {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.footer_link a {
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+footer .icons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer .icons img {
+
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+.footer_info {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_text {
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer p {
+    font-size: 0.7rem;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+}
+
+/* FOOTER SLUT */
+
+
 
 /*----------------------------------------GENERELT-SLUT----------------------------------------*/
 
@@ -501,7 +565,7 @@ main {
 .detaljeview_col {
     flex-basis: 300px;
     flex-grow: 1;
-    padding: 0 4vw 0 4vw;
+    padding: 5vw 4vw 0 4vw;
 }
 
 
@@ -595,16 +659,35 @@ main {
 /*----------------------------------------PRESS-SLUT----------------------------------------*/
 
 /*----------------------------------------CONTACT-START----------------------------------------*/
-/*
-#contact p:nth-child(1) {
-    padding-top: 30vw;
 
+.form_container {
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-family: manropebold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-#contact p {
-    padding-left: 4vw;
+input[type=text],
+select,
+textarea {
+    font-family: manropelight;
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background: none;
 }
-*/
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
 
 
 
@@ -851,6 +934,7 @@ ul {
         font-size: 1.2rem;
         font-family: manropebold;
         text-transform: uppercase;
+        letter-spacing: 3px;
 
     }
 
@@ -949,6 +1033,47 @@ ul {
 
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
+
+    /*----------------------------------------CONTACT-START----------------------------------------*/
+    .contact_container {
+        display: flex;
+    }
+
+    .form_container {
+        margin-top: 8vw;
+
+        margin-right: 5vw;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 1.2rem;
+        font-family: manropebold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    input[type=text],
+    select,
+    textarea {
+        font-family: manropelight;
+        font-size: 0.7rem;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        background: none;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+
+
+    /*----------------------------------------CONTACT-SLUT----------------------------------------*/
 
     /*----------------------------------------IPAD CONTACT-START----------------------------------------*/
 
