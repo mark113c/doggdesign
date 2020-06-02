@@ -59,20 +59,18 @@
     <div id="about">
 
 
-
-        <section id="about_intro">
-
-        </section>
+<!--
         <div class="h2_container">
             <h2>Story</h2>
 
             <div class="underline2"></div>
         </div>
+-->
         <section id="about_story">
         </section>
 
         <div class="h2_container">
-            <h2>Sustainability</h2>
+            <h2><Sustain></Sustain>ability</h2>
 
             <div class="underline2"></div>
         </div>
@@ -135,11 +133,7 @@
     <script src="script.js"></script>
 
     <script>
-        //ABOUT INTRO (sektion 1)
-        let aboutIntroData;
-        const aboutIntroEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/59";
-
-        //ABOUT - STORY (sektion 2)
+        //ABOUT- STORY (sektion 2)
         let aboutStoryData;
         const aboutStoryEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/pages/61";
 
@@ -163,11 +157,7 @@
         }
 
         async function hentData() {
-            //Henter data ind for ABOUT - INTRO sektion 1
-            const aboutIntroResponse = await fetch(aboutIntroEndpoint);
-            console.log(aboutIntroResponse);
-            aboutIntroData = await aboutIntroResponse.json();
-            visAboutIntro();
+
 
             //Henter data ind for ABOUT - STORY sektion 2
             const aboutStoryResponse = await fetch(aboutStoryEndpoint);
@@ -194,10 +184,6 @@
 
         //FUNKTIONER TIL SEKTIONER
 
-        function visAboutIntro() {
-            console.log(aboutIntroData);
-            document.querySelector("#about_intro").innerHTML = aboutIntroData.content.rendered;
-        }
 
         function visAboutStory() {
             console.log(aboutStoryData);
@@ -215,5 +201,8 @@
             document.querySelector("#about_CV").innerHTML = aboutCVData.content.rendered;
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

@@ -37,10 +37,11 @@ img {
 }
 
 .h2_container {
-    width: 70vw;
+    width: 65vw;
     position: relative;
     left: 30vw;
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 
 .underline2 {
@@ -67,6 +68,7 @@ img {
     padding-top: 10vw;
     margin-left: 5vw;
     margin-right: 5vw;
+    padding-bottom: 10vw;
 }
 
 /* STYLING AF INDHOLDSECTIONER SLUT  */
@@ -114,9 +116,9 @@ header {
 }
 
 #burger {
-    width: 36px;
-    height: 30px;
-    margin-top: 5vw;
+    width: 30px;
+    height: 20px;
+    margin-top: 13px;
     margin-right: 5vw;
     cursor: pointer;
     right: 2.5vw;
@@ -124,7 +126,7 @@ header {
 }
 
 .bar {
-    height: 3px;
+    height: 2px;
     width: 100%;
     display: block;
     border-radius: 1px;
@@ -146,7 +148,7 @@ header {
 }
 
 .change #bar3 {
-    transform: translateY(-2px) rotateZ(45deg);
+    transform: translateY(0px) rotateZ(45deg);
 }
 
 .change #bar2 {
@@ -182,7 +184,7 @@ header {
 }
 
 .cart img {
-    width: 13vw;
+    width: 35px;
     margin: 0 3vw;
 }
 
@@ -198,7 +200,7 @@ header {
 /*FOOTER-SLUT*/
 
 /*CALL-TO-ACTION-BUTTONS*/
-/*
+
 .cta {
     border: 1px solid #000000;
     background-color: transparent;
@@ -207,9 +209,9 @@ header {
     letter-spacing: 1.5px;
     line-height: 50px;
     text-transform: uppercase;
-    padding: 0 20px 0 20px;
+    padding: 0 10px 0 10px;
     margin-top: 25px;
-}*/
+}
 
 button {
 
@@ -254,7 +256,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: manropebold;
     text-transform: uppercase;
 
@@ -262,7 +264,7 @@ h3 {
 
 p {
     font-family: manropelight;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 a {
@@ -270,6 +272,7 @@ a {
     font-family: manropebold;
     text-transform: uppercase;
     color: black;
+    text-decoration: none;
 
 }
 
@@ -752,20 +755,13 @@ ul {
 
 
 
-#retailers .cta_links {
-    margin-top: 10vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
-#retailers .cta {
-    width: 60vw;
-    margin-top: 4vw;
+#retailers a {
+    text-decoration: none;
+    cursor: pointer;
 
 }
+
+
 
 
 
@@ -1036,6 +1032,18 @@ ul {
         padding-top: 0vw;
     }
 */
+
+    #about img {
+        margin-top: 4vw;
+        width: 70%;
+        margin-left: 25vw;
+    }
+
+    #about p {
+
+        max-width: 70vw;
+    }
+
 
 
     /*----------------------------------------IPAD ABOUT-SLUT----------------------------------------*/
@@ -1313,7 +1321,7 @@ ul {
     #showroom_single,
     #webshop,
     #contact {
-        padding-top: 10vw;
+        padding-top: 50px;
         margin-left: 10vw;
         margin-right: 10vw;
     }
