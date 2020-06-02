@@ -58,18 +58,25 @@
 
     #showroom_howto {
         display: flex;
-        flex-direction: row;
     }
 
     #showroom_howto video {
-        flex-grow: 1;
-        flex-basis: 300px;
+        flex-grow: ;
+        flex-basis: 420px;
     }
 
 
-    .howto_child {
+    #showroom_howto .quote {
         flex-grow: 2;
-        flex-basis: 600px;
+        flex-basis: 500px;
+        margin: 0;
+    }
+
+    #showroom_howto .quote p {
+        margin-right: 5vw;
+        margin-left: 0;
+        min-width: 700px;
+
     }
 
     .explainer {}
@@ -123,18 +130,20 @@
         <section id="showroom_quote">
 
 
+
+            <div class="h2_container">
+                <h2>HOW TO</h2>
+
+                <div class="underline2"></div>
+            </div>
+        </section>
+
+        <section id="showroom_howto">
+
+
             <div class="quote">
                 <p>We know how difficult it can be to choose the right furniture without seeing it in your home. Here you can do exactly that. Click on the furniture you are interested in, and it will take you to our showroom</p>
             </div>
-        </section>
-        <div class="h2_container">
-            <h2>HOW TO</h2>
-
-            <div class="underline2"></div>
-        </div>
-        <section id="showroom_howto">
-
-            <div class="howto_child"></div>
 
             <video class="explainer" width="300" autoplay muted loop id="myVideo">
                 <source src="img/explainer_2.mp4" type="video/mp4">
