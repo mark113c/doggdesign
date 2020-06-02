@@ -398,9 +398,9 @@
         }
 
         function visDetaljeview() {
-            //console.log("visDetaljeview");
+            console.log(visDetaljeview);
             detaljeviewData.forEach(elm => {
-                console.log(detaljeviewData);
+                console.log("DETALJEVIEW" + detaljeviewData);
                 if (elm.id == id) {
                     detaljeview.querySelector("h1").innerHTML = elm.product_name;
                     detaljeview.querySelector(".long_description").innerHTML = elm.long_description;
