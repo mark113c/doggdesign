@@ -10,6 +10,20 @@
 
 
 </head>
+<style>
+    .exhibitions_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-gap: 20px;
+
+
+    }
+
+    .exhibitions_grid main {
+        grid-column: 1/-1;
+    }
+
+</style>
 
 <body>
     <!--    BURGER MENU START    -->
@@ -56,7 +70,7 @@
 
         <div class="underline"></div>
     </div>
-    <section id="exhibitions">
+    <section id="exhibitions" class="exhibitions_grid">
         <template id="exhibitions_karrusel">
 
             <img class="caro_imgs" src="" alt="">
@@ -81,12 +95,18 @@
             </div>
 
         </main>
+
         <template id="exhibitions_template">
+
             <article>
+
                 <h3></h3>
                 <p></p>
+
             </article>
+
         </template>
+
     </section>
 
 
@@ -198,5 +218,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
