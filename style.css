@@ -1341,6 +1341,70 @@ ul {
 
     /*CTA KNAPPER SLUT*/
 
+    /* FOOTER START */
+
+    footer {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer img {
+        width: 30px;
+
+    }
+
+    .footer_link {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .footer_link a {
+        font-size: 1.2rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    footer .icons {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer .icons img {
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+
+    .footer_info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer_text {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .footer p {
+        font-size: 0.7rem;
+        margin-left: 3px;
+        margin-right: 3px;
+        text-align: center;
+    }
+
+    /* FOOTER SLUT */
+
+
 
     /*----------------------------------------IPAD PRO GENERAL STYLING SLUT----------------------------------------*/
 
