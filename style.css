@@ -501,7 +501,7 @@ main {
 .detaljeview_col {
     flex-basis: 300px;
     flex-grow: 1;
-    padding: 0 4vw 0 4vw;
+    padding: 5vw 4vw 0 4vw;
 }
 
 
