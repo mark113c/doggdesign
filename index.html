@@ -62,23 +62,7 @@
         margin: 0 10px 0 10px;
     }
 
-    .face {
-        width: 30px;
-        height: 30px;
-        background-color: black;
-    }
 
-    .insta {
-        width: 30px;
-        height: 30px;
-        background-color: black;
-    }
-
-    .li {
-        width: 30px;
-        height: 30px;
-        background-color: black;
-    }
 
     .text {
         display: flex;
@@ -410,15 +394,17 @@
             margin-bottom: 50px;
         }
 
+        /*
         .forside_col {
-            flex-basis: 500px;
-            flex-grow: 1;
+        flex-basis: 500px;
+        flex-grow: 1;
         }
 
         .forside_col_img {
-            flex-basis: 500px;
-            flex-grow: 2;
+        flex-basis: 500px;
+        flex-grow: 2;
         }
+*/
 
         .quote p {
             font-size: 2.5rem;
@@ -437,7 +423,6 @@
             flex-grow: 2;
         }
     }
-
 </style>
 
 <body>
@@ -520,42 +505,50 @@
     <section id="forside">
 
     </section>
-
-
     <footer>
-        <div class="footer_top">
-            <a href="">SHIPPING</a>
-
-            <a href="">RETAILERS</a>
-        </div>
-        <div class="footer_mid">
-            <a href="">RETURN POLICY</a>
-        </div>
-        <div class="footer_bot">
-            <a href="">TERMS AND CONDITIONS</a></div>
 
         <div class="footer">
+
+            <div class="footer_link">
+                <a href="shippinginfo.html">SHIPPING</a>
+                <a href="retailers.html">RETAILERS</a>
+            </div>
+            <div class="footer_link">
+                <a href="returnspolicy.html">RETURN POLICY</a>
+            </div>
+            <div class="footer_link">
+                <a href="termsandconditions.html">TERMS AND CONDITIONS</a>
+            </div>
+
+
             <div class="icons">
-                <div class="face"></div>
-                <div class="insta"></div>
-                <div class="li"></div>
+                <div class="face"><img src="img/facebook.svg" alt="Facebook icon"></div>
+                <div class="insta"><img src="img/Instagram.svg" alt="Instagram icon"></div>
+                <div class="li"><img src="img/LinkedIN.svg" alt="LinkedIn icon"></div>
             </div>
 
-            <div class="text">
-                <p>Dögg Design <br>
-                    Margretheholmsvej 12, 5. th <br>
-                    1432 Copenhagen K</p>
-                <p>
-                    Dögg Gudmundsdóttir <br>
-                    (+45) 26 17 09 05 <br>
-                    dogg@doggdesign.com
-                </p>
+            <div class="footer_info">
+                <p>Dögg Design</p>
+
+                <p>Margretheholmsvej 12, 5. th</p>
+
+                <p>1432 Copenhagen K</p>
 
             </div>
+
+            <div class="footer_text">
+                <p>(+45) 26 17 09 05</p>
+                <p> dogg@doggdesign.com</p>
+
+
+            </div>
+            <p> Copyright © Dögg Desgin
+            </p>
 
         </div>
 
     </footer>
+
 
 
 
@@ -583,8 +576,5 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
