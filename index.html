@@ -10,60 +10,6 @@
 
 </head>
 <style>
-    #forside footer {
-        text-align: center;
-    }
-
-    .footer_top,
-    .footer_mid,
-    .footer_bot {
-        margin-bottom: 25px;
-        text-align: center;
-    }
-
-    .footer_top {
-        margin-top: 25px;
-    }
-
-    .footer_top a:nth-child(1) {
-        margin-right: 12.5px;
-    }
-
-    .footer_top a:nth-child(2) {
-        margin-left: 12.5px;
-    }
-
-    footer {
-        text-decoration: none;
-        color: black;
-        font-family: manroperegular;
-
-    }
-
-    footer a {
-        text-decoration: none;
-        color: black;
-
-    }
-
-    .icons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 25px;
-    }
-
-    .footer {
-        /*        border-top: 1px solid black;*/
-
-    }
-
-    .icons div {
-        margin: 0 10px 0 10px;
-    }
-
-
-
     .text {
         display: flex;
         justify-content: space-between;
@@ -103,7 +49,10 @@
         margin-bottom: 15vw;
 
 
+
     }
+
+
 
     #forside .forside_quote1,
     #forside .forside_quote2,
@@ -175,8 +124,8 @@
         .splash_web {
             display: block;
             padding-top: 50px;
-            width: 90%;
-            margin-left: 10vw;
+            width: 70%;
+            margin-left: 30vw;
         }
 
         #splash_forside .quote p {
@@ -369,9 +318,14 @@
         }
     }
 
-    @media only screen and (min-width : 1330px) {
+    @media only screen and (min-width : 1440px) {
+
+        #forside h2 {
+            margin-top: 0;
+        }
+
         #forside .quote p {
-            max-width: 700px;
+            max-width: 550px;
             margin-left: 10vw;
 
         }
@@ -406,9 +360,84 @@
         }
 */
 
-        .quote p {
-            font-size: 2.5rem;
+        #splash_forside .quote p {
+
+            max-width: 600px;
         }
+
+        .quote p {
+            font-size: 2rem;
+
+        }
+
+        #forside .forside_vagn,
+        #forside .forside_fifty,
+        #forside .forside_wing,
+        #forside .forside_hiti,
+        #forside .forside_resit,
+        #forside .forside_rockytre,
+        #forside .forside_trinitas,
+        #forside .forside_diamondlamp {
+
+            margin-bottom: 0vw;
+        }
+
+
+        .forside_vagn {
+            width: 70%;
+            margin-left: 10vw;
+
+        }
+
+        .forside_fifty {
+            width: 85%;
+            margin-left: 28vw;
+
+        }
+
+        .forside_wing {
+            width: 85%;
+            margin-left: -10vw;
+
+        }
+
+
+        .forside_quote2 {
+            margin-left: 40vw;
+        }
+
+        .forside_hiti {
+            width: 85%;
+        }
+
+
+        .forside_hiti h2 {
+            margin-left: -5vw !important;
+        }
+
+        .forside_resit {
+            width: 80%;
+            margin-left: 25vw;
+        }
+
+        .forside_rockytre {
+            width: 90%;
+            margin-left: 15vw;
+        }
+
+        .forside_trinitas {
+            width: 85%;
+
+        }
+
+        .forside_diamondlamp {
+            width: 95%;
+            margin-left: 5vw;
+
+        }
+
+        .forside_diamondlamp h2 {}
+
 
     }
 
