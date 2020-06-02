@@ -183,6 +183,12 @@
     }
 
     @media only screen and (min-width : 1024px) {
+
+        .quote p {
+            font-size: 2rem;
+
+        }
+
         .splash_mobil {
             display: none;
 
@@ -197,7 +203,7 @@
 
         #splash_forside .quote p {
             margin-right: 0;
-            max-width: 1000px;
+            max-width: 800px;
         }
 
         #splash_forside img {
@@ -216,7 +222,7 @@
         .forside_wing {
             display: flex;
             flex-direction: row-reverse;
-            padding: 0 30vw 0 30vw;
+            padding: 0 40vw 0 20vw;
             align-items: center;
         }
 
@@ -237,7 +243,7 @@
         .forside_vagn {
             justify-content: center;
             align-items: center;
-            padding: 0 20vw 0 20vw;
+            padding: 0 30vw 0 30vw;
         }
 
         .forside_vagn h2 {
@@ -245,7 +251,7 @@
         }
 
         .forside_fifty {
-            padding: 0 20vw 0 20vw;
+            padding: 0 10vw 0 30vw;
             align-items: center;
         }
 
@@ -260,7 +266,9 @@
             flex-direction: row-reverse;
             padding: 0 50vw 0 0vw;
             align-items: center;
-            margin-left: 0;
+            margin-left: -5vw;
+
+
         }
 
         .forside_hiti h2 {
@@ -272,7 +280,7 @@
         .forside_resit {
             display: flex;
             align-items: center;
-            padding: 0 25vw 0 20vw;
+            padding: 0 25vw 0 30vw;
         }
 
         .forside_resit h2 {
@@ -288,7 +296,7 @@
         .forside_rockytre {
             display: flex;
             flex-direction: row-reverse;
-            padding: 0 10vw 0 35vw;
+            padding: 0 5vw 0 35vw;
             align-items: center;
         }
 
@@ -310,14 +318,17 @@
         .forside_diamondlamp {
             display: flex;
             align-items: center;
-            padding: 0 0vw 0 40vw;
+            padding: 0 0vw 0 0vw;
 
         }
 
         .forside_diamondlamp h2 {
             margin-left: 10vw !important;
-            text-align: center;
+            text-align: end;
             line-height: 30px;
+            justify-self: end;
+            min-width: 500px;
+
 
         }
 
@@ -440,8 +451,67 @@
             flex-basis: 200px;
             flex-grow: 2;
         }
-    }
 
+        @media only screen and (min-width : 2560px) {
+            .forside_vagn {
+                justify-content: center;
+                align-items: center;
+                padding: 0 32vw 0 32vw;
+            }
+
+            .forside_fifty {
+                padding: 0 15vw 0 35vw;
+                align-items: center;
+            }
+
+            .forside_wing {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0 45vw 0 15vw;
+                align-items: center;
+            }
+
+            .forside_hiti {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0 65vw 0 0vw;
+                align-items: center;
+                margin-left: -10vw;
+            }
+
+            .forside_resit {
+                display: flex;
+                align-items: center;
+                padding: 0 15vw 0 25vw;
+            }
+
+            .forside_rockytre {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0 5vw 0 40vw;
+                align-items: center;
+            }
+
+            .forside_trinitas {
+                display: flex;
+                align-items: center;
+                padding: 0 40vw 0 5vw;
+            }
+
+            .forside_diamondlamp {
+                display: flex;
+                align-items: center;
+                padding: 0 0vw 0 30vw;
+
+            }
+
+            .quote p {
+                font-size: 4rem;
+                min-width: 1200px;
+
+            }
+        }
+    }
 </style>
 
 <body>
@@ -586,8 +656,5 @@
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
