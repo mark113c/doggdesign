@@ -85,14 +85,31 @@
 
 
     /*                           SHOPPING CART STYLING                   */
-
+    .detaljeview_wrapper {
+        padding-top: 30px;
+    }
 
     .basket_container {
+        margin-bottom: 40px;
         display: flex;
+        justify-content: center;
+    }
+
+    .basket {
+        width: 100px;
+        height: 30px;
     }
 
     .detaljeview_col img {
-        width: 30vw;
+        width: 50vw;
+    }
+
+    .detaljeview_col {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
 
@@ -101,7 +118,10 @@
         text-transform: uppercase;
         font-size: 1.1rem;
         letter-spacing: 2px;
+    }
 
+    .underline {
+        width: 100%;
     }
 
 
@@ -256,18 +276,19 @@
 
                 <div class="underline"></div>
             </div>
+
             <div class="detaljeview_wrapper">
 
 
                 <div class="detaljeview_col">
-                    <img src="img/hiti2%20(1).png" alt="HITI lamp">
+                    <img src="img/hiti_product.jpg" alt="HITI lamp">
                     <p>Hiti lamp</p>
                 </div>
+
                 <div class="detaljeview_col">
 
 
                     <div class="basket_container">
-                        <button class="cta">Add to bag</button>
                         <div class="basket">
                             <p>-</p>
                             <p>1</p>
@@ -275,6 +296,10 @@
                         </div>
 
                     </div>
+                    <div class="underline"></div>
+                </div>
+                <div class="detaljeview_col">
+                    <button class="cta">Checkout</button>
                 </div>
 
 

@@ -464,11 +464,13 @@ main {
 
 /*----------------------------------------SHOWROOM-START----------------------------------------*/
 
+/*
 .showroom {
     width: 100%;
     margin-top: 5vw;
     margin-bottom: 10vw;
 }
+*/
 
 .explainer {
     width: 100%;
@@ -814,6 +816,7 @@ ul {
         max-width: 500px;
     }
 
+    /*
     .showroom {
         width: 100%;
         margin-top: 5vw;
@@ -822,21 +825,11 @@ ul {
         padding-right: 10vw;
 
     }
+*/
 
-    .explainer {
-        width: 100%;
-        display: block;
-        margin: 0 auto;
-        margin-top: 10vw;
-        margin-bottom: 10vw;
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
 
-    .showroom_placeholder {
-        padding-left: 10vw;
-        padding-right: 10vw;
-    }
+
+
 }
 
 @media only screen and (min-width : 768px) {

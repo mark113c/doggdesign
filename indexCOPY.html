@@ -97,6 +97,7 @@
         text-align: right;
     }
 
+
     .cta {
         border: 1px solid #000000;
         background-color: transparent;
@@ -111,6 +112,7 @@
     .forside_intro .cta {
         margin-top: 4vw;
     }
+
 
     #forside {
 
@@ -131,8 +133,7 @@
     #forside .forside_trinitas,
     #forside .forside_diamondlamp {
         grid-column: 1/-1;
-        margin-top: 50px;
-
+        margin-bottom: 15vw;
 
 
     }
@@ -163,11 +164,10 @@
     #splash_forside img {
         margin-left: 30vw;
         width: 80%;
-        float: right;
-    }
-
-    .forside_intro img {
+        margin-top: 25px;
         margin-bottom: 50px;
+        float: right;
+
     }
 
 
@@ -175,10 +175,6 @@
 
     .splash_web {
         display: none;
-    }
-
-    .quote p {
-        margin-top: 50px;
     }
 
     @media only screen and (min-width : 768px) {
@@ -194,35 +190,31 @@
 
         .splash_mobil {
             display: none;
+
         }
 
         .splash_web {
             display: block;
             padding-top: 50px;
+
         }
 
         #splash_forside img {
+
+
             margin-top: 25px;
             margin-bottom: 50px;
+
+
+        }
+    }
+
+    @media only screen and (min-width : 1024px) {
+        .splash_mobil {
+            display: none;
+
         }
 
-
-
-        .quote p {
-            margin-top: 100px;
-        }
-
-        #forside .forside_vagn,
-        #forside .forside_fifty,
-        #forside .forside_wing,
-        #forside .forside_hiti,
-        #forside .forside_resit,
-        #forside .forside_rockytre,
-        #forside .forside_trinitas,
-        #forside .forside_diamondlamp {
-
-            margin-top: 100px;
-        }
 
         .forside_intro .quote p {}
 
@@ -320,12 +312,65 @@
                 padding: 0 30vw 0 30vw;
             }
 
+            .splash_web {
+                display: block;
+                padding-top: 50px;
+                width: 90%;
+                margin-left: 10vw;
+            }
+
+
+            #splash_forside .quote p {
+                margin-right: 0;
+                max-width: 1000px;
+            }
+
+            #splash_forside img {
+                margin-left: 10vw;
+                width: 80%;
+                margin-top: 0px;
+                margin-bottom: 50px;
+
+            }
+
+            .forside_vagn,
+            .forside_fifty {
+                display: flex;
+            }
+
+            .forside_wing {
+                display: flex;
+                flex-direction: row-reverse;
+                padding: 0 30vw 0 30vw;
+                align-items: center;
+            }
+
+            .forside_wing img {
+                width: 50%;
+            }
+
+            .forside_wing h2 {
+
+                margin-left: 2vw !important;
+            }
+
+            .forside_quote2 {
+                margin-left: 30vw;
+            }
+
+
+            .forside_vagn {
+                justify-content: center;
+                align-items: center;
+                padding: 0 20vw 0 20vw;
+            }
+
             .forside_vagn h2 {
                 margin-right: 2vw;
             }
 
             .forside_fifty {
-                padding: 0 10vw 0 30vw;
+                padding: 0 20vw 0 20vw;
                 align-items: center;
             }
 
@@ -340,9 +385,7 @@
                 flex-direction: row-reverse;
                 padding: 0 50vw 0 0vw;
                 align-items: center;
-                margin-left: -5vw;
-
-
+                margin-left: 0;
             }
 
             .forside_hiti h2 {
@@ -354,7 +397,7 @@
             .forside_resit {
                 display: flex;
                 align-items: center;
-                padding: 0 25vw 0 30vw;
+                padding: 0 25vw 0 20vw;
             }
 
             .forside_resit h2 {
@@ -370,7 +413,7 @@
             .forside_rockytre {
                 display: flex;
                 flex-direction: row-reverse;
-                padding: 0 5vw 0 35vw;
+                padding: 0 10vw 0 35vw;
                 align-items: center;
             }
 
@@ -392,23 +435,23 @@
             .forside_diamondlamp {
                 display: flex;
                 align-items: center;
-                padding: 0 0vw 0 0vw;
+                padding: 0 0vw 0 40vw;
 
             }
 
             .forside_diamondlamp h2 {
                 margin-left: 10vw !important;
-                text-align: end;
+                text-align: center;
                 line-height: 30px;
-                justify-self: end;
-                min-width: 500px;
-
 
             }
 
 
 
-            button {}
+            button {
+                margin-left: 10vw;
+                margin-bottom: 10vw;
+            }
 
             .forside_intro {
                 display: flex;
@@ -522,66 +565,6 @@
                 flex-basis: 200px;
                 flex-grow: 2;
             }
-
-            @media only screen and (min-width : 2560px) {
-                .forside_vagn {
-                    justify-content: center;
-                    align-items: center;
-                    padding: 0 32vw 0 32vw;
-                }
-
-                .forside_fifty {
-                    padding: 0 15vw 0 35vw;
-                    align-items: center;
-                }
-
-                .forside_wing {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    padding: 0 45vw 0 15vw;
-                    align-items: center;
-                }
-
-                .forside_hiti {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    padding: 0 65vw 0 0vw;
-                    align-items: center;
-                    margin-left: -10vw;
-                }
-
-                .forside_resit {
-                    display: flex;
-                    align-items: center;
-                    padding: 0 15vw 0 25vw;
-                }
-
-                .forside_rockytre {
-                    display: flex;
-                    flex-direction: row-reverse;
-                    padding: 0 5vw 0 50vw;
-                    align-items: center;
-                }
-
-                .forside_trinitas {
-                    display: flex;
-                    align-items: center;
-                    padding: 0 40vw 0 5vw;
-                }
-
-                .forside_diamondlamp {
-                    display: flex;
-                    align-items: center;
-                    padding: 0 0vw 0 30vw;
-
-                }
-
-                .quote p {
-                    font-size: 4rem;
-                    min-width: 1200px;
-
-                }
-            }
         }
 </style>
 
@@ -654,7 +637,7 @@
                 </div>
 
                 <div class="button">
-                    <button class="cta" id="splash_cta">SHOWROOM
+                    <button class="cta" id="splash_cta"><a href="showroom.html">GO TO SHOWROOM</a>
                     </button>
                 </div>
             </div>

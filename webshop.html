@@ -9,6 +9,35 @@
     <link rel="stylesheet" href="fonts.css">
 
 </head>
+<style>
+    .webshop_images {
+        /*        display: inline-block;*/
+        position: relative;
+
+
+    }
+
+
+
+    .webshop_images .img-top {
+        /*        display: none;*/
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s ease;
+
+
+
+    }
+
+    .webshop_images:hover .img-top {
+        opacity: 1;
+
+
+    }
+
+</style>
 
 <body>
     <!--    BURGER MENU START    -->
@@ -85,7 +114,10 @@
         <template id="webshop_template">
             <article>
                 <div class="col">
-                    <img src="">
+                    <div class="webshop_images">
+                        <img src="" alt="">
+                        <img class="img-top" src="" alt="">
+                    </div>
                     <h2></h2>
                     <p class="price"></p>
                 </div>
@@ -125,6 +157,7 @@
                     const klon = webshopTemplate.cloneNode(true).content;
                     klon.querySelector("h2").innerHTML = elm.product_name;
                     klon.querySelector("img").src = elm.product_image.guid;
+                    klon.querySelector(".img-top").src = elm.hover_image.guid;
 
                     klon.querySelector(".price").innerHTML = elm.price;
                     klon.querySelector("article").addEventListener("click", () => {
