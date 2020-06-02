@@ -233,7 +233,7 @@ button {
 
 /*FONT STYLING START*/
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -495,12 +495,13 @@ main {
     display: flex;
     flex-wrap: wrap;
     margin-top: 10vw;
+
 }
 
 .detaljeview_col {
     flex-basis: 300px;
     flex-grow: 1;
-    padding: 4vw;
+    padding: 0 4vw 0 4vw;
 }
 
 
