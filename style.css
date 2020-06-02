@@ -198,6 +198,7 @@ header {
 /*FOOTER-SLUT*/
 
 /*CALL-TO-ACTION-BUTTONS*/
+/*
 .cta {
     border: 1px solid #000000;
     background-color: transparent;
@@ -208,7 +209,7 @@ header {
     text-transform: uppercase;
     padding: 0 20px 0 20px;
     margin-top: 25px;
-}
+}*/
 
 button {
     margin: auto;
