@@ -542,6 +542,7 @@ main {
 
 
 /*----------------------------------------EXHIBITIONS-START----------------------------------------*/
+/*
 #exhibitions p {
     padding-left: 4vw;
     padding-right: 4vw;
@@ -554,6 +555,7 @@ main {
     padding-left: 4vw;
     padding-top: 30vw;
 }
+*/
 
 
 
@@ -1193,10 +1195,12 @@ ul {
         }
 
 
+        /*
         #about_CV p {
             margin-top: 2vw;
             margin-bottom: 4vw
         }
+*/
 
 
         #about h3 {
