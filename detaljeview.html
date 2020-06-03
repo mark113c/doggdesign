@@ -13,7 +13,7 @@
 <style>
     .breadcrumb {
 
-        list-style: none;
+
         display: flex;
         position: absolute;
         padding-top: 10vw;
@@ -302,6 +302,7 @@
 
 
     }
+
 </style>
 
 
@@ -345,11 +346,11 @@
     </header>
     <!--    BURGER MENU SLUT    -->
     <section id="webshop_detaljeview">
-        <ul class="breadcrumb">
-            <li><a href="webshop.html">Produktoverview</a></li>
+        <div class="breadcrumb">
+            <a href="webshop.html">Produktoverview</a>
             <img src="img/forwardpil.svg" alt="forwardpil">
-            <li><a class="brodkrummesti" href="#"></a></li>
-        </ul>
+            <a class="brodkrummesti" href="#"></a>
+        </div>
         <article id="detaljeview_article">
             <div class="h1_container">
                 <h1></h1>
@@ -521,7 +522,7 @@
                     detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
                     detaljeview.querySelector(".materials").innerHTML += elm.material;
                     detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
-                    detaljeview.querySelector("title").innerHTML = elm.product_name;
+
 
 
 
@@ -593,5 +594,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
