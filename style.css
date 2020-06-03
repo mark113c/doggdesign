@@ -247,7 +247,7 @@ h1 {
     font-family: manropebold;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin: 0;
+    margin: 0 0 0 -1.4vw;
     line-height: 0.8;
 
 }
@@ -928,7 +928,7 @@ ul {
         font-family: manropebold;
         text-transform: uppercase;
         letter-spacing: 5px;
-        margin: 0;
+        margin: 0 0 0 -1vw;
 
     }
 
@@ -1283,7 +1283,7 @@ ul {
         font-family: manropebold;
         text-transform: uppercase;
         letter-spacing: 5px;
-        margin: 0;
+        margin: 0 0 0 -0.9vw;
 
     }
 
@@ -1607,7 +1607,7 @@ ul {
         font-family: manropeextrabold;
         text-transform: uppercase;
         letter-spacing: 5px;
-        margin: 0;
+        margin: 0 0 0 -.4vw;
         line-height: .9;
 
 
