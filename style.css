@@ -976,6 +976,20 @@ ul {
     }
 
     /* STYLING AF INDHOLDSECTIONER SLUT  */
+    /*CTA KNAPPER START*/
+
+    .button {
+        margin-left: 4vw;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+    }
+
+
+    .cta a {
+        font-size: 1rem;
+    }
+
+    /*CTA KNAPPER SLUT */
 
 
 
@@ -984,7 +998,7 @@ ul {
 
     /*----------------------------------------IPAD FORSIDE-START----------------------------------------*/
     .quote p {
-        font-size: 2rem;
+        font-size: 1.5rem;
 
     }
 
@@ -993,15 +1007,6 @@ ul {
     }
 
 
-
-
-    #forside {
-
-
-        grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-
-
-    }
 
 
     /*----------------------------------------IPAD FORSIDE-SLUT----------------------------------------*/
@@ -1335,8 +1340,16 @@ ul {
 
     .button {
         margin-left: 10vw;
-        margin-top: 6vw;
-        margin-bottom: 6vw;
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
+    .quote p {
+        font-size: 1.3rem;
+        margin-left: 10vw;
+        margin-top: 5vw;
+        max-width: 400px;
+
     }
 
     /*CTA KNAPPER SLUT*/
@@ -1583,18 +1596,19 @@ ul {
 
     /*FONT STYLING START*/
     h1 {
-        font-size: 2.5rem;
-        font-family: manropebold;
+        font-size: 4rem;
+        font-family: manropeextrabold;
         text-transform: uppercase;
         letter-spacing: 5px;
         margin: 0;
+        line-height: .9;
 
 
     }
 
     h2 {
-        font-size: 1.8rem;
-        font-family: manropebold;
+        font-size: 2.5rem;
+        font-family: manropeextrabold;
         text-transform: uppercase;
         letter-spacing: 5px;
         line-height: 0.9;
@@ -1623,6 +1637,19 @@ ul {
     }
 
     /*FONT STYLING SLUT*/
+    /*FORWARD OG BACKWARDS PILE START*/
+    .bwd img {
+        width: 1%;
+        margin-left: -22px;
+    }
+
+    .fwd img {
+        width: 1%;
+        margin-left: 10px;
+    }
+
+
+    /*FORWARD OG BACKWARDS PILE SLUT*/
 
     /* STYLING AF INDHOLDSECTIONER START  */
 
@@ -1653,6 +1680,19 @@ ul {
     }
 
     /*CTA SLUT*/
+
+    /*QUOTES START */
+
+    .quote p {
+        font-size: 2rem;
+        margin-left: 10vw;
+        margin-top: 10vw;
+        max-width: 1000px;
+    }
+
+
+
+    /*QUOTES SLUT*/
 
     /*----------------------------------------LAPTOP STOR GENERAL SLUT----------------------------------------*/
 
