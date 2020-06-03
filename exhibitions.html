@@ -9,22 +9,23 @@
     <title>Dögg Design | Current, previous and future exhibitions</title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .exhibitions_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-gap: 20px;
+
+
+        }
+
+        .exhibitions_grid main {
+            grid-column: 1/-1;
+        }
+    </style>
 
 
 </head>
-<style>
-    .exhibitions_grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 20px;
 
-
-    }
-
-    .exhibitions_grid main {
-        grid-column: 1/-1;
-    }
-</style>
 
 <body>
     <!--    BURGER MENU START    -->
@@ -78,7 +79,7 @@
             <img class="caro_imgs" src="" alt="">
 
         </template>
-        <main id="exhibitions_carousel">
+        <div id="exhibitions_carousel">
 
             <div class="carousel">
                 <div class="carousel_inner">
@@ -96,7 +97,7 @@
                 <div class="legend-container"></div>
             </div>
 
-        </main>
+        </div>
 
         <template id="exhibitions_template">
 
