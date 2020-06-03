@@ -174,12 +174,13 @@ header {
 .nav li a {
     text-decoration: none;
     color: black;
+    font-family: manropelight;
 }
 
 .nav li {
     list-style: none;
     padding: 7vw 10vw;
-    text-align: right;
+    text-align: left;
     transition: 0.3s ease;
 }
 
@@ -526,12 +527,17 @@ footer .icons img {
 
 #webshop img {
     width: 100%;
+    cursor: pointer;
 }
 
+.filter-menu {
+    cursor: pointer;
+}
 
 
 .filter-menu button {
     background: none;
+
 
 
     /*            transition: 1s ease;*/
@@ -899,12 +905,13 @@ ul {
     .nav li a {
         text-decoration: none;
         color: black;
+        font-family: manropelight;
     }
 
     .nav li {
         list-style: none;
-        padding: 7vw 10vw;
-        text-align: right;
+        padding: 6vw 10vw;
+
         transition: 0.3s ease;
     }
 
@@ -1345,7 +1352,7 @@ ul {
     }
 
     .quote p {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         margin-left: 10vw;
         margin-top: 5vw;
         max-width: 400px;
@@ -1457,13 +1464,13 @@ ul {
         margin-left: 47vw;
     }
 
-    /*----------------------------------------IPAD PRO WEBSHOP START----------------------------------------*/
+    /*----------------------------------------IPAD PRO WEBSHOP SLUT----------------------------------------*/
 
 }
 
 /*----------------------------------------LAPTOP STOR  START----------------------------------------*/
 
-@media only screen and (min-width : 1440px) {
+@media only screen and (min-width : 1200px) {
 
     /*----------------------------------------LAPTOP STOR GENERAL START----------------------------------------*/
 
@@ -1573,7 +1580,7 @@ ul {
     .nav li a {
         text-decoration: none;
         color: black;
-        font-size: 0.8rem;
+        font-size: .9rem;
 
     }
 
@@ -1630,7 +1637,7 @@ ul {
 
     a {
         font-size: 1.2rem;
-        font-family: manropebold;
+        font-family: manropelight;
         text-transform: uppercase;
         color: black;
 
