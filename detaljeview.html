@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="da">
 
 <head>
     <meta charset="utf-8">
@@ -475,7 +475,7 @@
         //Detaljeview tekst indhold
         const urlParams = new URLSearchParams(window.location.search)
         const id = urlParams.get("id");
-        const detaljeviewEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop";
+        const detaljeviewEndpoint = "https://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop";
         let detaljeviewData = [];
         const detaljeview = document.querySelector("#webshop_detaljeview");
 
@@ -484,7 +484,7 @@
         let karrusel;
         let numberOfPicsInCaro;
         let caroCurrentNum = 0;
-        const detaljeKarruselEndpoint = "http://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop/" + id;
+        const detaljeKarruselEndpoint = "https://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/webshop/" + id;
 
         document.addEventListener("DOMContentLoaded", start);
 
@@ -523,6 +523,7 @@
                     detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
                     detaljeview.querySelector(".materials").innerHTML += elm.material;
                     detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
+
 
 
                 }
