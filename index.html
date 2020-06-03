@@ -27,6 +27,7 @@
         text-align: right;
     }
 
+    /*
     #forside {
 
         display: grid;
@@ -34,6 +35,7 @@
         grid-gap: 20px;
 
     }
+*/
 
 
 
@@ -45,7 +47,7 @@
     #forside .forside_rockytre,
     #forside .forside_trinitas,
     #forside .forside_diamondlamp {
-        grid-column: 1/-1;
+/*        grid-column: 1/-1;*/
         margin-bottom: 15vw;
 
 
@@ -310,6 +312,7 @@
         }
     }
 
+    /*
     @media only screen and (min-width : 1200px) {
         #forside .quote p {
             max-width: 600px;
@@ -317,11 +320,17 @@
 
         }
     }
+*/
 
-    @media only screen and (min-width : 1440px) {
+
+    @media only screen and (min-width : 1200px) {
 
         #forside h2 {
             margin-top: 0;
+        }
+
+        #forside {
+            overflow-x: hidden;
         }
 
         #forside .quote p {
