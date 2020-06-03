@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Product
+
     </title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
@@ -513,16 +513,21 @@
 
         function visDetaljeview() {
             console.log(visDetaljeview);
+
             detaljeviewData.forEach(elm => {
                 console.log("DETALJEVIEW" + detaljeviewData);
                 if (elm.id == id) {
+                    document.title = elm.product_name;
                     detaljeview.querySelector("h1").innerHTML = elm.product_name;
                     detaljeview.querySelector(".long_description").innerHTML = elm.long_description;
                     detaljeview.querySelector(".price").innerHTML += elm.price;
                     detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
                     detaljeview.querySelector(".materials").innerHTML += elm.material;
                     detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 
 
