@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webshop</title>
+    <title>
+        Product
+    </title>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -300,7 +302,6 @@
 
 
     }
-
 </style>
 
 
@@ -520,7 +521,7 @@
                     detaljeview.querySelector(".measurements").innerHTML += elm.height + " x " + elm.width + " x " + elm.length;
                     detaljeview.querySelector(".materials").innerHTML += elm.material;
                     detaljeview.querySelector(".brodkrummesti").innerHTML = elm.product_name;
-
+                    detaljeview.querySelector("title").innerHTML = elm.product_name;
 
 
                 }
@@ -591,8 +592,5 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
-
     </script>
-</body>
-
-</html>
+</body></html>
