@@ -14,6 +14,28 @@ img {
     width: 100%;
 }
 
+#termsandconditions,
+#returnpolicy,
+#shippinginfo,
+#webshop_detaljeview,
+#press,
+#exhibitions,
+#about,
+#showroom,
+#retailers,
+#shoppingbag,
+#forside,
+#splash_forside,
+footer {
+    max-width: 1752px;
+}
+
+
+
+
+
+
+
 /*
 #about p:nth-child(1) {
     padding-top: 30vw;
