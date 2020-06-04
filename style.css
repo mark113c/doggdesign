@@ -631,7 +631,7 @@ footer .icons img {
 
 
 #showroom p {
-    margin: 15vw 4vw 10vw 4vw;
+    margin: 10vw 4vw 4vw 0vw;
 }
 
 #showroom .filter-menu {
@@ -840,6 +840,10 @@ ul {
     /*----------------------------------------IPAD GENERELT-START----------------------------------------*/
 
     /* STYLING AF HEADERE START  */
+
+    #showroom p {
+        margin: 0vw 4vw 4vw 0vw;
+    }
 
     .h1_container {
         width: 65vw;
