@@ -146,7 +146,7 @@
                 align-items: center;
                 border-style: solid;
                 border-width: 1px;
-                background-color: white;
+                background-color: #F2F2EF;
                 z-index: 10000;
                 position: fixed;
                 padding: 2vw;
@@ -172,7 +172,7 @@
                 align-items: center;
                 border-style: solid;
                 border-width: 1px;
-                background-color: white;
+
                 z-index: 10000;
                 position: fixed;
                 padding: 2vw;
@@ -200,7 +200,7 @@
                 align-items: center;
                 border-style: solid;
                 border-width: 1px;
-                background-color: white;
+
                 z-index: 10000;
                 position: fixed;
                 padding: 2vw;
@@ -268,6 +268,97 @@
 
             .pop-up_cta {
                 padding: 0.5rem;
+
+
+            }
+
+            .pop-up_cta a {
+                padding: 0.3rem;
+                font-size: 1rem;
+                border-style: solid;
+                border-width: 0.5px;
+                background-color: ;
+
+            }
+        }
+
+        @media only screen and (min-width : 1200px) {
+
+            .pop-up_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-style: solid;
+                border-width: 1px;
+
+                z-index: 10000;
+                position: fixed;
+                padding: 2vw;
+                top: 55vh;
+                right: 0px;
+                box-shadow: 20px 20px 40px #8A8A8A;
+                animation-name: slide_inkf;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                width: auto;
+
+            }
+
+            @keyframes slide_inkf {
+                0% {
+                    transform: translateX(500px);
+                }
+
+                100% {
+                    transform: translateX(0px);
+                }
+
+            }
+
+            .pop-up_text {
+                text-align: center;
+            }
+
+            .pop-up_text p {
+                font-size: 1rem;
+            }
+
+            .pop-up_x {
+                position: absolute;
+                top: 0.5vw;
+                left: 1vw;
+                font-family: manrope;
+                font-size: 1.3rem;
+                text-align: left;
+
+            }
+
+            .pop-up_close {
+                animation-name: pop_up_closekf;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+
+            }
+
+
+            @keyframes pop_up_closekf {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(500px);
+                }
+
+            }
+
+            .hide {
+                display: none;
+            }
+
+            .pop-up_cta {
+                padding: 0rem;
 
 
             }
