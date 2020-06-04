@@ -10,6 +10,109 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        .pop-up_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-width: 1px;
+            background-color: #F2F2EF;
+            z-index: 10000;
+            position: fixed;
+            padding: 2vw;
+            top: 84.3vh;
+            right: 0px;
+            width: 100vw;
+            box-shadow: 20px 20px 40px #8A8A8A;
+            animation-name: slide_inkf;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+        }
+
+        @keyframes slide_inkf {
+            0% {
+                transform: translateX(500px);
+            }
+
+            100% {
+                transform: translateX(0px);
+            }
+
+        }
+
+        .pop-up_text {
+            text-align: center;
+
+        }
+
+        .pop-up_text h3 {
+            margin-top: 2vw;
+            font-size: 1.3rem;
+            margin-bottom: 3vw;
+
+        }
+
+        .pop-up_text p {
+            display: none;
+        }
+
+        .pop-up_x {
+            position: absolute;
+            top: 0.5vw;
+            left: 1vw;
+            font-family: manrope;
+            font-size: 1.3rem;
+            text-align: left;
+            cursor: pointer;
+
+        }
+
+        .pop-up_close {
+            animation-name: pop_up_closekf;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+
+
+        }
+
+        @keyframes pop_up_closekf {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(500px);
+            }
+
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .pop-up_cta {
+            padding: 0.5rem;
+
+
+        }
+
+        .pop-up_cta a {
+            padding: 0.3rem;
+            font-size: 1rem;
+            border-style: solid;
+            border-width: 0.5px;
+            background-color: ;
+
+        }
+
+
+
+
+
+
+
         .text {
             display: flex;
             justify-content: space-between;
@@ -92,6 +195,11 @@
             display: none;
         }
 
+        .hide {
+            display: none;
+        }
+
+
         /*
         .forside_diamondlamp img {
 width: 50%;
@@ -102,6 +210,40 @@ margin-left: 40vw;
         .forside_diamondlamp h2 {}
 
         @media only screen and (min-width : 768px) {
+
+            .pop-up_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-style: solid;
+                border-width: 1px;
+
+                z-index: 10000;
+                position: fixed;
+                padding: 2vw;
+                top: 65vh;
+                right: 0px;
+                box-shadow: 20px 20px 40px #8A8A8A;
+                animation-name: slide_inkf;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                width: auto;
+
+            }
+
+            .pop-up_text p {
+                display: block;
+            }
+
+            .hide {
+                display: none;
+            }
+
+
+
+
+
             .splash_mobil {
                 display: none;
 
@@ -302,6 +444,10 @@ margin-left: 40vw;
 
             }
 
+            .hide {
+                display: none;
+            }
+
 
             #splash_forside .quote p {
                 margin-right: 0;
@@ -420,6 +566,95 @@ margin-left: 40vw;
 
 
         @media only screen and (min-width : 1200px) {
+
+            .pop-up_container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-style: solid;
+                border-width: 1px;
+
+                z-index: 10000;
+                position: fixed;
+                padding: 2vw;
+                top: 55vh;
+                right: 0px;
+                box-shadow: 20px 20px 40px #8A8A8A;
+                animation-name: slide_inkf;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+                width: auto;
+
+            }
+
+            @keyframes slide_inkf {
+                0% {
+                    transform: translateX(500px);
+                }
+
+                100% {
+                    transform: translateX(0px);
+                }
+
+            }
+
+            .pop-up_text {
+                text-align: center;
+            }
+
+            .pop-up_text p {
+                font-size: 1rem;
+            }
+
+            .pop-up_x {
+                position: absolute;
+                top: 0.5vw;
+                left: 1vw;
+                font-family: manrope;
+                font-size: 1.3rem;
+                text-align: left;
+
+            }
+
+            .pop-up_close {
+                animation-name: pop_up_closekf;
+                animation-duration: 1s;
+                animation-iteration-count: 1;
+
+            }
+
+
+            @keyframes pop_up_closekf {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(500px);
+                }
+
+            }
+
+            .hide {
+                display: none;
+            }
+
+            .pop-up_cta {
+                padding: 0rem;
+
+
+            }
+
+            .pop-up_cta a {
+                padding: 0.3rem;
+                font-size: 1rem;
+                border-style: solid;
+                border-width: 0.5px;
+                background-color: ;
+
+            }
+
 
             .splash_web {
 
@@ -552,6 +787,7 @@ margin-left: 40vw;
         }
     }
 */
+
     </style>
 
 </head>
@@ -597,6 +833,15 @@ margin-left: 40vw;
     </header>
 
     <!--    BURGER MENU SLUT    -->
+    <div class="pop-up_container ">
+        <div class="pop-up_x">x</div>
+        <div class="pop-up_text">
+            <h3>VIRTUAL SHOWROOM</h3>
+            <p>Explore what Dögg Designs unique furniture <br>will look like in your home</p>
+        </div>
+        <div class="pop-up_cta"><a href="showroom.html">TRY IT OUT</a></div>
+
+    </div>
 
 
     <section id="splash_forside">
@@ -706,6 +951,17 @@ margin-left: 40vw;
             console.log(response);
             forsideData = await response.json();
             visForside();
+            document.querySelector(".pop-up_x").addEventListener("click", closePopUp);
+
+
+
+        }
+
+        function closePopUp() {
+
+            document.querySelector(".pop-up_container").classList.add("hide");
+
+
 
 
         }
@@ -714,5 +970,8 @@ margin-left: 40vw;
             console.log(forsideData);
             document.querySelector("#forside").innerHTML = forsideData.content.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

@@ -8,27 +8,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F2F2EF;
+
 }
 
 img {
     width: 100%;
 }
 
-#termsandconditions,
-#returnpolicy,
-#shippinginfo,
-#webshop_detaljeview,
-#press,
-#exhibitions,
-#about,
-#showroom,
-#retailers,
-#shoppingbag,
-#forside,
-#splash_forside,
-footer {
-    max-width: 1752px;
-}
 
 
 
@@ -122,7 +108,7 @@ header {
 }
 
 .logo img {
-    width: 8vw;
+    width: 6vw;
 
     margin: 0 3vw;
 }
@@ -913,7 +899,7 @@ ul {
     }
 
     .logo img {
-        width: 4vw;
+        width: 3.5vw;
         margin: 0 3vw;
     }
 
@@ -1278,7 +1264,7 @@ ul {
     }
 
     .logo img {
-        width: 3vw;
+        width: 2vw;
         margin: 0 3vw;
     }
 
@@ -1615,14 +1601,11 @@ ul {
     }
 
     .logo img {
-        width: 2vw;
+
         margin: 0 3vw;
     }
 
-    .logo img {
-        width: 3vw;
-        margin: 0 3vw;
-    }
+
 
     .cart {
         display: none;
