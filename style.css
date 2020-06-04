@@ -64,7 +64,7 @@ img {
 #showroom,
 #showroom_single,
 #webshop,
-#contact {
+.contact_container {
     padding-top: 10vw;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -210,7 +210,7 @@ header {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     padding: 3px 8px 3px 8px;
-    margin-top: 25px;
+/*    margin-top: 25px;*/
 }
 
 button {
@@ -399,6 +399,8 @@ footer {
     flex-direction: column;
 }
 
+
+
 footer img {
     width: 30px;
 
@@ -413,6 +415,13 @@ footer img {
     font-size: 1.2rem;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: manropelight;
+}
+
+.footer_text a {
+    font-size: 0.7rem;
+    text-transform: lowercase;
+    font-family: manropelight;
 }
 
 footer .icons {
@@ -439,6 +448,7 @@ footer .icons img {
 .footer_text {
     display: flex;
     justify-content: center;
+
 }
 
 
@@ -976,7 +986,7 @@ ul {
     #showroom,
     #showroom_single,
     #webshop,
-    #contact {
+    .contact_container {
         padding-top: 8vw;
         margin-left: 5vw;
         margin-right: 5vw;
@@ -992,9 +1002,11 @@ ul {
     }
 
 
-    .cta a {
+    .cta {
         font-size: 1rem;
     }
+
+
 
     /*CTA KNAPPER SLUT */
 
@@ -1064,12 +1076,16 @@ ul {
         display: flex;
     }
 
-    .form_container {
-        margin-top: 6vw;
+    #contact {
+        padding: 0 6vw 10vw 0vw;
+    }
 
-        margin-right: 5vw;
+    .form_container {
+        /*        margin-top: 6vw;*/
+
+
         border-radius: 5px;
-        padding: 20px;
+        padding: 0;
         font-size: 1.2rem;
         font-family: manropebold;
         text-transform: uppercase;
@@ -1093,7 +1109,8 @@ ul {
     }
 
     input[type=submit]:hover {
-        background-color: #45a049;
+        background-color: transparent;
+        text-decoration: underline;
     }
 
 
@@ -1331,7 +1348,7 @@ ul {
     #showroom,
     #showroom_single,
     #webshop,
-    #contact {
+    .contact_container {
         padding-top: 50px;
         margin-left: 10vw;
         margin-right: 10vw;
@@ -1349,6 +1366,10 @@ ul {
         margin-left: 10vw;
         margin-top: 0vw;
         margin-bottom: 0vw;
+    }
+
+    .cta {
+        padding: 1vw 1vw 1vw 1vw;
     }
 
     .quote p {
@@ -1453,7 +1474,7 @@ ul {
     }
 
     .form_container {
-        margin-top: 3vw;
+        /*        margin-top: 3vw;*/
 
     }
 
@@ -1498,7 +1519,7 @@ ul {
     .h2_container {
         width: 45vw;
         position: relative;
-
+        left: 40vw;
         margin-top: 100px;
     }
 
@@ -1641,7 +1662,7 @@ ul {
         font-size: 1rem;
     }
 
-    a {
+    nav a {
         font-size: 1.2rem;
         font-family: manropelight;
         text-transform: uppercase;
@@ -1676,7 +1697,7 @@ ul {
     #showroom,
     #showroom_single,
     #webshop,
-    #contact {
+    .contact_container {
         padding-top: 5vw;
         margin-left: 15vw;
         margin-right: 15vw;
@@ -1751,7 +1772,7 @@ ul {
     /*----------------------------------------LAPTOP PRESS SLUT----------------------------------------*/
     /*----------------------------------------LAPTOP CONTACT START----------------------------------------*/
     .form_container {
-        margin-top: 4vw;
+        /*        margin-top: 4vw;*/
     }
 
     /*----------------------------------------LAPTOP CONTACT SLUT----------------------------------------*/
