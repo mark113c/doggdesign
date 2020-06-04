@@ -377,7 +377,7 @@ main {
 .bwd img,
 .fwd img {
     position: absolute;
-    z-index: 10;
+
 
 }
 
