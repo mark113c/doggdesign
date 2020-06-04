@@ -213,6 +213,10 @@ header {
     /*    margin-top: 25px;*/
 }
 
+.cta:hover {
+    background-color: none;
+}
+
 button {
 
     display: block;
@@ -725,7 +729,11 @@ textarea {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: lightgray;
+}
+
+#contact figure {
+    margin: 0;
 }
 
 
