@@ -8,11 +8,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: #F2F2EF;
+
 }
 
 img {
     width: 100%;
 }
+
+
+
+
+
+
+
 
 /*
 #about p:nth-child(1) {
@@ -100,7 +108,7 @@ header {
 }
 
 .logo img {
-    width: 8vw;
+    width: 6vw;
 
     margin: 0 3vw;
 }
@@ -891,7 +899,7 @@ ul {
     }
 
     .logo img {
-        width: 4vw;
+        width: 3.5vw;
         margin: 0 3vw;
     }
 
@@ -1256,7 +1264,7 @@ ul {
     }
 
     .logo img {
-        width: 3vw;
+        width: 2vw;
         margin: 0 3vw;
     }
 
@@ -1593,14 +1601,11 @@ ul {
     }
 
     .logo img {
-        width: 2vw;
+
         margin: 0 3vw;
     }
 
-    .logo img {
-        width: 3vw;
-        margin: 0 3vw;
-    }
+
 
     .cart {
         display: none;

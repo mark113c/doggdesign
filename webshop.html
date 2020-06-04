@@ -44,7 +44,7 @@
             align-items: center;
             border-style: solid;
             border-width: 1px;
-            background-color: white;
+            background-color: #F2F2EF;
             z-index: 10000;
             position: fixed;
             padding: 2vw;
@@ -138,31 +138,7 @@
 
 
 
-        @media only screen and (min-width : 768px) {
-            .pop-up_container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                border-style: solid;
-                border-width: 1px;
-                background-color: #F2F2EF;
-                z-index: 10000;
-                position: fixed;
-                padding: 2vw;
-                top: 65vh;
-                right: 0px;
-                box-shadow: 20px 20px 40px #8A8A8A;
-                animation-name: slide_inkf;
-                animation-duration: 1s;
-                animation-iteration-count: 1;
 
-            }
-
-            .pop-up_text p {
-                display: block;
-            }
-        }
 
         @media only screen and (min-width : 768px) {
             .pop-up_container {
@@ -188,6 +164,10 @@
 
             .pop-up_text p {
                 display: block;
+            }
+
+            .hide {
+                display: none;
             }
         }
 
