@@ -34,11 +34,13 @@
             display: flex;
             flex-direction: row;
             align-items: flex-start;
+
         }
 
         .showroom_product_container .quote {
             flex-grow: 1;
             flex-basis: 500px;
+
         }
 
         .showroom_product_container .product_video {
@@ -48,33 +50,97 @@
 
         .showroom_product_container .quote p {
             margin-left: 0;
+            margin-top: 0;
         }
 
-        #showroom_howto {
-            display: flex;
-        }
-
-        #showroom_howto video {
-            flex-grow: ;
-            flex-basis: 420px;
-        }
-
-
-        #showroom_howto .quote {
-            flex-grow: 2;
-            flex-basis: 500px;
+        .button {
             margin: 0;
         }
+
+
 
         #showroom_howto .quote p {
             margin-right: 5vw;
             margin-left: 0;
-            min-width: 700px;
+            margin-top: 0;
+            max-width: 600px;
 
         }
 
-        .explainer {}
+        #showroom_howto video {
+            width: 50%;
+        }
 
+
+
+        .overlay_container {
+            position: relative;
+        }
+
+        .overlay_container .cta {
+            position: absolute;
+            top: 10vw;
+            left: 28vw;
+            cursor: pointer;
+
+        }
+
+        #showroom_product_container .showroom_placeholder {
+            z-index: 1;
+            position: relative;
+        }
+
+
+        .showroom_hover {
+            position: absolute;
+            left: 0;
+            z-index: -1
+        }
+
+        .showroom_hover_relative {
+            position: relative;
+        }
+
+        .drag {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: rotateY(180deg);
+            width: 16vw;
+            height: 21vw;
+
+        }
+
+        .re-sit {
+            cursor: grabbing;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        @media only screen and (min-width : 768px) {
+
+            #showroom_howto {
+                display: flex;
+                align-content: center;
+            }
+
+            #showroom_howto video {
+                flex-grow: ;
+                flex-basis: 420px;
+            }
+
+
+            #showroom_howto .quote {
+                flex-grow: 2;
+                flex-basis: 500px;
+                margin: 0;
+                align-self: center;
+            }
+        }
+
+        .explainer {}
     </style>
 </head>
 
@@ -131,11 +197,7 @@
 
 
 
-            <div class="h2_container">
-                <h2>HOW TO</h2>
 
-                <div class="underline2"></div>
-            </div>
         </section>
 
         <section id="showroom_howto">
@@ -146,7 +208,7 @@
             </div>
 
             <video class="explainer" width="300" autoplay muted loop id="myVideo">
-                <source src="img/explainer_final.mp4" type="video/mp4">
+                <source src="img/explainer_white.mp4" type="video/mp4">
             </video>
 
 
@@ -158,13 +220,24 @@
                 <div class="underline2"></div>
             </div>
 
-            <img class="showroom_placeholder" src="img/showroom_placeholder.png" alt="placeholder3">
+
+            <div class="overlay_container">
+                <img class="showroom_placeholder" src="img/showroom_placeholder_white%20copy.jpg" alt="placeholder3">
+                <img class="showroom_hover" src="img/hover_billede.jpg" alt="placeholder3">
+
+                <img class="drag hide" src="img/re-sit_frit.png" alt="">
+
+
+
+                <button class="cta">UPLOAD IMAGE OF YOUR ROOM</button>
+            </div>
+
 
             <div class="icon_container">
                 <img src="img/showroom/rockyfrit_product%20(1).jpg" alt="rocky tre dogg design">
                 <img src="img/showroom/bensi_product.jpg" alt="bensi table dogg design">
                 <img src="img/showroom/fifty-dining_product.jpg" alt="fifty dining chair dogg design">
-                <img src="img/showroom/re-sit_product_webshop.jpg" alt="re-sit dining chair dogg design">
+                <img class="re-sit" src="img/showroom/re-sit_product_webshop.jpg" alt="re-sit dining chair dogg design">
                 <img src="img/showroom/Soursquare.jpg" alt="sour chair table dogg design">
                 <img src="img/showroom/vagn_produkt.jpg" alt="vagn side table dogg design">
                 <img src="img/showroom/balloonprodukt.jpg" alt="balloon lamp dogg design">
@@ -248,6 +321,20 @@
 
 
     <script src="script.js"></script>
-</body>
 
-</html>
+    <script>
+        document.querySelector("button").addEventListener("click", show);
+
+        function show() {
+            this.classList.add("hide");
+            document.querySelector(".showroom_placeholder").classList.add("hide");
+            document.querySelector(".showroom_hover").classList.add("showroom_hover_relative");
+        }
+
+        document.querySelector(".re-sit").addEventListener("click", show_product);
+
+        function show_product() {
+            document.querySelector(".drag").classList.remove("hide");
+        }
+    </script>
+</body></html>
