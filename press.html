@@ -111,8 +111,8 @@
             </div>
 
             <div class="footer_text">
-                <p>(+45) 26 17 09 05</p>
-                <p> dogg@doggdesign.com</p>
+                <p><a href=tel:004526170905>(+45) 26 17 09 05</a></p>
+                <p><a href="mailto:dogg@doggdesign.com"> dogg@doggdesign.com</a></p>
 
 
             </div>
@@ -127,7 +127,7 @@
 
     <script>
         let pressData = [];
-        const pressEndpoint = "https://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press";
+        const pressEndpoint = "https://emiliefrank.dk/kea/10_eksamensprojekt2sem/wordpress/wp-json/wp/v2/press?per_page=100";
         let pressTemplate = document.querySelector("#press_template");
         const listeElm = document.querySelector("#about_press");
 
@@ -160,7 +160,7 @@
 
                 klon.querySelector("img").src = elm.image.guid;
 
-                klon.querySelector("h2").innerHTML = elm.magazine;
+                klon.querySelector("h2").innerHTML = elm.year;
 
 
 
