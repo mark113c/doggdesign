@@ -11,6 +11,10 @@
 
     <link rel="stylesheet" href="fonts.css">
     <style>
+        .quote p {
+            font-size: 1.4rem;
+        }
+
         .icon_container {
             display: flex;
             overflow: scroll;
@@ -102,13 +106,15 @@
         }
 
         #showroom_product_container .showroom_placeholder {
-
+            z-index: 1;
             position: relative;
         }
 
 
         .showroom_hover {
             position: absolute;
+            left: 0;
+            z-index: -1
         }
 
         .showroom_hover_relative {
@@ -132,6 +138,8 @@
         .hide {
             display: none;
         }
+
+        @media only screen and (min-width : 768px) {}
 
         .explainer {}
     </style>
@@ -215,9 +223,11 @@
 
 
             <div class="overlay_container">
-                <img class="showroom_hover" src="img/hover_billede.jpg" alt="placeholder3">
-                <img class="drag hide" src="img/re-sit_frit.png" alt="">
                 <img class="showroom_placeholder" src="img/showroom_placeholder_white%20copy.jpg" alt="placeholder3">
+                <img class="showroom_hover" src="img/hover_billede.jpg" alt="placeholder3">
+
+                <img class="drag hide" src="img/re-sit_frit.png" alt="">
+
 
 
                 <button class="cta">UPLOAD IMAGE OF YOUR ROOM</button>
