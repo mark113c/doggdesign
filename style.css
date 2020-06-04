@@ -413,6 +413,7 @@ footer img {
     font-size: 1.2rem;
     margin-left: 10px;
     margin-right: 10px;
+    font-family: manropelight;
 }
 
 footer .icons {
@@ -1498,7 +1499,7 @@ ul {
     .h2_container {
         width: 45vw;
         position: relative;
-
+        left: 40vw;
         margin-top: 100px;
     }
 
@@ -1641,7 +1642,7 @@ ul {
         font-size: 1rem;
     }
 
-    a {
+    nav a {
         font-size: 1.2rem;
         font-family: manropelight;
         text-transform: uppercase;
