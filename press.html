@@ -73,7 +73,7 @@
 
 
         <article>
-            <img src="" alt="">
+            <a href=""><img src="" alt=""></a>
             <h3></h3>
         </article>
 
@@ -168,6 +168,9 @@
                 klon.querySelector("img").src = elm.image.guid;
 
                 klon.querySelector("h3").innerHTML = elm.year;
+                if (elm.publication_link != "") {
+                    klon.querySelector("a").href = elm.publication_link;
+                }
 
 
 
@@ -176,5 +179,8 @@
             });
 
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
