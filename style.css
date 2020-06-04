@@ -39,7 +39,6 @@ img {
 }
 
 .underline {
-    width 50vw;
     height: 1px;
     background-color: black;
 }
@@ -53,7 +52,6 @@ img {
 }
 
 .underline2 {
-    width 50vw;
     height: 1px;
     background-color: black;
 }
@@ -223,7 +221,7 @@ header {
 }
 
 .cta:hover {
-    background-color: none;
+    background-color: transparent;
 }
 
 button {
@@ -630,7 +628,7 @@ footer .icons img {
 
 
 
-}
+
 
 #showroom p {
     margin: 15vw 4vw 10vw 4vw;
@@ -851,7 +849,6 @@ ul {
     }
 
     .underline {
-        width 150vw;
         height: 1px;
         background-color: black;
     }
@@ -864,7 +861,6 @@ ul {
     }
 
     .underline2 {
-        width 50vw;
         height: 1px;
         background-color: black;
     }
@@ -1208,7 +1204,6 @@ ul {
     }
 
     .underline {
-        width 50vw;
         height: 1px;
         background-color: black;
     }
@@ -1222,7 +1217,6 @@ ul {
     }
 
     .underline2 {
-        width 50vw;
         height: 1px;
         background-color: black;
     }
@@ -1547,20 +1541,17 @@ ul {
     }
 
     .underline {
-        width 50vw;
         height: 1px;
         background-color: black;
     }
 
     .h2_container {
-        width: 45vw;
         position: relative;
         left: 40vw;
         margin-top: 100px;
     }
 
     .underline2 {
-        width 50vw;
         height: 1px;
         background-color: black;
     }
