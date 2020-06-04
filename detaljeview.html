@@ -17,13 +17,15 @@
 
         display: flex;
         position: absolute;
-        padding-top: 10vw;
+        padding-top: 15vw;
+        padding-left: 10vw;
+
 
 
 
     }
 
-    .detaljeview_col .button {}
+
 
     .detaljeview_col {
         padding-top: 10vw;
@@ -58,17 +60,22 @@
 
     }
 
+
+
+
     .basket p {
 
-        /*        padding: 2vw 8vw 2vw 8vw;*/
+        padding: 2vw 8vw 2vw 8vw;
         margin-left: 4vw;
         margin-right: 4vw;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
 
 
 
     }
+
+
 
     .detaljeview_col:nth-child(2),
     .detaljeview_col:nth-child(3) {
@@ -110,14 +117,17 @@
     }
 
     .detaljeview_col .button {
-        margin-top: 0;
+        margin-top: 0vw;
         margin-bottom: 0;
         margin-left: 0;
+        display: flex;
     }
 
-    .detaljeview_col .cta {
-        margin-top: 0;
+    .detaljeview_col .button p {
+        margin: 0;
     }
+
+
 
 
 
@@ -155,10 +165,7 @@
             padding-top: 6vw;
         }
 
-        .detaljeview_col .cta {
-            padding: 0vw 0vw 0 0vw;
-            font-size: 1rem;
-        }
+
 
         .basket p:nth-child(2) {
             /*              padding: 1vw 4vw 1vw 4vw;*/
@@ -195,6 +202,7 @@
 
 
 
+
         }
 
     }
@@ -211,6 +219,16 @@
 
             padding: 0 2vw 0 2vw;
         }
+
+        .basket {
+            margin-left: 2vw;
+            margin-right: 1vw;
+
+        }
+
+
+
+
 
         .detaljeview_col:nth-child(3) p {
             max-width: 700px;
@@ -303,6 +321,7 @@
 
 
     }
+
 </style>
 
 
@@ -400,13 +419,14 @@
 
                     <div class="basket_container">
                         <div class="button">
-                            <button class="cta">Add to bag</button>
+                            <a class="cta" href="shoppingbag.html">Add to bag</a>
                         </div>
                         <div class="basket">
                             <p>-</p>
                             <p>1</p>
                             <p>+</p>
                         </div>
+
 
                     </div>
                 </div>
@@ -461,8 +481,8 @@
             </div>
 
             <div class="footer_text">
-                <p>(+45) 26 17 09 05</p>
-                <p> dogg@doggdesign.com</p>
+                <p><a href=tel:004526170905>(+45) 26 17 09 05</a></p>
+                <p><a href="mailto:dogg@doggdesign.com"> dogg@doggdesign.com</a></p>
 
 
             </div>
@@ -597,5 +617,8 @@
                 document.querySelector(".bwd").style.cursor = "default";
             }
         }
+
     </script>
-</body></html>
+</body>
+
+</html>
