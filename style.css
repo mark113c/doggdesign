@@ -334,7 +334,10 @@ main {
 .carousel {
     width: 90%;
     padding: 0;
-    margin-left: 20px;
+
+    margin: 0 auto;
+    display: block;
+
 }
 
 .caro_imgs {
@@ -522,10 +525,19 @@ footer .icons img {
 
 /*----------------------------------------WEBSHOP-START----------------------------------------*/
 
-#webshop h1,
-#webshop h2,
+
+#webshop h3,
 #webshop .price {
     text-align: center;
+}
+
+#webshop .price {
+    margin-top: 0;
+}
+
+#webshop h3 {
+    margin-top: 0;
+    margin-bottom: 0vw;
 }
 
 #webshop h2,
@@ -634,20 +646,20 @@ footer .icons img {
 
 
 /*----------------------------------------EXHIBITIONS-START----------------------------------------*/
-/*
+
+
+
+#exhibitions h3,
 #exhibitions p {
-    padding-left: 4vw;
-    padding-right: 4vw;
+    padding: 0 5vw 0 5vw;
 
 }
 
-
-
-#exhibitions h3 {
-    padding-left: 4vw;
-    padding-top: 30vw;
+#exhibitions p {
+    line-height: 20px;
 }
-*/
+
+
 
 
 
@@ -661,9 +673,10 @@ footer .icons img {
 }
 */
 
-#press h2,
-#press p {
+#press h3,
+    {
     text-align: center;
+    margin-top: 0vw;
 }
 
 #press article {
@@ -1390,7 +1403,7 @@ ul {
         padding-left: 5vw;
         padding-right: 5vw;
         display: flex;
-        flex-direction: column;
+
     }
 
     footer img {
@@ -1401,6 +1414,7 @@ ul {
     .footer_link {
         margin-bottom: 25px;
         text-align: center;
+
     }
 
     .footer_link a {
@@ -1489,8 +1503,19 @@ ul {
     }
 
     /*----------------------------------------IPAD PRO WEBSHOP SLUT----------------------------------------*/
+    /*----------------------------------------IPAD PRO PRESS START----------------------------------------*/
 
+    #exhibitions h3,
+    #exhibitions p {
+        padding: 0 4vw 0 4vw;
 
+    }
+
+    #exhibitions p {
+        line-height: 30px;
+    }
+
+    /*----------------------------------------IPAD PRO PRESS SLUT----------------------------------------*/
 
 
 }
@@ -1770,6 +1795,14 @@ ul {
         margin: 3vw 3vw 0 2vw;
 
     }
+
+    #exhibitions h3,
+    #exhibitions p {
+        padding: 0 3.5vw 0 3.5vw;
+
+    }
+
+
 
     /*----------------------------------------LAPTOP PRESS SLUT----------------------------------------*/
     /*----------------------------------------LAPTOP CONTACT START----------------------------------------*/

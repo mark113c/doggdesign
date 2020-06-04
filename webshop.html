@@ -92,6 +92,7 @@
             font-family: manrope;
             font-size: 1.3rem;
             text-align: left;
+            cursor: pointer;
 
         }
 
@@ -99,6 +100,7 @@
             animation-name: pop_up_closekf;
             animation-duration: 1s;
             animation-iteration-count: 1;
+
 
         }
 
@@ -374,7 +376,7 @@
                         <img src="" alt="">
                         <img class="img-top" src="" alt="">
                     </div>
-                    <h2></h2>
+                    <h3></h3>
                     <p class="price"></p>
                 </div>
             </article>
@@ -477,7 +479,7 @@
             webshopData.forEach(elm => {
                 if (filter == "alle" || filter == elm.wf_webshop_folders) {
                     const klon = webshopTemplate.cloneNode(true).content;
-                    klon.querySelector("h2").innerHTML = elm.product_name;
+                    klon.querySelector("h3").innerHTML = elm.product_name;
                     klon.querySelector("img").src = elm.product_image.guid;
                     klon.querySelector(".img-top").src = elm.hover_image.guid;
 
