@@ -213,6 +213,10 @@ header {
     /*    margin-top: 25px;*/
 }
 
+.cta:hover {
+    background-color: none;
+}
+
 button {
 
     display: block;
@@ -725,7 +729,11 @@ textarea {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: lightgray;
+}
+
+#contact figure {
+    margin: 0;
 }
 
 
@@ -899,7 +907,7 @@ ul {
     #burger {
         width: 36px;
         height: 30px;
-        margin-top: 1.5vw;
+        margin-top: 1.1rem;
         margin-right: 2vw;
         cursor: pointer;
         right: 2.5vw;
@@ -1251,22 +1259,17 @@ ul {
         margin: 0 3vw;
     }
 
-    .cart img {
-        width: 3vw;
-        margin: 0 3vw;
-    }
-
     .cart {
         display: none;
     }
 
     .cart_web {
-
+        padding: 0rem 0rem;
         display: block;
     }
 
     .cart_web img {
-        width: 3vw;
+        width: 1.8rem;
         margin-right: 3vw;
     }
 
@@ -1593,7 +1596,7 @@ ul {
         margin: 0 3vw;
     }
 
-    .cart img {
+    .logo img {
         width: 3vw;
         margin: 0 3vw;
     }
@@ -1603,13 +1606,8 @@ ul {
     }
 
     .cart_web {
-
+        padding: 0.2rem 0rem;
         display: block;
-    }
-
-    .cart_web img {
-        width: 3vw;
-        margin-right: 3vw;
     }
 
     #burger {
